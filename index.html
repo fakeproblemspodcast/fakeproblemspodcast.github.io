@@ -4,233 +4,517 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Problems Podcast</title>
-    <meta name="description" content="An irreverent comedy podcast about dark, weird, and absurd topics. New episodes every other Saturday.">
+    <meta name="description" content="An irreverent comedy podcast about dark, weird, and absurd topics. Two guys, deadpan delivery, zero corporate energy. New episodes every other Saturday.">
     <meta property="og:title" content="Fake Problems Podcast">
-    <meta property="og:description" content="An irreverent comedy podcast about dark, weird, and absurd topics.">
+    <meta property="og:description" content="Dark, weird, and absurd comedy. Two guys who treat moral dilemmas and bizarre hypotheticals with deadpan seriousness.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/podcast_logo.jpg">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --yellow: #FFD700;
+            --yellow-dim: rgba(255, 215, 0, 0.08);
             --dark: #1a1a1a;
-            --darker: #111;
+            --darker: #0d0d0d;
+            --card-bg: #181818;
+            --card-hover: #1f1f1f;
             --text: #e0e0e0;
-            --text-muted: #999;
-            --card-bg: #222;
+            --text-muted: #888;
+            --border: #2a2a2a;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--darker);
             color: var(--text);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* ── Nav ── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--yellow);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        nav .nav-links a:hover { color: var(--yellow); }
+
+        /* ── Hero ── */
         .hero {
             text-align: center;
-            padding: 4rem 1rem 3rem;
-            background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+            padding: 8rem 1.5rem 4rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255,215,0,0.06) 0%, transparent 60%);
+            position: relative;
         }
 
-        .hero img {
-            width: 200px;
-            height: 200px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
-            margin-bottom: 1.5rem;
+        .hero-logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 24px;
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.12), 0 8px 32px rgba(0,0,0,0.5);
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
         }
+
+        .hero-logo:hover { transform: scale(1.05) rotate(-1deg); }
 
         .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--yellow);
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.3rem;
+            line-height: 1.1;
         }
+
+        .hero h1 span { color: var(--yellow); }
 
         .hero .tagline {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
-            max-width: 500px;
-            margin: 0 auto 2rem;
+            max-width: 520px;
+            margin: 0.75rem auto 2.5rem;
+            line-height: 1.7;
         }
 
+        /* ── Buttons ── */
         .listen-buttons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.75rem;
-            margin-bottom: 1rem;
         }
 
         .listen-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.7rem 1.3rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: transform 0.15s, box-shadow 0.15s;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.01em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
         }
 
         .listen-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
         }
 
-        .listen-btn.youtube { background: #FF0000; color: #fff; }
-        .listen-btn.spotify { background: #1DB954; color: #fff; }
-        .listen-btn.bluesky { background: #0085FF; color: #fff; }
+        .listen-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .listen-btn.yt { background: #FF0000; color: #fff; }
+        .listen-btn.sp { background: #1DB954; color: #fff; }
+        .listen-btn.bs { background: #0085FF; color: #fff; }
 
-        .listen-btn svg { width: 20px; height: 20px; fill: currentColor; }
-
-        section {
-            max-width: 800px;
+        /* ── Sections ── */
+        .container {
+            max-width: 860px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 0 1.5rem;
         }
 
-        section h2 {
-            font-size: 1.6rem;
-            color: var(--yellow);
-            margin-bottom: 1.5rem;
+        .section { padding: 4rem 0; }
+
+        .section-title {
+            font-size: 0.8rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--yellow);
+            margin-bottom: 0.5rem;
         }
 
-        .about p {
-            font-size: 1.05rem;
-            color: var(--text);
-            margin-bottom: 1rem;
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
-        .episode-card {
+        /* ── Latest Episode (embedded player) ── */
+        .latest-episode {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .latest-episode .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .latest-episode .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .latest-episode .ep-info {
+            padding: 1.5rem;
+        }
+
+        .latest-episode .ep-info h3 {
+            font-size: 1.25rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .latest-episode .ep-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ── Clips Grid ── */
+        .clips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .clip-card {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-left: 3px solid var(--yellow);
-            transition: background 0.15s;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s, transform 0.2s;
         }
 
-        .episode-card:hover { background: #2a2a2a; }
-
-        .episode-card h3 {
-            font-size: 1.15rem;
-            color: #fff;
-            margin-bottom: 0.4rem;
+        .clip-card:hover {
+            border-color: var(--yellow);
+            transform: translateY(-3px);
         }
 
-        .episode-card h3 a {
-            color: #fff;
-            text-decoration: none;
+        .clip-card .clip-video {
+            position: relative;
+            padding-bottom: 177.78%; /* 9:16 */
+            height: 0;
         }
 
-        .episode-card h3 a:hover { color: var(--yellow); }
-
-        .episode-card .ep-number {
-            color: var(--yellow);
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+        .clip-card .clip-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
-        .episode-card .ep-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-top: 0.5rem;
+        .clip-card .clip-title {
+            padding: 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text);
+            text-align: center;
         }
 
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
+        /* ── Quotes ── */
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 1rem;
-            justify-content: center;
-            padding: 2rem 1rem 3rem;
         }
 
-        .social-link {
+        .quote-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.75rem;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .quote-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+            font-size: 3rem;
+            color: var(--yellow);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .quote-card blockquote {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+        }
+
+        .quote-card cite {
+            font-size: 0.8rem;
             color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.15s;
+            font-style: normal;
+            padding-left: 0.5rem;
         }
 
-        .social-link:hover { color: var(--yellow); }
+        /* ── About ── */
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
 
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .feature .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature h4 {
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Footer ── */
         footer {
             text-align: center;
-            padding: 2rem 1rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid #333;
+            padding: 3rem 1rem;
+            border-top: 1px solid var(--border);
         }
 
-        @media (max-width: 600px) {
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-socials a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer-socials a:hover { color: var(--yellow); }
+
+        footer .copyright {
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero-logo { width: 140px; height: 140px; }
+            .clips-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-features { grid-template-columns: 1fr; }
+            .section-heading { font-size: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 6rem 1rem 3rem; }
             .hero h1 { font-size: 1.8rem; }
-            .hero img { width: 150px; height: 150px; }
-            .listen-btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+            .clips-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
+            .listen-btn { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
+            nav .nav-links { gap: 1rem; }
         }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#" class="logo">FAKE PROBLEMS</a>
+    <div class="nav-links">
+        <a href="#episodes">Episodes</a>
+        <a href="#clips">Clips</a>
+        <a href="#about">About</a>
+    </div>
+</nav>
+
+<!-- ── Hero ── -->
 <div class="hero">
-    <img src="assets/podcast_logo.jpg" alt="Fake Problems Podcast logo">
-    <h1>Fake Problems Podcast</h1>
-    <p class="tagline">An irreverent comedy podcast about dark, weird, and absurd topics. Two guys, deadpan delivery, zero corporate energy. New episodes every other Saturday.</p>
+    <img src="assets/podcast_logo.jpg" alt="Fake Problems Podcast" class="hero-logo">
+    <h1><span>Fake</span> Problems Podcast</h1>
+    <p class="tagline">Dark, weird, and absurd comedy. Two guys who treat moral dilemmas and bizarre hypotheticals with the same deadpan seriousness. New episodes every other Saturday.</p>
 
     <div class="listen-buttons">
-        <a href="https://www.youtube.com/@evanperez55" class="listen-btn youtube">
+        <a href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA" class="listen-btn yt">
             <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.9 31.9 0 0 0 0 12a31.9 31.9 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.9 31.9 0 0 0 24 12a31.9 31.9 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
             YouTube
         </a>
-        <a href="https://open.spotify.com" class="listen-btn spotify">
-            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1 .25c-2.8-1.7-6.4-2.1-10.5-1.1a.75.75 0 1 1-.3-1.5c4.5-1 8.5-.6 11.5 1.3a.75.75 0 0 1 .3 1zm1.4-3.3a.94.94 0 0 1-1.3.3c-3.2-2-8.2-2.5-12-1.4a.94.94 0 1 1-.5-1.8c4.4-1.3 9.8-.7 13.5 1.6a.94.94 0 0 1 .3 1.3zm.1-3.4C15.4 8.4 9 8.2 5.2 9.3a1.13 1.13 0 1 1-.6-2.2c4.3-1.3 11.4-1 15.9 1.6a1.13 1.13 0 0 1-1.5 1.9z"/></svg>
-            Spotify
-        </a>
-        <a href="https://bsky.app/profile/fakeproblemspod.bsky.social" class="listen-btn bluesky">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <a href="https://bsky.app/profile/fakeproblemspod.bsky.social" class="listen-btn bs">
+            <svg viewBox="0 0 600 530"><path d="M135.72 44.03C202.22 93.87 273.73 195.16 300 249.12c26.27-53.96 97.78-155.25 164.28-205.09C528.06-5.45 600-23.93 600 66.54c0 18.09-10.38 151.96-16.48 173.6-21.19 75.14-98.42 94.35-167.7 82.75 121.05 20.63 151.85 88.94 85.31 157.25-126.4 129.81-181.76-32.57-195.93-74.19-2.59-7.59-3.8-11.15-5.2-11.15-1.4 0-2.62 3.56-5.2 11.15-14.17 41.62-69.53 204-195.93 74.19-66.54-68.31-35.74-136.62 85.31-157.25-69.28 11.6-146.51-7.61-167.7-82.75C10.38 218.5 0 84.63 0 66.54 0-23.93 71.94-5.45 135.72 44.03z"/></svg>
             Bluesky
         </a>
     </div>
 </div>
 
-<section class="about">
-    <h2>About the Show</h2>
-    <p>Fake Problems Podcast is what happens when two guys with too much free time and not enough impulse control start talking into microphones. Every episode dives into the dark, weird, and absurd corners of life — from near-nuclear disasters to whether penguins could be domesticated.</p>
-    <p>No guests. No sponsors. No filter. Just two friends who treat conspiracy theories, moral dilemmas, and bizarre hypotheticals with the same deadpan seriousness. If you've ever spent 20 minutes arguing about something that doesn't matter, this is your show.</p>
-</section>
+<!-- ── Latest Episode ── -->
+<div class="container">
+    <div class="section" id="episodes">
+        <p class="section-title">Latest Episode</p>
+        <h2 class="section-heading">Now Playing</h2>
 
-<section class="episodes">
-    <h2>Latest Episodes</h2>
-
-    <div class="episode-card">
-        <span class="ep-number">Episode 30</span>
-        <h3><a href="https://www.youtube.com/watch?v=NV54Ilj0zGE">Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Thought</a></h3>
-        <p class="ep-desc">A dropped wrench almost detonated a nuke, kids on bikes are surprisingly terrifying bullies, Appalachia is basically its own country, and the guys settle the penguin pet debate once and for all.</p>
+        <div class="latest-episode">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/NV54Ilj0zGE" title="Episode 30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="ep-info">
+                <h3>Ep 30: Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Thought</h3>
+                <p>A dropped wrench almost detonated a nuke, kids on bikes are surprisingly terrifying bullies, Appalachia is basically its own country, and the guys settle the penguin pet debate once and for all.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="episode-card">
-        <span class="ep-number">Episode 29</span>
-        <h3><a href="https://www.youtube.com/watch?v=LwkLdFUiib0">The One We Had to Re-Upload</a></h3>
-        <p class="ep-desc">This episode went places. Some of those places got us a YouTube strike. We edited, we learned, we re-uploaded.</p>
-    </div>
-</section>
+    <!-- ── Best Clips ── -->
+    <div class="section" id="clips">
+        <p class="section-title">Highlights</p>
+        <h2 class="section-heading">Best Clips</h2>
 
-<div class="social-links">
-    <a href="https://www.youtube.com/@evanperez55" class="social-link">YouTube</a>
-    <a href="https://bsky.app/profile/fakeproblemspod.bsky.social" class="social-link">Bluesky</a>
+        <div class="clips-grid">
+            <div class="clip-card">
+                <div class="clip-video">
+                    <iframe src="https://www.youtube.com/embed/7LYxLPpHcHg" title="Clip: Nukes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="clip-title">A Wrench Almost Nuked the South</div>
+            </div>
+            <div class="clip-card">
+                <div class="clip-video">
+                    <iframe src="https://www.youtube.com/embed/MJWuJACj-bY" title="Clip: Pickleball" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="clip-title">Bullied by Kids at Pickleball</div>
+            </div>
+            <div class="clip-card">
+                <div class="clip-video">
+                    <iframe src="https://www.youtube.com/embed/Em1SJ_U6qck" title="Clip: Torture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="clip-title">Why Torture Is Pain x1000</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Quotes ── -->
+    <div class="section">
+        <p class="section-title">From the Show</p>
+        <h2 class="section-heading">Actual Things We Said</h2>
+
+        <div class="quotes-grid">
+            <div class="quote-card">
+                <blockquote>"If anyone comes up to you and just says you suck for 30 minutes, you start to believe it."</blockquote>
+                <cite>on being bullied by children</cite>
+            </div>
+            <div class="quote-card">
+                <blockquote>"A dropped wrench almost nuked half the country and no one even knew about it."</blockquote>
+                <cite>on Cold War nuclear accidents</cite>
+            </div>
+            <div class="quote-card">
+                <blockquote>"What if you could pet any animal into being your pet? Like, just keep petting it until it gives up and loves you."</blockquote>
+                <cite>on the science of domestication</cite>
+            </div>
+            <div class="quote-card">
+                <blockquote>"They ate their dead friends and still made it out alive. That's some next-level survival."</blockquote>
+                <cite>on the Andes rugby crash</cite>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── About ── -->
+    <div class="section" id="about">
+        <p class="section-title">About</p>
+        <h2 class="section-heading">What Is This Show?</h2>
+
+        <p class="about-text">Fake Problems Podcast is what happens when two guys with too much free time and not enough impulse control start talking into microphones. Every episode dives into the dark, weird, and absurd corners of life with the kind of deadpan confidence that makes you wonder if they're joking.</p>
+        <p class="about-text">No guests. No sponsors. No filter. If you've ever spent 20 minutes arguing about something that doesn't matter, this is your show.</p>
+
+        <div class="about-features">
+            <div class="feature">
+                <div class="feature-icon">&#127911;</div>
+                <h4>Bi-Weekly</h4>
+                <p>New episode every other Saturday</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9760;</div>
+                <h4>Dark Comedy</h4>
+                <p>Nukes, cannibalism, penguins</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128683;</div>
+                <h4>No Corporate BS</h4>
+                <p>Zero sponsors, zero filter</p>
+            </div>
+        </div>
+    </div>
 </div>
 
+<!-- ── Footer ── -->
 <footer>
-    &copy; 2026 Fake Problems Podcast. Built with zero corporate energy.
+    <div class="footer-socials">
+        <a href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA">YouTube</a>
+        <a href="https://bsky.app/profile/fakeproblemspod.bsky.social">Bluesky</a>
+    </div>
+    <p class="copyright">&copy; 2026 Fake Problems Podcast</p>
 </footer>
 
 </body>
