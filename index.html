@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Problems Podcast</title>
+    <meta name="description" content="An irreverent comedy podcast about dark, weird, and absurd topics. New episodes every other Saturday.">
+    <meta property="og:title" content="Fake Problems Podcast">
+    <meta property="og:description" content="An irreverent comedy podcast about dark, weird, and absurd topics.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/podcast_logo.jpg">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        :root {
+            --yellow: #FFD700;
+            --dark: #1a1a1a;
+            --darker: #111;
+            --text: #e0e0e0;
+            --text-muted: #999;
+            --card-bg: #222;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--darker);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem 3rem;
+            background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--yellow);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        .listen-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .listen-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .listen-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+
+        .listen-btn.youtube { background: #FF0000; color: #fff; }
+        .listen-btn.spotify { background: #1DB954; color: #fff; }
+        .listen-btn.bluesky { background: #0085FF; color: #fff; }
+
+        .listen-btn svg { width: 20px; height: 20px; fill: currentColor; }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section h2 {
+            font-size: 1.6rem;
+            color: var(--yellow);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about p {
+            font-size: 1.05rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .episode-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--yellow);
+            transition: background 0.15s;
+        }
+
+        .episode-card:hover { background: #2a2a2a; }
+
+        .episode-card h3 {
+            font-size: 1.15rem;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+
+        .episode-card h3 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .episode-card h3 a:hover { color: var(--yellow); }
+
+        .episode-card .ep-number {
+            color: var(--yellow);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .episode-card .ep-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 2rem 1rem 3rem;
+        }
+
+        .social-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+
+        .social-link:hover { color: var(--yellow); }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero img { width: 150px; height: 150px; }
+            .listen-btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <img src="assets/podcast_logo.jpg" alt="Fake Problems Podcast logo">
+    <h1>Fake Problems Podcast</h1>
+    <p class="tagline">An irreverent comedy podcast about dark, weird, and absurd topics. Two guys, deadpan delivery, zero corporate energy. New episodes every other Saturday.</p>
+
+    <div class="listen-buttons">
+        <a href="https://www.youtube.com/@evanperez55" class="listen-btn youtube">
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.9 31.9 0 0 0 0 12a31.9 31.9 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.9 31.9 0 0 0 24 12a31.9 31.9 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            YouTube
+        </a>
+        <a href="https://open.spotify.com" class="listen-btn spotify">
+            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1 .25c-2.8-1.7-6.4-2.1-10.5-1.1a.75.75 0 1 1-.3-1.5c4.5-1 8.5-.6 11.5 1.3a.75.75 0 0 1 .3 1zm1.4-3.3a.94.94 0 0 1-1.3.3c-3.2-2-8.2-2.5-12-1.4a.94.94 0 1 1-.5-1.8c4.4-1.3 9.8-.7 13.5 1.6a.94.94 0 0 1 .3 1.3zm.1-3.4C15.4 8.4 9 8.2 5.2 9.3a1.13 1.13 0 1 1-.6-2.2c4.3-1.3 11.4-1 15.9 1.6a1.13 1.13 0 0 1-1.5 1.9z"/></svg>
+            Spotify
+        </a>
+        <a href="https://bsky.app/profile/fakeproblemspod.bsky.social" class="listen-btn bluesky">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Bluesky
+        </a>
+    </div>
+</div>
+
+<section class="about">
+    <h2>About the Show</h2>
+    <p>Fake Problems Podcast is what happens when two guys with too much free time and not enough impulse control start talking into microphones. Every episode dives into the dark, weird, and absurd corners of life — from near-nuclear disasters to whether penguins could be domesticated.</p>
+    <p>No guests. No sponsors. No filter. Just two friends who treat conspiracy theories, moral dilemmas, and bizarre hypotheticals with the same deadpan seriousness. If you've ever spent 20 minutes arguing about something that doesn't matter, this is your show.</p>
+</section>
+
+<section class="episodes">
+    <h2>Latest Episodes</h2>
+
+    <div class="episode-card">
+        <span class="ep-number">Episode 30</span>
+        <h3><a href="https://www.youtube.com/watch?v=NV54Ilj0zGE">Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Thought</a></h3>
+        <p class="ep-desc">A dropped wrench almost detonated a nuke, kids on bikes are surprisingly terrifying bullies, Appalachia is basically its own country, and the guys settle the penguin pet debate once and for all.</p>
+    </div>
+
+    <div class="episode-card">
+        <span class="ep-number">Episode 29</span>
+        <h3><a href="https://www.youtube.com/watch?v=LwkLdFUiib0">The One We Had to Re-Upload</a></h3>
+        <p class="ep-desc">This episode went places. Some of those places got us a YouTube strike. We edited, we learned, we re-uploaded.</p>
+    </div>
+</section>
+
+<div class="social-links">
+    <a href="https://www.youtube.com/@evanperez55" class="social-link">YouTube</a>
+    <a href="https://bsky.app/profile/fakeproblemspod.bsky.social" class="social-link">Bluesky</a>
+</div>
+
+<footer>
+    &copy; 2026 Fake Problems Podcast. Built with zero corporate energy.
+</footer>
+
+</body>
+</html>
