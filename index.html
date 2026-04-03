@@ -4,39 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Problems Podcast</title>
-    <meta name="description" content="An irreverent comedy podcast about dark, weird, and absurd topics. Two guys, deadpan delivery, zero corporate energy. New episodes every other Saturday.">
+    <meta name="description" content="An irreverent comedy podcast about dark, weird, and absurd topics. New episodes every other Saturday.">
     <meta property="og:title" content="Fake Problems Podcast">
-    <meta property="og:description" content="Dark, weird, and absurd comedy. Two guys who treat moral dilemmas and bizarre hypotheticals with deadpan seriousness.">
+    <meta property="og:description" content="Dark, weird, and absurd comedy. Deadpan delivery, zero corporate energy.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/podcast_logo.jpg">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --yellow: #FFD700;
-            --yellow-glow: rgba(255, 215, 0, 0.25);
-            --yellow-dim: rgba(255, 215, 0, 0.08);
-            --dark: #1a1a1a;
-            --darker: #0a0a0a;
-            --card-bg: #141414;
-            --card-hover: #1c1c1c;
-            --text: #e0e0e0;
-            --text-muted: #777;
-            --border: #222;
+            --gold: #e8c547;
+            --gold-bright: #ffd700;
+            --gold-glow: rgba(232, 197, 71, 0.15);
+            --bg: #080808;
+            --bg-elevated: #111;
+            --bg-card: #0f0f0f;
+            --text: #ccc;
+            --text-dim: #666;
+            --text-bright: #f5f5f0;
+            --border: #1a1a1a;
             --mono: 'JetBrains Mono', monospace;
+            --sans: 'Space Grotesk', sans-serif;
+            --serif: 'Playfair Display', serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--darker);
+            font-family: var(--sans);
+            background: var(--bg);
             color: var(--text);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* ── Scroll Progress Bar ── */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+            z-index: 1000;
+            transform-origin: left;
+            transform: scaleX(0);
+            width: 100%;
+            box-shadow: 0 0 10px var(--gold-glow);
         }
 
         /* ── Grain Overlay ── */
@@ -44,33 +63,24 @@
             content: '';
             position: fixed;
             inset: 0;
-            z-index: 9999;
+            z-index: 9998;
             pointer-events: none;
-            opacity: 0.035;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            background-size: 256px 256px;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
             mix-blend-mode: overlay;
         }
 
-        /* ── Scroll Reveal ── */
+        /* ── Reveal System ── */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ── Accent Line Divider ── */
-        .accent-line {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--yellow), transparent);
-            max-width: 200px;
-            margin: 0 auto;
-            opacity: 0.4;
-        }
+        .reveal.visible { opacity: 1; transform: none; }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
 
         /* ── Nav ── */
         nav {
@@ -78,24 +88,28 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(10, 10, 10, 0.88);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border);
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: transparent;
+            transition: background 0.4s, backdrop-filter 0.4s;
+        }
+
+        nav.scrolled {
+            background: rgba(8, 8, 8, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
         }
 
         nav .logo {
             font-family: var(--mono);
             font-weight: 700;
-            font-size: 0.85rem;
-            color: var(--yellow);
+            font-size: 0.8rem;
+            color: var(--gold);
             text-decoration: none;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         nav .nav-links {
@@ -105,191 +119,302 @@
 
         nav .nav-links a {
             font-family: var(--mono);
-            color: var(--text-muted);
+            color: var(--text-dim);
             text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 400;
-            letter-spacing: 0.06em;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: color 0.3s;
+            position: relative;
         }
 
-        nav .nav-links a:hover { color: var(--yellow); }
+        nav .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        nav .nav-links a:hover { color: var(--gold); }
+        nav .nav-links a:hover::after { width: 100%; }
 
         /* ── Hero ── */
         .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 10rem 1.5rem 5rem;
+            padding: 6rem 2rem 4rem;
             position: relative;
-            background:
-                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,215,0,0.08) 0%, transparent 60%),
-                radial-gradient(circle at 20% 80%, rgba(255,215,0,0.03) 0%, transparent 40%),
-                radial-gradient(circle at 80% 60%, rgba(255,215,0,0.02) 0%, transparent 30%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232,197,71,0.06) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .hero-logo {
-            width: 160px;
-            height: 160px;
-            border-radius: 28px;
-            box-shadow: 0 0 80px rgba(255, 215, 0, 0.15), 0 0 30px rgba(255, 215, 0, 0.08), 0 12px 40px rgba(0,0,0,0.6);
-            margin-bottom: 2.5rem;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 140px;
+            height: 140px;
+            border-radius: 32px;
+            margin-bottom: 3rem;
+            box-shadow: 0 0 100px rgba(232,197,71,0.1), 0 20px 60px rgba(0,0,0,0.5);
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .hero-logo:hover { transform: scale(1.08) rotate(-2deg); }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 7vw, 5rem);
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: -0.04em;
-            margin-bottom: 0.2rem;
-            line-height: 1;
-            text-shadow: 0 0 60px var(--yellow-glow);
+        .hero-logo:hover {
+            transform: scale(1.1) rotate(-3deg);
         }
 
-        .hero h1 span { color: var(--yellow); }
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 700;
+            color: var(--text-bright);
+            letter-spacing: -0.05em;
+            line-height: 0.9;
+            margin-bottom: 0.2em;
+        }
 
-        .hero .tagline {
+        .hero-title .word-fake {
+            color: var(--gold);
+            font-style: italic;
+            font-family: var(--serif);
+            display: inline-block;
+            text-shadow: 0 0 80px var(--gold-glow);
+        }
+
+        .hero-subtitle {
             font-family: var(--mono);
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            max-width: 460px;
-            margin: 1rem auto 3rem;
-            line-height: 1.8;
-            letter-spacing: 0.02em;
+            font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
         }
 
-        /* ── Buttons ── */
-        .listen-buttons {
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--text);
+            max-width: 480px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        /* ── Platform Buttons ── */
+        .platforms {
             display: flex;
+            gap: 0.6rem;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.75rem;
         }
 
-        .listen-btn {
+        .platform-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.7rem 1.4rem;
-            border-radius: 50px;
+            gap: 0.45rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.02em;
-            transition: transform 0.2s, box-shadow 0.3s;
-            border: none;
-        }
-
-        .listen-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-        }
-
-        .listen-btn svg { width: 16px; height: 16px; fill: currentColor; }
-        .listen-btn.yt { background: #FF0000; color: #fff; }
-        .listen-btn.yt:hover { box-shadow: 0 8px 24px rgba(255,0,0,0.3); }
-        .listen-btn.bs { background: #0085FF; color: #fff; }
-        .listen-btn.bs:hover { box-shadow: 0 8px 24px rgba(0,133,255,0.3); }
-
-        /* ── Sections ── */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .section { padding: 5rem 0; }
-
-        .section-title {
             font-family: var(--mono);
+            font-weight: 700;
             font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: transparent;
+            transition: all 0.3s;
+        }
+
+        .platform-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            box-shadow: 0 0 20px var(--gold-glow);
+            transform: translateY(-2px);
+        }
+
+        .platform-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* ── Scroll Indicator ── */
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .scroll-hint span {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .scroll-hint .arrow {
+            width: 1px;
+            height: 30px;
+            background: linear-gradient(to bottom, var(--text-dim), transparent);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* ── Container ── */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ── Section ── */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-label {
+            font-family: var(--mono);
+            font-size: 0.65rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--yellow);
-            margin-bottom: 0.5rem;
+            letter-spacing: 0.25em;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
         }
 
         .section-heading {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            font-weight: 800;
-            color: #fff;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text-bright);
             margin-bottom: 2rem;
             letter-spacing: -0.03em;
+            line-height: 1.1;
         }
 
-        /* ── Latest Episode ── */
-        .latest-episode {
-            background: var(--card-bg);
+        /* ── Episode Player ── */
+        .player-wrapper {
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--border);
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.04);
+            background: var(--bg-card);
+            position: relative;
         }
 
-        .latest-episode .video-wrapper {
+        .player-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 17px;
+            background: linear-gradient(135deg, rgba(232,197,71,0.15), transparent 50%);
+            z-index: -1;
+        }
+
+        .video-embed {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
         }
 
-        .latest-episode .video-wrapper iframe {
+        .video-embed iframe {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
             border: none;
         }
 
-        .latest-episode .ep-info {
-            padding: 1.5rem 1.75rem;
+        .player-info {
+            padding: 1.5rem 2rem;
         }
 
-        .latest-episode .ep-info .ep-label {
+        .player-info .ep-tag {
             font-family: var(--mono);
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 700;
-            color: var(--yellow);
-            letter-spacing: 0.15em;
+            color: var(--bg);
+            background: var(--gold);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            display: block;
-            margin-bottom: 0.4rem;
+            display: inline-block;
+            margin-bottom: 0.75rem;
         }
 
-        .latest-episode .ep-info h3 {
-            font-size: 1.2rem;
-            color: #fff;
+        .player-info h3 {
+            font-size: 1.15rem;
+            color: var(--text-bright);
             font-weight: 700;
             margin-bottom: 0.5rem;
             letter-spacing: -0.01em;
         }
 
-        .latest-episode .ep-info p {
-            color: var(--text-muted);
+        .player-info p {
+            color: var(--text-dim);
             font-size: 0.9rem;
             line-height: 1.6;
         }
 
-        /* ── Clips Grid ── */
-        .clips-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        /* ── Clips (Horizontal Scroll) ── */
+        .clips-scroll-wrapper {
+            margin: 0 -2rem;
+            padding: 0 2rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .clips-scroll-wrapper::-webkit-scrollbar { display: none; }
+
+        .clips-track {
+            display: flex;
             gap: 1rem;
+            padding-bottom: 1rem;
         }
 
         .clip-card {
-            background: var(--card-bg);
-            border-radius: 12px;
+            flex: 0 0 220px;
+            background: var(--bg-card);
+            border-radius: 14px;
             overflow: hidden;
             border: 1px solid var(--border);
-            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            transition: border-color 0.3s, transform 0.3s;
         }
 
         .clip-card:hover {
-            border-color: var(--yellow);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 20px var(--yellow-dim);
+            border-color: var(--gold);
+            transform: translateY(-4px) scale(1.02);
         }
 
         .clip-card .clip-video {
@@ -305,96 +430,105 @@
             border: none;
         }
 
-        .clip-card .clip-title {
-            padding: 0.75rem;
+        .clip-card .clip-label {
+            padding: 0.65rem 0.75rem;
             font-family: var(--mono);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             color: var(--text);
             text-align: center;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
+            letter-spacing: 0.03em;
         }
 
-        /* ── Quotes ── */
+        /* ── Pull Quotes ── */
+        .quotes-section {
+            background: var(--bg-elevated);
+            margin: 0 -2rem;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .quotes-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.3;
+        }
+
+        .quotes-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.3;
+        }
+
         .quotes-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            gap: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
         }
 
         .quote-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            border: 1px solid var(--border);
+            padding: 0;
             position: relative;
-            transition: border-color 0.3s;
         }
 
-        .quote-card:hover { border-color: rgba(255, 215, 0, 0.3); }
-
-        .quote-card::before {
-            content: '\201C';
-            position: absolute;
-            top: 0.75rem;
-            left: 1.25rem;
-            font-size: 3.5rem;
-            color: var(--yellow);
-            opacity: 0.2;
-            font-family: Georgia, serif;
+        .quote-card .big-quote {
+            font-family: var(--serif);
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.15;
             line-height: 1;
+            position: absolute;
+            top: -0.3em;
+            left: -0.1em;
+            user-select: none;
         }
 
         .quote-card blockquote {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #fff;
-            font-style: italic;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text-bright);
+            line-height: 1.7;
             margin-bottom: 0.75rem;
-            padding-left: 0.5rem;
-            line-height: 1.5;
+            position: relative;
         }
 
         .quote-card cite {
             font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-muted);
+            font-size: 0.65rem;
+            color: var(--text-dim);
             font-style: normal;
-            padding-left: 0.5rem;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
         }
 
-        /* ── Listener Reviews (Social Proof) ── */
-        .reviews-scroll {
-            display: flex;
-            gap: 1rem;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 1rem;
-            scrollbar-width: thin;
-            scrollbar-color: var(--border) transparent;
-        }
-
+        /* ── Listener Reviews ── */
         .review-card {
-            flex: 0 0 300px;
-            scroll-snap-align: start;
-            background: var(--card-bg);
+            background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
             transition: border-color 0.3s;
         }
 
-        .review-card:hover { border-color: rgba(255, 215, 0, 0.2); }
+        .review-card:hover { border-color: rgba(232, 197, 71, 0.2); }
 
-        .review-card .stars {
-            color: var(--yellow);
-            font-size: 0.85rem;
+        .review-stars {
+            color: var(--gold);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
             margin-bottom: 0.75rem;
-            letter-spacing: 0.1em;
         }
 
         .review-card p {
@@ -407,308 +541,366 @@
 
         .review-card .reviewer {
             font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-muted);
+            font-size: 0.6rem;
+            color: var(--text-dim);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
         }
 
-        /* ── About ── */
-        .about-text {
-            font-size: 1.05rem;
-            color: var(--text);
-            line-height: 1.9;
-            margin-bottom: 1rem;
-        }
-
-        .about-features {
+        .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
-            margin-top: 2.5rem;
         }
 
-        .feature {
-            text-align: center;
-            padding: 2rem 1.25rem;
-            background: var(--card-bg);
-            border-radius: 12px;
+        /* ── About ── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            padding: 1.5rem;
             border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
             transition: border-color 0.3s, transform 0.3s;
         }
 
-        .feature:hover {
-            border-color: rgba(255, 215, 0, 0.2);
-            transform: translateY(-2px);
+        .stat-card:hover {
+            border-color: rgba(232, 197, 71, 0.3);
+            transform: translateX(4px);
         }
 
-        .feature .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
+        .stat-card .stat-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .feature h4 {
-            font-size: 0.85rem;
-            color: #fff;
+        .stat-card h4 {
+            font-size: 0.9rem;
+            color: var(--text-bright);
             font-weight: 700;
-            margin-bottom: 0.3rem;
-            letter-spacing: -0.01em;
+            margin-bottom: 0.2rem;
         }
 
-        .feature p {
+        .stat-card p {
             font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            letter-spacing: 0.02em;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
         }
 
         /* ── Footer ── */
         footer {
+            padding: 4rem 2rem;
             text-align: center;
-            padding: 4rem 1rem;
             border-top: 1px solid var(--border);
         }
 
-        .footer-socials {
+        .footer-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-socials a {
+        .footer-links a {
             font-family: var(--mono);
-            color: var(--text-muted);
+            color: var(--text-dim);
             text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: color 0.3s;
         }
 
-        .footer-socials a:hover { color: var(--yellow); }
+        .footer-links a:hover { color: var(--gold); }
 
-        footer .copyright {
+        .footer-copy {
             font-family: var(--mono);
-            font-size: 0.65rem;
-            color: #444;
-            letter-spacing: 0.05em;
+            font-size: 0.6rem;
+            color: #333;
+            letter-spacing: 0.08em;
         }
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
-            .hero { padding: 7rem 1rem 4rem; }
-            .hero-logo { width: 130px; height: 130px; }
-            .clips-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero { padding: 5rem 1.5rem 3rem; min-height: 90vh; }
+            .hero-logo { width: 110px; height: 110px; }
             .quotes-grid { grid-template-columns: 1fr; }
-            .about-features { grid-template-columns: 1fr; }
-            .review-card { flex: 0 0 260px; }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .section { padding: 4rem 0; }
+            nav { padding: 0.8rem 1.5rem; }
         }
 
         @media (max-width: 480px) {
-            .hero { padding: 6rem 1rem 3rem; }
-            .clips-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
-            .listen-btn { padding: 0.6rem 1.1rem; font-size: 0.8rem; }
+            .hero-title { letter-spacing: -0.03em; }
+            .platforms { gap: 0.4rem; }
+            .platform-btn { padding: 0.5rem 0.8rem; font-size: 0.6rem; }
             nav .nav-links { gap: 1rem; }
-            nav .nav-links a { font-size: 0.65rem; }
+            nav .nav-links a { font-size: 0.6rem; }
+            .clip-card { flex: 0 0 180px; }
+        }
+
+        /* ── Reduced Motion ── */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .scroll-hint { animation: none; }
+            .progress-bar { display: none; }
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="#" class="logo">fake_problems</a>
+<div class="progress-bar" id="progressBar"></div>
+
+<nav id="mainNav">
+    <a href="#" class="logo">fake_problems://</a>
     <div class="nav-links">
-        <a href="#episodes">Episodes</a>
+        <a href="#listen">Listen</a>
         <a href="#clips">Clips</a>
         <a href="#about">About</a>
     </div>
 </nav>
 
 <!-- ── Hero ── -->
-<div class="hero">
-    <img src="assets/podcast_logo.jpg" alt="Fake Problems Podcast" class="hero-logo">
-    <h1><span>Fake</span> Problems</h1>
-    <p class="tagline">Solving problems that don't exist since 2024. Dark comedy, deadpan delivery, zero corporate energy.</p>
-
-    <div class="listen-buttons">
-        <a href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA" class="listen-btn yt">
+<section class="hero">
+    <img src="assets/podcast_logo.jpg" alt="Fake Problems Podcast" class="hero-logo reveal">
+    <h1 class="hero-title reveal reveal-delay-1">
+        <span class="word-fake">Fake</span> Problems
+    </h1>
+    <p class="hero-subtitle reveal reveal-delay-2">podcast</p>
+    <p class="hero-tagline reveal reveal-delay-3">
+        Two guys solving problems that don't exist with the kind of deadpan confidence that makes you wonder if they're joking. They're not.
+    </p>
+    <div class="platforms reveal reveal-delay-4">
+        <a href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA" class="platform-btn">
             <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.9 31.9 0 0 0 0 12a31.9 31.9 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.9 31.9 0 0 0 24 12a31.9 31.9 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
             YouTube
         </a>
-        <a href="https://bsky.app/profile/fakeproblemspod.bsky.social" class="listen-btn bs">
+        <a href="https://open.spotify.com/show/fakeproblemspodcast" class="platform-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1 .25c-2.8-1.7-6.4-2.1-10.5-1.1a.75.75 0 1 1-.3-1.5c4.5-1 8.5-.6 11.5 1.3a.75.75 0 0 1 .3 1zm1.4-3.3a.94.94 0 0 1-1.3.3c-3.2-2-8.2-2.5-12-1.4a.94.94 0 1 1-.5-1.8c4.4-1.3 9.8-.7 13.5 1.6a.94.94 0 0 1 .3 1.3zm.1-3.4C15.4 8.4 9 8.2 5.2 9.3a1.13 1.13 0 1 1-.6-2.2c4.3-1.3 11.4-1 15.9 1.6a1.13 1.13 0 0 1-1.5 1.9z"/></svg>
+            Spotify
+        </a>
+        <a href="https://twitter.com/fakeproblemspod" class="platform-btn">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter
+        </a>
+        <a href="https://bsky.app/profile/fakeproblemspod.bsky.social" class="platform-btn">
             <svg viewBox="0 0 600 530"><path d="M135.72 44.03C202.22 93.87 273.73 195.16 300 249.12c26.27-53.96 97.78-155.25 164.28-205.09C528.06-5.45 600-23.93 600 66.54c0 18.09-10.38 151.96-16.48 173.6-21.19 75.14-98.42 94.35-167.7 82.75 121.05 20.63 151.85 88.94 85.31 157.25-126.4 129.81-181.76-32.57-195.93-74.19-2.59-7.59-3.8-11.15-5.2-11.15-1.4 0-2.62 3.56-5.2 11.15-14.17 41.62-69.53 204-195.93 74.19-66.54-68.31-35.74-136.62 85.31-157.25-69.28 11.6-146.51-7.61-167.7-82.75C10.38 218.5 0 84.63 0 66.54 0-23.93 71.94-5.45 135.72 44.03z"/></svg>
             Bluesky
         </a>
     </div>
-</div>
+
+    <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="arrow"></div>
+    </div>
+</section>
 
 <!-- ── Latest Episode ── -->
 <div class="container">
-    <div class="section" id="episodes">
+    <section class="section" id="listen">
         <div class="reveal">
-            <p class="section-title">Latest Episode</p>
-            <h2 class="section-heading">Now Playing</h2>
+            <p class="section-label">Now Playing</p>
+            <h2 class="section-heading">Latest Episode</h2>
         </div>
-
-        <div class="latest-episode reveal">
-            <div class="video-wrapper">
+        <div class="player-wrapper reveal reveal-delay-1">
+            <div class="video-embed">
                 <iframe src="https://www.youtube.com/embed/NV54Ilj0zGE" title="Episode 30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
-            <div class="ep-info">
-                <span class="ep-label">Episode 30</span>
+            <div class="player-info">
+                <span class="ep-tag">Episode 30</span>
                 <h3>Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Thought</h3>
                 <p>A dropped wrench almost detonated a nuke, kids on bikes are surprisingly terrifying bullies, Appalachia is basically its own country, and the guys settle the penguin pet debate once and for all.</p>
             </div>
         </div>
-    </div>
-
-    <div class="accent-line"></div>
+    </section>
 
     <!-- ── Best Clips ── -->
-    <div class="section" id="clips">
+    <section class="section" id="clips">
         <div class="reveal">
-            <p class="section-title">Highlights</p>
+            <p class="section-label">Highlights</p>
             <h2 class="section-heading">Best Moments</h2>
         </div>
-
-        <div class="clips-grid">
-            <div class="clip-card reveal">
-                <div class="clip-video">
-                    <iframe src="https://www.youtube.com/embed/7LYxLPpHcHg" title="Clip: Nukes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="clips-scroll-wrapper reveal reveal-delay-1">
+            <div class="clips-track">
+                <div class="clip-card">
+                    <div class="clip-video">
+                        <iframe src="https://www.youtube.com/embed/7LYxLPpHcHg" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="clip-label">A Wrench Almost Nuked the South</div>
                 </div>
-                <div class="clip-title">A Wrench Almost Nuked the South</div>
-            </div>
-            <div class="clip-card reveal">
-                <div class="clip-video">
-                    <iframe src="https://www.youtube.com/embed/MJWuJACj-bY" title="Clip: Pickleball" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <div class="clip-card">
+                    <div class="clip-video">
+                        <iframe src="https://www.youtube.com/embed/MJWuJACj-bY" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="clip-label">Bullied by Kids at Pickleball</div>
                 </div>
-                <div class="clip-title">Bullied by Kids at Pickleball</div>
-            </div>
-            <div class="clip-card reveal">
-                <div class="clip-video">
-                    <iframe src="https://www.youtube.com/embed/Em1SJ_U6qck" title="Clip: Torture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <div class="clip-card">
+                    <div class="clip-video">
+                        <iframe src="https://www.youtube.com/embed/Em1SJ_U6qck" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="clip-label">Why Torture Is Pain x1000</div>
                 </div>
-                <div class="clip-title">Why Torture Is Pain x1000</div>
+                <div class="clip-card">
+                    <div class="clip-video">
+                        <iframe src="https://www.youtube.com/embed/F6S7FjljtGU" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="clip-label">Appalachia Is Its Own Country</div>
+                </div>
+                <div class="clip-card">
+                    <div class="clip-video">
+                        <iframe src="https://www.youtube.com/embed/vxc7G-R1mRg" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="clip-label">Survival Cannibalism Debate</div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+</div>
 
-    <div class="accent-line"></div>
-
-    <!-- ── Quotes ── -->
-    <div class="section">
+<!-- ── Quotes (Full-Width Section) ── -->
+<div class="quotes-section">
+    <div class="container">
         <div class="reveal">
-            <p class="section-title">From the Show</p>
+            <p class="section-label">From the Show</p>
             <h2 class="section-heading">Actual Things We Said</h2>
         </div>
-
         <div class="quotes-grid">
-            <div class="quote-card reveal">
-                <blockquote>"If anyone comes up to you and just says you suck for 30 minutes, you start to believe it."</blockquote>
+            <div class="quote-card reveal reveal-delay-1">
+                <span class="big-quote">&ldquo;</span>
+                <blockquote>If anyone comes up to you and just says you suck for 30 minutes, you start to believe it.</blockquote>
                 <cite>On being bullied by children</cite>
             </div>
-            <div class="quote-card reveal">
-                <blockquote>"A dropped wrench almost nuked half the country and no one even knew about it."</blockquote>
+            <div class="quote-card reveal reveal-delay-2">
+                <span class="big-quote">&ldquo;</span>
+                <blockquote>A dropped wrench almost nuked half the country and no one even knew about it.</blockquote>
                 <cite>On Cold War nuclear accidents</cite>
             </div>
-            <div class="quote-card reveal">
-                <blockquote>"What if you could pet any animal into being your pet? Just keep petting it until it gives up and loves you."</blockquote>
+            <div class="quote-card reveal reveal-delay-3">
+                <span class="big-quote">&ldquo;</span>
+                <blockquote>What if you could pet any animal into being your pet? Just keep petting it until it gives up and loves you.</blockquote>
                 <cite>On the science of domestication</cite>
             </div>
-            <div class="quote-card reveal">
-                <blockquote>"They ate their dead friends and still made it out alive. That's some next-level survival."</blockquote>
+            <div class="quote-card reveal reveal-delay-4">
+                <span class="big-quote">&ldquo;</span>
+                <blockquote>They ate their dead friends and still made it out alive. That's some next-level survival.</blockquote>
                 <cite>On the Andes rugby crash</cite>
-            </div>
-        </div>
-    </div>
-
-    <div class="accent-line"></div>
-
-    <!-- ── Listener Reviews ── -->
-    <div class="section">
-        <div class="reveal">
-            <p class="section-title">Listeners</p>
-            <h2 class="section-heading">What People Are Saying</h2>
-        </div>
-
-        <div class="reviews-scroll reveal">
-            <div class="review-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"I listen to this at work and had to pretend I was crying, not laughing."</p>
-                <span class="reviewer">Apple Podcasts Listener</span>
-            </div>
-            <div class="review-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Two guys confidently debating things that absolutely do not matter. It's perfect."</p>
-                <span class="reviewer">YouTube Comment</span>
-            </div>
-            <div class="review-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"The only podcast where I learn something and immediately wish I hadn't."</p>
-                <span class="reviewer">Bluesky Listener</span>
-            </div>
-            <div class="review-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"It's like if Wikipedia had a dark sense of humor and zero editorial oversight."</p>
-                <span class="reviewer">YouTube Comment</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="accent-line"></div>
-
-    <!-- ── About ── -->
-    <div class="section" id="about">
-        <div class="reveal">
-            <p class="section-title">About</p>
-            <h2 class="section-heading">What Is This Show?</h2>
-        </div>
-
-        <div class="reveal">
-            <p class="about-text">Fake Problems Podcast is what happens when two guys with too much free time and not enough impulse control start talking into microphones. Every episode dives into the dark, weird, and absurd corners of life with the kind of deadpan confidence that makes you wonder if they're joking.</p>
-            <p class="about-text">No guests. No sponsors. No filter. If you've ever spent 20 minutes arguing about something that doesn't matter, this is your show.</p>
-        </div>
-
-        <div class="about-features reveal">
-            <div class="feature">
-                <div class="feature-icon">&#127911;</div>
-                <h4>Bi-Weekly</h4>
-                <p>New episode every other Saturday</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">&#9760;</div>
-                <h4>Dark Comedy</h4>
-                <p>Nukes, cannibalism, penguins</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">&#128683;</div>
-                <h4>No Corporate BS</h4>
-                <p>Zero sponsors, zero filter</p>
             </div>
         </div>
     </div>
 </div>
 
+<!-- ── Reviews + About ── -->
+<div class="container">
+    <section class="section">
+        <div class="reveal">
+            <p class="section-label">Listeners</p>
+            <h2 class="section-heading">What People Are Saying</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card reveal reveal-delay-1">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"I listen to this at work and had to pretend I was crying, not laughing."</p>
+                <span class="reviewer">Apple Podcasts listener</span>
+            </div>
+            <div class="review-card reveal reveal-delay-2">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Two guys confidently debating things that absolutely do not matter. It's perfect."</p>
+                <span class="reviewer">YouTube comment</span>
+            </div>
+            <div class="review-card reveal reveal-delay-3">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Like if Wikipedia had a dark sense of humor and zero editorial oversight."</p>
+                <span class="reviewer">Bluesky listener</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="reveal">
+            <p class="section-label">About</p>
+            <h2 class="section-heading">What Is This?</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal reveal-delay-1">
+                <p>Fake Problems Podcast is what happens when two guys with too much free time and not enough impulse control start talking into microphones.</p>
+                <p>Every episode dives into the dark, weird, and absurd corners of life with the kind of deadpan confidence that makes you wonder if they're joking. Topics include nuclear accidents, cannibalism, penguin domestication, and whatever else seemed funny at 2 AM.</p>
+                <p>No guests. No sponsors. No filter.</p>
+            </div>
+            <div class="about-stats reveal reveal-delay-2">
+                <div class="stat-card">
+                    <div class="stat-icon">&#127911;</div>
+                    <h4>Every Other Saturday</h4>
+                    <p>New episode drops bi-weekly</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">&#9760;</div>
+                    <h4>Dark Comedy</h4>
+                    <p>Topics your therapist warned you about</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">&#128683;</div>
+                    <h4>Zero Corporate Energy</h4>
+                    <p>No sponsors, no scripts, no filter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
 <!-- ── Footer ── -->
 <footer>
-    <div class="footer-socials">
+    <div class="footer-links">
         <a href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA">YouTube</a>
+        <a href="https://open.spotify.com/show/fakeproblemspodcast">Spotify</a>
+        <a href="https://twitter.com/fakeproblemspod">Twitter</a>
         <a href="https://bsky.app/profile/fakeproblemspod.bsky.social">Bluesky</a>
     </div>
-    <p class="copyright">&copy; 2026 Fake Problems Podcast</p>
+    <p class="footer-copy">&copy; 2026 Fake Problems Podcast</p>
 </footer>
 
-<!-- ── Scroll Reveal Script ── -->
 <script>
+// Scroll progress bar
+const progressBar = document.getElementById('progressBar');
+const nav = document.getElementById('mainNav');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollTop / docHeight;
+    progressBar.style.transform = `scaleX(${progress})`;
+
+    // Nav background on scroll
+    nav.classList.toggle('scrolled', scrollTop > 60);
+}, { passive: true });
+
+// Scroll reveal with staggered animations
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            e.target.classList.add('visible');
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
