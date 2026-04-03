@@ -15,16 +15,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #e8c547;
-            --gold-bright: #ffd700;
-            --gold-glow: rgba(232, 197, 71, 0.15);
-            --bg: #080808;
-            --bg-elevated: #111;
-            --bg-card: #0f0f0f;
-            --text: #ccc;
-            --text-dim: #666;
-            --text-bright: #f5f5f0;
-            --border: #1a1a1a;
+            --accent: #C0582A;
+            --accent-bright: #D4622B;
+            --accent-glow: rgba(192, 88, 42, 0.15);
+            --bg: #FAF6EE;
+            --bg-elevated: #F0EBE0;
+            --bg-card: #F5F0E6;
+            --text: #4A3F33;
+            --text-dim: #9B8E7B;
+            --text-bright: #1E1810;
+            --border: #DDD4C4;
             --mono: 'JetBrains Mono', monospace;
             --sans: 'Space Grotesk', sans-serif;
             --serif: 'Playfair Display', serif;
@@ -50,12 +50,12 @@
             top: 0;
             left: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+            background: linear-gradient(90deg, var(--accent), var(--accent-bright));
             z-index: 1000;
             transform-origin: left;
             transform: scaleX(0);
             width: 100%;
-            box-shadow: 0 0 10px var(--gold-glow);
+            box-shadow: 0 0 10px var(--accent-glow);
         }
 
         /* ── Grain Overlay ── */
@@ -65,9 +65,9 @@
             inset: 0;
             z-index: 9998;
             pointer-events: none;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-            mix-blend-mode: overlay;
+            opacity: 0.045;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            mix-blend-mode: multiply;
         }
 
         /* ── Reveal System ── */
@@ -97,7 +97,7 @@
         }
 
         nav.scrolled {
-            background: rgba(8, 8, 8, 0.92);
+            background: rgba(250, 246, 238, 0.92);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
@@ -107,7 +107,7 @@
             font-family: var(--mono);
             font-weight: 700;
             font-size: 0.8rem;
-            color: var(--gold);
+            color: var(--accent);
             text-decoration: none;
             letter-spacing: 0.1em;
         }
@@ -135,11 +135,11 @@
             left: 0;
             width: 0;
             height: 1px;
-            background: var(--gold);
+            background: var(--accent);
             transition: width 0.3s;
         }
 
-        nav .nav-links a:hover { color: var(--gold); }
+        nav .nav-links a:hover { color: var(--accent); }
         nav .nav-links a:hover::after { width: 100%; }
 
         /* ── Hero ── */
@@ -162,7 +162,7 @@
             transform: translateX(-50%);
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(232,197,71,0.06) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(192,88,42,0.06) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -171,7 +171,7 @@
             height: 140px;
             border-radius: 32px;
             margin-bottom: 3rem;
-            box-shadow: 0 0 100px rgba(232,197,71,0.1), 0 20px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 0 100px rgba(192,88,42,0.1), 0 20px 60px rgba(0,0,0,0.5);
             transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -189,11 +189,11 @@
         }
 
         .hero-title .word-fake {
-            color: var(--gold);
+            color: var(--accent);
             font-style: italic;
             font-family: var(--serif);
             display: inline-block;
-            text-shadow: 0 0 80px var(--gold-glow);
+            text-shadow: 0 0 80px var(--accent-glow);
         }
 
         .hero-subtitle {
@@ -240,9 +240,9 @@
         }
 
         .platform-btn:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-            box-shadow: 0 0 20px var(--gold-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
             transform: translateY(-2px);
         }
 
@@ -299,7 +299,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.25em;
-            color: var(--gold);
+            color: var(--accent);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -310,7 +310,7 @@
             content: '';
             width: 30px;
             height: 1px;
-            background: var(--gold);
+            background: var(--accent);
         }
 
         .section-heading {
@@ -336,7 +336,7 @@
             position: absolute;
             inset: -1px;
             border-radius: 17px;
-            background: linear-gradient(135deg, rgba(232,197,71,0.15), transparent 50%);
+            background: linear-gradient(135deg, rgba(192,88,42,0.15), transparent 50%);
             z-index: -1;
         }
 
@@ -362,7 +362,7 @@
             font-size: 0.6rem;
             font-weight: 700;
             color: var(--bg);
-            background: var(--gold);
+            background: var(--accent);
             padding: 0.2rem 0.6rem;
             border-radius: 4px;
             letter-spacing: 0.1em;
@@ -413,7 +413,7 @@
         }
 
         .clip-card:hover {
-            border-color: var(--gold);
+            border-color: var(--accent);
             transform: translateY(-4px) scale(1.02);
         }
 
@@ -455,7 +455,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
             opacity: 0.3;
         }
 
@@ -466,7 +466,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
             opacity: 0.3;
         }
 
@@ -486,7 +486,7 @@
         .quote-card .big-quote {
             font-family: var(--serif);
             font-size: 5rem;
-            color: var(--gold);
+            color: var(--accent);
             opacity: 0.15;
             line-height: 1;
             position: absolute;
@@ -522,10 +522,10 @@
             transition: border-color 0.3s;
         }
 
-        .review-card:hover { border-color: rgba(232, 197, 71, 0.2); }
+        .review-card:hover { border-color: rgba(192, 88, 42, 0.2); }
 
         .review-stars {
-            color: var(--gold);
+            color: var(--accent);
             font-size: 0.75rem;
             letter-spacing: 0.08em;
             margin-bottom: 0.75rem;
@@ -583,7 +583,7 @@
         }
 
         .stat-card:hover {
-            border-color: rgba(232, 197, 71, 0.3);
+            border-color: rgba(192, 88, 42, 0.3);
             transform: translateX(4px);
         }
 
@@ -630,12 +630,12 @@
             transition: color 0.3s;
         }
 
-        .footer-links a:hover { color: var(--gold); }
+        .footer-links a:hover { color: var(--accent); }
 
         .footer-copy {
             font-family: var(--mono);
             font-size: 0.6rem;
-            color: #333;
+            color: var(--text-dim);
             letter-spacing: 0.08em;
         }
 
