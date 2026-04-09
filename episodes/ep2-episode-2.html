@@ -185,6 +185,39 @@
             margin-top: 3rem;
         }
         footer a { color: var(--accent); text-decoration: none; }
+        .ep-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin: 2rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .ep-nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            max-width: 40%;
+        }
+        .ep-nav a:hover { text-decoration: underline; }
+        .ep-nav .prev { text-align: left; }
+        .ep-nav .next { text-align: right; }
+        .ep-nav .all {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .ep-nav .label {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
         @media (max-width: 600px) {
             h1 { font-size: 1.5rem; }
             .container { padding: 1rem; }
@@ -2897,6 +2930,13 @@
 <p class="transcript-line"><span class="timestamp">[111:50]</span> next Thursday</p>
 <p class="transcript-line"><span class="timestamp">[111:52]</span> Tune in to the thing that's not on spot. All right</p>
         </div>
+
+        
+        <nav class="ep-nav">
+            <a href="ep1-episode-1.html" class="prev"><span class="label">&larr; Previous</span>Ep. 1: Episode 1</a>
+            <a href="/episodes/" class="all">All Episodes</a>
+            <a href="ep3-episode-3.html" class="next"><span class="label">Next &rarr;</span>Ep. 3: Episode 3</a>
+        </nav>
     </div>
 
     <footer>

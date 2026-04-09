@@ -185,6 +185,39 @@
             margin-top: 3rem;
         }
         footer a { color: var(--accent); text-decoration: none; }
+        .ep-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin: 2rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .ep-nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            max-width: 40%;
+        }
+        .ep-nav a:hover { text-decoration: underline; }
+        .ep-nav .prev { text-align: left; }
+        .ep-nav .next { text-align: right; }
+        .ep-nav .all {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .ep-nav .label {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
         @media (max-width: 600px) {
             h1 { font-size: 1.5rem; }
             .container { padding: 1rem; }
@@ -1595,6 +1628,13 @@
 <p class="transcript-line"><span class="timestamp">[54:57]</span> Thanks for tuning in.</p>
 <p class="transcript-line"><span class="timestamp">[54:58]</span> Bye-bye.</p>
         </div>
+
+        
+        <nav class="ep-nav">
+            <a href="ep8-episode-8.html" class="prev"><span class="label">&larr; Previous</span>Ep. 8: Episode 8</a>
+            <a href="/episodes/" class="all">All Episodes</a>
+            <a href="ep10-episode-10.html" class="next"><span class="label">Next &rarr;</span>Ep. 10: Episode 10</a>
+        </nav>
     </div>
 
     <footer>
