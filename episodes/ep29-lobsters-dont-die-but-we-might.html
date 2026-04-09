@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobsters Don't Die, But We Might | Fake Problems Podcast Ep. 29</title>
+    <meta name="description" content="In this episode, the hosts dive into the myths of lobster immortality, explore the bizarre world of AI horror. They also touch on cultural differences in diet a">
+    <meta property="og:title" content="Lobsters Don't Die, But We Might | Fake Problems Podcast">
+    <meta property="og:description" content="In this episode, the hosts dive into the myths of lobster immortality, explore the bizarre world of AI horror. They also touch on cultural differences in diet and the implications of nuclear deterrenc">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/podcast_logo.jpg">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="canonical" href="https://fakeproblemspodcast.com/episodes/ep29">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Lobsters Don't Die, But We Might",
+  "description": "In this episode, the hosts dive into the myths of lobster immortality, explore the bizarre world of AI horror. They also touch on cultural differences in diet and the implications of nuclear deterrence.",
+  "episodeNumber": 29,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Fake Problems Podcast",
+    "url": "https://fakeproblemspodcast.com"
+  },
+  "datePublished": "2026-04-08",
+  "url": "https://fakeproblemspodcast.com/episodes/ep29"
+}</script>
+    <style>
+        :root {
+            --accent: #C0582A;
+            --accent-bright: #D4622B;
+            --accent-glow: rgba(192, 88, 42, 0.15);
+            --bg: #FAF6EE;
+            --bg-elevated: #F0EBE0;
+            --bg-card: #F5F0E6;
+            --text: #4A3F33;
+            --text-dim: #9B8E7B;
+            --text-bright: #1E1810;
+            --border: #DDD4C4;
+            --mono: 'JetBrains Mono', monospace;
+            --sans: 'Space Grotesk', sans-serif;
+            --serif: 'Playfair Display', serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        .back-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+            color: var(--text-bright);
+            margin-bottom: 0.5rem;
+        }
+        .episode-meta {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .summary {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-embed iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: var(--text-bright);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .show-notes p { margin-bottom: 1rem; }
+        .show-notes ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .show-notes li { margin-bottom: 0.5rem; }
+        .chapters { list-style: none; padding: 0; }
+        .chapters li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .timestamp {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+        blockquote {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.2rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            background: var(--bg-card);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+        }
+        blockquote cite {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            font-style: normal;
+            margin-top: 0.5rem;
+        }
+        .transcript {
+            margin-top: 1rem;
+        }
+        .transcript-line {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        .transcript .timestamp {
+            font-size: 0.75rem;
+        }
+        .cta-box {
+            text-align: center;
+            padding: 2rem;
+            margin: 3rem 0;
+            background: var(--bg-elevated);
+            border-radius: 12px;
+        }
+        .cta-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-bright);
+        }
+        .cta-box p {
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+        .cta-box .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .cta-box .btn:hover { background: var(--accent-bright); }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">&larr; Back to Fake Problems Podcast</a>
+
+        <h1>Lobsters Don't Die, But We Might</h1>
+        <div class="episode-meta">Episode 29 &middot; 2026-04-08 &middot; 13,090 words</div>
+
+        <div class="summary">In this episode, the hosts dive into the myths of lobster immortality, explore the bizarre world of AI horror. They also touch on cultural differences in diet and the implications of nuclear deterrence.</div>
+
+        
+
+        <h2>Show Notes</h2>
+        <div class="show-notes">
+            <p>In this episode, the hosts explore a range of fascinating topics, from the myth of lobster immortality to the bizarre world of AI-generated horror. They also discuss cultural differences in diet and the implications of nuclear deterrence.</p>
+<ul>
+<li>Lobsters: Eternal or not?</li>
+<li>AI horror stories</li>
+<li>Cultural diet differences</li>
+<li>Nuclear deterrence insights</li>
+</ul>
+<p>Notable quote: <strong>Did you know lobsters might live forever?</strong></p>
+        </div>
+
+        <h2>Chapters</h2><ul class="chapters"><li><span class="timestamp">00:00:00</span> Intro</li><li><span class="timestamp">00:01:17</span> Lobsters and Immortality</li><li><span class="timestamp">00:18:14</span> Dark Humor and Rube Goldberg Machines</li><li><span class="timestamp">00:27:01</span> Elephants in Convenience Stores</li><li><span class="timestamp">00:45:00</span> AI Horror and Human Evolution</li><li><span class="timestamp">01:00:00</span> Nuclear Deterrence Discussion</li></ul>
+
+        
+
+        <div class="cta-box">
+            <h3>Never miss an episode</h3>
+            <p>New episodes every other Saturday. Subscribe wherever you listen.</p>
+            <a href="https://www.youtube.com/@fakeproblemspodcast" class="btn">Subscribe on YouTube</a>
+        </div>
+
+        <h2>Full Transcript</h2>
+        <div class="transcript">
+            <p class="transcript-line"><span class="timestamp">[0:01]</span> And we're live. We're back another episode. Feels like a long time.</p>
+<p class="transcript-line"><span class="timestamp">[0:05]</span> Jamis us. Yeah, you bet you're fucking</p>
+<p class="transcript-line"><span class="timestamp">[0:08]</span> astic. Yeah. People have been screaming for us. I know.</p>
+<p class="transcript-line"><span class="timestamp">[0:11]</span> And hearing all over fucking YouTube and Spotify. I think we're up to like six</p>
+<p class="transcript-line"><span class="timestamp">[0:16]</span> consistent listeners. That's pretty good. That's not bad. We were at two for a while.</p>
+<p class="transcript-line"><span class="timestamp">[0:22]</span> Dude, I have come across podcasts with comedians that I like and they get like 80</p>
+<p class="transcript-line"><span class="timestamp">[0:28]</span> listeners or 80 subscribers. Oh, really? Yeah. And it's like it's tough out</p>
+<p class="transcript-line"><span class="timestamp">[0:33]</span> there. There's so many. There's so many huge ones that it's kind of a winner</p>
+<p class="transcript-line"><span class="timestamp">[0:38]</span> take all time. Yeah. And I don't want to name them because I like them. But it is</p>
+<p class="transcript-line"><span class="timestamp">[0:41]</span> just like I would expect thousands at a minimum at a minimum. And I see them</p>
+<p class="transcript-line"><span class="timestamp">[0:46]</span> like they got like 80 subscribers. Yeah. They're really making no money. And like</p>
+<p class="transcript-line"><span class="timestamp">[0:49]</span> very successful comedians. Yes. Yeah. So I'm like, I don't know. I'll take six, dude.</p>
+<p class="transcript-line"><span class="timestamp">[0:54]</span> I'll take six any day. I mean, and at the same time with no marketing,</p>
+<p class="transcript-line"><span class="timestamp">[0:58]</span> not to fluff our own shit and be in the podcast. But like we don't we don't do</p>
+<p class="transcript-line"><span class="timestamp">[1:03]</span> anything. Just pure talent. Yeah.</p>
+<p class="transcript-line"><span class="timestamp">[1:08]</span> They're all our friends. They will come. They just were drawn to us. Okay.</p>
+<p class="transcript-line"><span class="timestamp">[1:17]</span> Where's the lobster thing? Okay. Lobsters don't die of old age. Now I put this</p>
+<p class="transcript-line"><span class="timestamp">[1:24]</span> on here. And the second we started talking about before we went live, I thought</p>
+<p class="transcript-line"><span class="timestamp">[1:28]</span> I didn't validate this at all. Okay. But it's but I've seen this. The words you</p>
+<p class="transcript-line"><span class="timestamp">[1:35]</span> said exactly were, yeah, they're eternal. Yeah. With full confidence. As if I</p>
+<p class="transcript-line"><span class="timestamp">[1:42]</span> been researched. You threw a turtle around so lightly. Don't die eternal. It is</p>
+<p class="transcript-line"><span class="timestamp">[1:47]</span> it is the thing. But I think there's because they have ways of validating</p>
+<p class="transcript-line"><span class="timestamp">[1:54]</span> organic matters age. I don't know if they do that through carbon dating or some</p>
+<p class="transcript-line"><span class="timestamp">[1:57]</span> other method. But like you've probably seen, I feel like it's been circulating in</p>
+<p class="transcript-line"><span class="timestamp">[2:02]</span> the news for the past like maybe a couple of months and it'll come up every</p>
+<p class="transcript-line"><span class="timestamp">[2:05]</span> once in a while. There's this shark that lives in some like it's a fresh water</p>
+<p class="transcript-line"><span class="timestamp">[2:09]</span> shark that lives somewhere. I think in Ireland that is like 400. It's the</p>
+<p class="transcript-line"><span class="timestamp">[2:12]</span> longest living thing that they found alive. Holy shit. That's right. That's the</p>
+<p class="transcript-line"><span class="timestamp">[2:16]</span> carbon dating. Yeah, I don't know. But they can do with organic matter. And I</p>
+<p class="transcript-line"><span class="timestamp">[2:20]</span> think that they have found lobsters that have gone beyond the hundreds of</p>
+<p class="transcript-line"><span class="timestamp">[2:24]</span> years, but are like dead. And they can't they keep finding lobsters at older and</p>
+<p class="transcript-line"><span class="timestamp">[2:29]</span> older ages being dead, but had still fresh enough to where like, oh, this just</p>
+<p class="transcript-line"><span class="timestamp">[2:34]</span> died. Okay. So they're like, oh, they don't have an age cap right now. Okay. So</p>
+<p class="transcript-line"><span class="timestamp">[2:40]</span> there's no typical age where a lobster will die. Correct. Saying that the only way</p>
+<p class="transcript-line"><span class="timestamp">[2:44]</span> they die is by like actually killing them through something. So we should keep</p>
+<p class="transcript-line"><span class="timestamp">[2:48]</span> keep catching them because they won't die otherwise. That's not how that works.</p>
+<p class="transcript-line"><span class="timestamp">[2:55]</span> Because you can kill all you can make them go extinct if you killed all of them.</p>
+<p class="transcript-line"><span class="timestamp">[2:59]</span> Yeah, but we got a if they never die. Yeah, they'll want the population just get</p>
+<p class="transcript-line"><span class="timestamp">[3:04]</span> out of control. Well, that's like if nothing ate them. That's like I guess</p>
+<p class="transcript-line"><span class="timestamp">[3:09]</span> there's lots of things in lobster, including us. Lobsters are so good. They're delicious.</p>
+<p class="transcript-line"><span class="timestamp">[3:14]</span> Fun fact that you probably know, but they used to be like prison food. Yeah, yeah.</p>
+<p class="transcript-line"><span class="timestamp">[3:18]</span> It was like poor people food. God, that was that was one where I'd go to a party</p>
+<p class="transcript-line"><span class="timestamp">[3:21]</span> and someone would bring that up like every party I went to. It was just like the</p>
+<p class="transcript-line"><span class="timestamp">[3:25]</span> thing going around. We're like, did you know that lobster? There are certain facts</p>
+<p class="transcript-line"><span class="timestamp">[3:30]</span> that people just love repeating. And I feel like they have phases. Yeah. I remember</p>
+<p class="transcript-line"><span class="timestamp">[3:34]</span> that one literally being like in the zeitgeist at like social gatherings. Like</p>
+<p class="transcript-line"><span class="timestamp">[3:37]</span> just everyone knows about prisoners and lobsters now. And people just love</p>
+<p class="transcript-line"><span class="timestamp">[3:42]</span> repeating it because it's like slightly counterintuitive. Yeah. And it's funny</p>
+<p class="transcript-line"><span class="timestamp">[3:45]</span> too because it could totally be fake like this lobster thing I just told you about.</p>
+<p class="transcript-line"><span class="timestamp">[3:48]</span> And no one would know. I had never valedade the prison thing with those fucking people.</p>
+<p class="transcript-line"><span class="timestamp">[3:54]</span> But I overview while lobsters have a unique biological trait that makes them</p>
+<p class="transcript-line"><span class="timestamp">[3:58]</span> resistant to aging. They don't live forever and can die from other causes,</p>
+<p class="transcript-line"><span class="timestamp">[4:02]</span> but not old age. Wait, hold on. That doesn't make any sense though.</p>
+<p class="transcript-line"><span class="timestamp">[4:06]</span> They can't die from old age, but they don't live forever. Yeah. I think it just</p>
+<p class="transcript-line"><span class="timestamp">[4:12]</span> assumes something will kill it. But okay. So in the in the if you're to separate</p>
+<p class="transcript-line"><span class="timestamp">[4:17]</span> other things killing it, it would live forever then. Yeah. I think if they had</p>
+<p class="transcript-line"><span class="timestamp">[4:21]</span> no predators. Yeah. Or if it can't get sick, they could starve probably. Yeah.</p>
+<p class="transcript-line"><span class="timestamp">[4:26]</span> So you take it's needs are met. Okay. Yeah. It just can just age forever.</p>
+<p class="transcript-line"><span class="timestamp">[4:32]</span> That so lobsters have an enzyme called telomerase.</p>
+<p class="transcript-line"><span class="timestamp">[4:40]</span> Telomerase, which maintains their telomeres that those are like what indicates</p>
+<p class="transcript-line"><span class="timestamp">[4:45]</span> your age right? The length of them. Yeah. So like in your DNA, you know, the the</p>
+<p class="transcript-line"><span class="timestamp">[4:49]</span> double helix. Yeah. On the ends of those like ladder things are telomeres. And</p>
+<p class="transcript-line"><span class="timestamp">[4:54]</span> the length of those can typically the rungs on the ladders.</p>
+<p class="transcript-line"><span class="timestamp">[4:57]</span> So they're run and on the. Oh, the spirally part. So the rungs. So they have the</p>
+<p class="transcript-line"><span class="timestamp">[5:03]</span> rungs. But think like they they're on the ends. There's caps. So like on the on the</p>
+<p class="transcript-line"><span class="timestamp">[5:08]</span> other side of the thing going down essentially. Those those I believe are called</p>
+<p class="transcript-line"><span class="timestamp">[5:12]</span> your telomeres. And the length of those predicts health outcomes pretty well.</p>
+<p class="transcript-line"><span class="timestamp">[5:17]</span> Okay. So I guess telomerase is probably produced by the telomeres. It allows</p>
+<p class="transcript-line"><span class="timestamp">[5:22]</span> their cells to keep dividing potentially leading to a very long lifespan.</p>
+<p class="transcript-line"><span class="timestamp">[5:26]</span> However, they still face threats like molting diseases. Natural predators, which lead to their demise.</p>
+<p class="transcript-line"><span class="timestamp">[5:32]</span> So you have to imagine with that too, if if your cells never stop</p>
+<p class="transcript-line"><span class="timestamp">[5:35]</span> replicating, your your chance of cancer is inevitable. You're going to have a</p>
+<p class="transcript-line"><span class="timestamp">[5:40]</span> mutation in there somewhere. Okay. But but if you could if you somehow get rid of</p>
+<p class="transcript-line"><span class="timestamp">[5:46]</span> the disease that comes with that. No cancer. Yeah. I wonder if that's going to be a</p>
+<p class="transcript-line"><span class="timestamp">[5:49]</span> some like thing they're going to extract from them. I feel like we're starting to</p>
+<p class="transcript-line"><span class="timestamp">[5:54]</span> hit that point where like a lot of our a lot of the things that kill us we've</p>
+<p class="transcript-line"><span class="timestamp">[5:58]</span> figured out and then cancer just gets all of us eventually. Yeah, I think we</p>
+<p class="transcript-line"><span class="timestamp">[6:02]</span> also die of all the age. I think but I've said this before. But I think cancer is</p>
+<p class="transcript-line"><span class="timestamp">[6:06]</span> going to be just like how bacteria was pre. Oh yeah. We're going to figure out</p>
+<p class="transcript-line"><span class="timestamp">[6:11]</span> some do this. Starwash in our hands. Cancer's gone. Yeah. No, the trick is you have to do</p>
+<p class="transcript-line"><span class="timestamp">[6:17]</span> coffee enemies every morning. Oh, no, no cancer. But there's all this research</p>
+<p class="transcript-line"><span class="timestamp">[6:22]</span> coming out in these MRNA vaccine stuff they're using for cancer. They're getting</p>
+<p class="transcript-line"><span class="timestamp">[6:25]</span> success rates with like aggressive cancers because they're like able to</p>
+<p class="transcript-line"><span class="timestamp">[6:29]</span> program it on a DNA level to just like either implode on itself or half the</p>
+<p class="transcript-line"><span class="timestamp">[6:35]</span> battle with cancer is our body just do a place where it like stops fighting it</p>
+<p class="transcript-line"><span class="timestamp">[6:40]</span> because like every day our body is getting rid of cancer cells. You'll have</p>
+<p class="transcript-line"><span class="timestamp">[6:43]</span> cells to become pre cancers and your body's like, oh, fuck that. And something</p>
+<p class="transcript-line"><span class="timestamp">[6:46]</span> like misfires in your system where it can no longer identify it efficiently. So</p>
+<p class="transcript-line"><span class="timestamp">[6:52]</span> that your body's not taken care of and you'll find endless examples of someone</p>
+<p class="transcript-line"><span class="timestamp">[6:57]</span> going through some life experience or moving to a different place and their</p>
+<p class="transcript-line"><span class="timestamp">[7:01]</span> body is free of cancer. So like our body has the power to kill cancer and</p>
+<p class="transcript-line"><span class="timestamp">[7:07]</span> something goes wrong and we still haven't quite figured that out. Okay. And these</p>
+<p class="transcript-line"><span class="timestamp">[7:10]</span> MRNA vaccines that essentially just either kill the cancer without hurting any</p>
+<p class="transcript-line"><span class="timestamp">[7:15]</span> part of you or tell your body to be like, fuck that cancer. Fuck it. Sweet. It's</p>
+<p class="transcript-line"><span class="timestamp">[7:21]</span> how you beat it. Yeah. It's fucking sick. So I think in our lifetime we'll live a</p>
+<p class="transcript-line"><span class="timestamp">[7:25]</span> post cancer vaccine error. We'll be like, oh yeah. People usually get cancer</p>
+<p class="transcript-line"><span class="timestamp">[7:29]</span> and die. That was fucking gay. Dude. That'd be crazy. Yeah. And I think next</p>
+<p class="transcript-line"><span class="timestamp">[7:34]</span> on till we'll be like dementia. But shit. Yeah. Well, there are these</p>
+<p class="transcript-line"><span class="timestamp">[7:38]</span> shaman's tough. They're showing diet trials that are a little reversing</p>
+<p class="transcript-line"><span class="timestamp">[7:41]</span> early stage Alzheimer's. Like literally to the point where people... Diet</p>
+<p class="transcript-line"><span class="timestamp">[7:46]</span> trials? Yeah. Where people are eating just like low fat plant-based diet. They</p>
+<p class="transcript-line"><span class="timestamp">[7:49]</span> already have randomized control trials showing people who have to the point</p>
+<p class="transcript-line"><span class="timestamp">[7:52]</span> at least in the trials the because they interviewed the participants afterwards</p>
+<p class="transcript-line"><span class="timestamp">[7:56]</span> and before the intervention which I think it was 24 weeks of low fat whole</p>
+<p class="transcript-line"><span class="timestamp">[8:03]</span> food plant-based 60 minutes of moderate cardiovascular activity which is</p>
+<p class="transcript-line"><span class="timestamp">[8:08]</span> like literally walking and then 30 minutes of stress what do you call it therapy</p>
+<p class="transcript-line"><span class="timestamp">[8:14]</span> of mindfulness meditation something of that sort and community. So they're like</p>
+<p class="transcript-line"><span class="timestamp">[8:18]</span> healthy centers with people their age. I think living alone's got to be a big</p>
+<p class="transcript-line"><span class="timestamp">[8:22]</span> yeah doesn't help just don't talk to people you just naturally go crazy. Yeah. I</p>
+<p class="transcript-line"><span class="timestamp">[8:26]</span> think the point of this one though is that they've tried those other things</p>
+<p class="transcript-line"><span class="timestamp">[8:30]</span> regardless of the diet in other trials and you maybe see slowing of the disease</p>
+<p class="transcript-line"><span class="timestamp">[8:35]</span> but you never really like the diet the biggest piece. It seems to be because</p>
+<p class="transcript-line"><span class="timestamp">[8:39]</span> it's there's a lot it's an arterial disease that's the suspicion is that</p>
+<p class="transcript-line"><span class="timestamp">[8:43]</span> like everything gets gunked up so blood flow to the brain is so mitigated</p>
+<p class="transcript-line"><span class="timestamp">[8:48]</span> that eventually you start like degrading your brain and the diet like a</p>
+<p class="transcript-line"><span class="timestamp">[8:52]</span> whole food plant based diet opens up your arteries substantially and increases</p>
+<p class="transcript-line"><span class="timestamp">[8:55]</span> blood flow. So they put people on this 24 weeks thing they had a statistically</p>
+<p class="transcript-line"><span class="timestamp">[9:00]</span> significant enough amount of people that like before the trial they could</p>
+<p class="transcript-line"><span class="timestamp">[9:05]</span> literally not read a book the memory was so bad they'd like read a page and</p>
+<p class="transcript-line"><span class="timestamp">[9:09]</span> be like I don't know what I just read by the end of the trial most people could</p>
+<p class="transcript-line"><span class="timestamp">[9:13]</span> read a full book that's how I feel. Yeah I know too. What was that just happened</p>
+<p class="transcript-line"><span class="timestamp">[9:21]</span> exactly but at the end of the trial they could remember a book and they could</p>
+<p class="transcript-line"><span class="timestamp">[9:25]</span> sit the one that's open these they could sit down watching actual movie they're</p>
+<p class="transcript-line"><span class="timestamp">[9:28]</span> like I can enjoy movies again because they see a scene be like I don't know what's</p>
+<p class="transcript-line"><span class="timestamp">[9:31]</span> having the movie. It's fucking beautiful. Yeah so yeah I think there's hope. What</p>
+<p class="transcript-line"><span class="timestamp">[9:36]</span> do they eat? Just poop. Beach 24 weeks. Here's the catch. It's a shit diet. No</p>
+<p class="transcript-line"><span class="timestamp">[9:44]</span> but I mean it's mostly whole foods and then our plants but also these are</p>
+<p class="transcript-line"><span class="timestamp">[9:50]</span> those studies too where and a lot of scientists will say that at least in the</p>
+<p class="transcript-line"><span class="timestamp">[9:54]</span> food world the less 10% really doesn't matter that much. So like if you're</p>
+<p class="transcript-line"><span class="timestamp">[9:57]</span> eating 90% whole food plant based sources and your last 10% is like fucking</p>
+<p class="transcript-line"><span class="timestamp">[10:03]</span> double bacon cheeseburger which would be like literally one a week. Now your your</p>
+<p class="transcript-line"><span class="timestamp">[10:07]</span> body is equipped to pretty solid. Yeah it's like that's fucking whatever. It's</p>
+<p class="transcript-line"><span class="timestamp">[10:11]</span> also the majority of the high majority I guess 90% but we'll see there's still</p>
+<p class="transcript-line"><span class="timestamp">[10:16]</span> trials being done on more of that stuff. Well again Wisconsin's tough place to live</p>
+<p class="transcript-line"><span class="timestamp">[10:21]</span> free and healthy. Yeah ugly people. Dementia cancer. Yeah it is it is what you</p>
+<p class="transcript-line"><span class="timestamp">[10:28]</span> make it at the same time. Oh man. I won't say names. I'll tell you after the</p>
+<p class="transcript-line"><span class="timestamp">[10:34]</span> pie but I got into a debate over. Let me hear it. Over. I love hearing about your</p>
+<p class="transcript-line"><span class="timestamp">[10:40]</span> debates. You always they're always crazy. You know in America I feel like we</p>
+<p class="transcript-line"><span class="timestamp">[10:45]</span> always hear about like how Europe has this cleaner food and there's not a lot</p>
+<p class="transcript-line"><span class="timestamp">[10:48]</span> of preservatives and like people can eat whatever and they're all they can</p>
+<p class="transcript-line"><span class="timestamp">[10:51]</span> whatever they want their healthier and people ignore all the facts around that</p>
+<p class="transcript-line"><span class="timestamp">[10:55]</span> stuff but the this idea that through regulation they have it better I think is</p>
+<p class="transcript-line"><span class="timestamp">[11:01]</span> just the farthest thing from the truth because of the core of it is choice. Like in</p>
+<p class="transcript-line"><span class="timestamp">[11:07]</span> America you have the choice to eat healthier food or each of your food. Like</p>
+<p class="transcript-line"><span class="timestamp">[11:12]</span> that's and in Europe it's crazy to think that like they got rid of a</p>
+<p class="transcript-line"><span class="timestamp">[11:19]</span> preservative that they used to put in twinkies and now they did that you're</p>
+<p class="transcript-line"><span class="timestamp">[11:21]</span> gonna be healthier because that's what we're talking about here. They're banning</p>
+<p class="transcript-line"><span class="timestamp">[11:24]</span> like certain pesticides and certain preservatives and certain like food</p>
+<p class="transcript-line"><span class="timestamp">[11:28]</span> coloring like red dye 40 got banned here recently and all the world's like we</p>
+<p class="transcript-line"><span class="timestamp">[11:31]</span> have been that stuff for so long ago and it's like dude that food dye is</p>
+<p class="transcript-line"><span class="timestamp">[11:36]</span> typically in unhealthy food so saying that like banning these ingredients is</p>
+<p class="transcript-line"><span class="timestamp">[11:42]</span> going to lead you to a healthier place I think it's ignoring the</p>
+<p class="transcript-line"><span class="timestamp">[11:46]</span> totality of it going on. I feel like it's a cultural thing like we just we just</p>
+<p class="transcript-line"><span class="timestamp">[11:52]</span> love shitty food like more so than Europe does and our portion sizes are</p>
+<p class="transcript-line"><span class="timestamp">[11:56]</span> crazy for sure but I think at the core of that is choice it's like okay and with</p>
+<p class="transcript-line"><span class="timestamp">[12:03]</span> yeah with all the shitty food we have by allowing it to be freer you do have</p>
+<p class="transcript-line"><span class="timestamp">[12:09]</span> so many choices in from the most unhealthy part of the spectrum all the way to</p>
+<p class="transcript-line"><span class="timestamp">[12:14]</span> the healthiest and the more you can leave that open the cheaper healthier</p>
+<p class="transcript-line"><span class="timestamp">[12:19]</span> options get because the the more competition there is in the space it's just</p>
+<p class="transcript-line"><span class="timestamp">[12:24]</span> cheaper and cheaper and cheaper and if you lean towards the EU way where they go</p>
+<p class="transcript-line"><span class="timestamp">[12:28]</span> listen all of you has to be organic can have red dye 40 can do anything you</p>
+<p class="transcript-line"><span class="timestamp">[12:34]</span> essentially just create monopolies in markets because the bar with every</p>
+<p class="transcript-line"><span class="timestamp">[12:40]</span> organic thing reduction of that that is cost so all these players that could have</p>
+<p class="transcript-line"><span class="timestamp">[12:45]</span> gotten into the market no longer can and so only these big dogs can keep in</p>
+<p class="transcript-line"><span class="timestamp">[12:50]</span> the game and the market smaller and smaller and smaller and the same people who</p>
+<p class="transcript-line"><span class="timestamp">[12:53]</span> are like yeah we got to get these regulations once those companies have</p>
+<p class="transcript-line"><span class="timestamp">[12:57]</span> monopolies like an Amazon they go fuck Amazon like dude you you did this all</p>
+<p class="transcript-line"><span class="timestamp">[13:03]</span> through market motion controlling of markets do you think they are healthier though</p>
+<p class="transcript-line"><span class="timestamp">[13:09]</span> Europe in general yeah I think it depends on I can anecdotally this is not</p>
+<p class="transcript-line"><span class="timestamp">[13:15]</span> science or data but I I was overwhelmed by when I went there I've been</p>
+<p class="transcript-line"><span class="timestamp">[13:19]</span> there once yeah in Switzerland and Germany and everyone looks so much healthier</p>
+<p class="transcript-line"><span class="timestamp">[13:26]</span> sure and they rip sigs like crazy like way more than us my conclusion based on</p>
+<p class="transcript-line"><span class="timestamp">[13:31]</span> literally no data was like that their food must be better yeah because how can</p>
+<p class="transcript-line"><span class="timestamp">[13:35]</span> you reconcile that but totally I just think it comes back to this idea of if</p>
+<p class="transcript-line"><span class="timestamp">[13:42]</span> those people were eating the foods were all these like things were eliminated</p>
+<p class="transcript-line"><span class="timestamp">[13:44]</span> from like twinkies and sodas and all that yeah I don't think changing that right</p>
+<p class="transcript-line"><span class="timestamp">[13:50]</span> I move the market I totally I don't think regulation has anything to do with it</p>
+<p class="transcript-line"><span class="timestamp">[13:53]</span> right I think it's a cultural thing because like choice you're right we have choice</p>
+<p class="transcript-line"><span class="timestamp">[13:58]</span> but it's kind of hard when you like all your friends are going to a restaurant</p>
+<p class="transcript-line"><span class="timestamp">[14:01]</span> and it's just all burgers on the menu and most restaurants are like that in</p>
+<p class="transcript-line"><span class="timestamp">[14:05]</span> your area sure like that's just how we are over here yeah yeah and to your point</p>
+<p class="transcript-line"><span class="timestamp">[14:09]</span> I think the culture here is like to go eat out all the time and do all these</p>
+<p class="transcript-line"><span class="timestamp">[14:14]</span> like those people up there are probably not doing that as much and that's like</p>
+<p class="transcript-line"><span class="timestamp">[14:18]</span> it that's why they are healthier or or even just eating smaller portions the</p>
+<p class="transcript-line"><span class="timestamp">[14:23]</span> portions is one of the biggest yeah I mean my girlfriend when she was</p>
+<p class="transcript-line"><span class="timestamp">[14:31]</span> younger did this foreign exchange thing where two French siblings came to</p>
+<p class="transcript-line"><span class="timestamp">[14:35]</span> America lived with her and her brother for a little bit and then they went</p>
+<p class="transcript-line"><span class="timestamp">[14:38]</span> over there and she said one of her favorite stories was when they saw a</p>
+<p class="transcript-line"><span class="timestamp">[14:43]</span> cinnamon roll for the first time like what the fuck is this they would like</p>
+<p class="transcript-line"><span class="timestamp">[14:47]</span> their kids still and they're like I can't eat this this is too sweet yeah like</p>
+<p class="transcript-line"><span class="timestamp">[14:51]</span> no kid over here says that yeah no I mean that's a great point because it is</p>
+<p class="transcript-line"><span class="timestamp">[14:57]</span> down to like how we are kind of raised to eat food yeah that's just like</p>
+<p class="transcript-line"><span class="timestamp">[15:01]</span> there's kids raised on just fucking soda sugary soda every night states right</p>
+<p class="transcript-line"><span class="timestamp">[15:06]</span> now yeah that's what's going on crazy so but again to point to it that it's like</p>
+<p class="transcript-line"><span class="timestamp">[15:11]</span> some controlling that red dye yeah but again just let there be freedom in market</p>
+<p class="transcript-line"><span class="timestamp">[15:17]</span> choices and people can choose what do I and dude I feel like there's a lot of</p>
+<p class="transcript-line"><span class="timestamp">[15:23]</span> I'll get off this tangent though because I've already gone to the government</p>
+<p class="transcript-line"><span class="timestamp">[15:26]</span> around there's a lot of this like people are so dumb that if we don't make</p>
+<p class="transcript-line"><span class="timestamp">[15:30]</span> regulations like they will just become super unhealthy and it's like there's</p>
+<p class="transcript-line"><span class="timestamp">[15:37]</span> you should empower the people sure provide information with the same time I</p>
+<p class="transcript-line"><span class="timestamp">[15:42]</span> would make the argument that most people that see when they're feeding their</p>
+<p class="transcript-line"><span class="timestamp">[15:44]</span> kid twinkies and sodas and their kids getting fat that they can draw a</p>
+<p class="transcript-line"><span class="timestamp">[15:48]</span> conclusion that when they're feeding your kid garbage that they get unhealthy</p>
+<p class="transcript-line"><span class="timestamp">[15:54]</span> yeah especially now like there's so much it maybe it would be different a</p>
+<p class="transcript-line"><span class="timestamp">[15:59]</span> long time ago but I feel like when when hyper sugary stuff first came out we</p>
+<p class="transcript-line"><span class="timestamp">[16:04]</span> all just got fucked as a nation because no one really realized I mean even</p>
+<p class="transcript-line"><span class="timestamp">[16:08]</span> that you could but like it's now we've we've had all this stuff for a while</p>
+<p class="transcript-line"><span class="timestamp">[16:12]</span> yeah feel like even the most on educated people can probably right I mean it</p>
+<p class="transcript-line"><span class="timestamp">[16:16]</span> only take literally if you have a kid who gains 40 pounds in a year from it</p>
+<p class="transcript-line"><span class="timestamp">[16:21]</span> like and you I don't know maybe I'm being ignorant but it just seems like such</p>
+<p class="transcript-line"><span class="timestamp">[16:24]</span> a direct causal thing yeah of what you're eating and how big you're getting</p>
+<p class="transcript-line"><span class="timestamp">[16:29]</span> there's also the financial component like that stuff's cheaper so maybe they</p>
+<p class="transcript-line"><span class="timestamp">[16:33]</span> do see it they're like but I can't feed my kid any other day it is not like</p>
+<p class="transcript-line"><span class="timestamp">[16:38]</span> those things if you were to truly shop around a grocery and like from the</p>
+<p class="transcript-line"><span class="timestamp">[16:42]</span> produce to the meat to anything that's not in the middle your your pain</p>
+<p class="transcript-line"><span class="timestamp">[16:46]</span> substantially less there's some somewhere along the line someone fed this</p>
+<p class="transcript-line"><span class="timestamp">[16:50]</span> information that process food is cheaper and there's exceptions because if you</p>
+<p class="transcript-line"><span class="timestamp">[16:55]</span> are on food stamps it's subsidized through those means so you can buy those</p>
+<p class="transcript-line"><span class="timestamp">[16:59]</span> foods with food stamps and it's you're not really paying with money at that</p>
+<p class="transcript-line"><span class="timestamp">[17:03]</span> point you're using food stamps to get it so but to a person who's not on food</p>
+<p class="transcript-line"><span class="timestamp">[17:06]</span> stamps if you're shopping you're getting fresh produce and meat or dairy or</p>
+<p class="transcript-line"><span class="timestamp">[17:11]</span> eggs typically by calorie it is cheaper okay because it you just think it takes</p>
+<p class="transcript-line"><span class="timestamp">[17:18]</span> more work though maybe that's part of it oh I mean to prepare a healthy meal</p>
+<p class="transcript-line"><span class="timestamp">[17:22]</span> versus throw a microwave and taste I mean if you go give someone who's</p>
+<p class="transcript-line"><span class="timestamp">[17:27]</span> typically eating like dress gets and you give them like fucking kale like this</p>
+<p class="transcript-line"><span class="timestamp">[17:31]</span> is kale socks yeah you just got to make it probably I'll be one of those guys</p>
+<p class="transcript-line"><span class="timestamp">[17:35]</span> you just got to do it right how do you make kale I'm only just eating straight up</p>
+<p class="transcript-line"><span class="timestamp">[17:39]</span> kale you just no you got to cook it saute it a little bit at some moments</p>
+<p class="transcript-line"><span class="timestamp">[17:43]</span> salt get a little crispy on the outside have it with some like chicken and</p>
+<p class="transcript-line"><span class="timestamp">[17:47]</span> fucking potatoes it can be good I've just tried eating like handfuls of it yeah</p>
+<p class="transcript-line"><span class="timestamp">[17:52]</span> well you which again if you're doing the raw method get some balsamic vinegar</p>
+<p class="transcript-line"><span class="timestamp">[17:56]</span> get some lemon on it do like balsamic oh yeah it's cheat code if you're going</p>
+<p class="transcript-line"><span class="timestamp">[18:01]</span> just raw it's tough which don't get off you eat enough it eventually you can</p>
+<p class="transcript-line"><span class="timestamp">[18:05]</span> kind of get a taste for it but why fucking punch yourself like that</p>
+<p class="transcript-line"><span class="timestamp">[18:08]</span> say myself all right we're gonna that later let's put that in the back</p>
+<p class="transcript-line"><span class="timestamp">[18:14]</span> I'm making a root gold bird machine I found you dead with that I'm like fuck I</p>
+<p class="transcript-line"><span class="timestamp">[18:21]</span> did this to him Tom about it Tom about your thought okay root</p>
+<p class="transcript-line"><span class="timestamp">[18:25]</span> gold bird machine someone has had to have had this thought before of just like</p>
+<p class="transcript-line"><span class="timestamp">[18:30]</span> they're going to kill themselves and they just want one last kind of</p>
+<p class="transcript-line"><span class="timestamp">[18:34]</span> horror and they make an extravagant root gold machine for the for the audience</p>
+<p class="transcript-line"><span class="timestamp">[18:37]</span> who doesn't know what that is it's those like really really long chained kind of</p>
+<p class="transcript-line"><span class="timestamp">[18:43]</span> they seem primitive sometimes of like dominoes knocking over at least to</p>
+<p class="transcript-line"><span class="timestamp">[18:46]</span> hitting a ball and the ball hits another thing and that ball triggers a switch</p>
+<p class="transcript-line"><span class="timestamp">[18:49]</span> but at the end of the whole thing is just a shotgun and there's a string on</p>
+<p class="transcript-line"><span class="timestamp">[18:54]</span> the trigger that the last thing pulls and blows your head off and that dude</p>
+<p class="transcript-line"><span class="timestamp">[18:58]</span> plays a little jingle while the balls fall down but even this hear me out way</p>
+<p class="transcript-line"><span class="timestamp">[19:05]</span> better way of killing yourself because then you you don't get any like</p>
+<p class="transcript-line"><span class="timestamp">[19:08]</span> a trigger fear which apparently is a thing where when people go to miss the last</p>
+<p class="transcript-line"><span class="timestamp">[19:14]</span> second they pull out in fear so like if you're locked in in a chair and</p>
+<p class="transcript-line"><span class="timestamp">[19:18]</span> root gold bird machines is going at it God the thing is you you presumably</p>
+<p class="transcript-line"><span class="timestamp">[19:24]</span> design the machine yourself for sure you probably know when it's gonna come yeah</p>
+<p class="transcript-line"><span class="timestamp">[19:29]</span> but the sound true yeah I guess it comes down to how many times if you</p>
+<p class="transcript-line"><span class="timestamp">[19:33]</span> put like gone through test runs if you if you've done it once and made sure</p>
+<p class="transcript-line"><span class="timestamp">[19:37]</span> that it pulls the trigger then you might not have a good enough like sense of</p>
+<p class="transcript-line"><span class="timestamp">[19:41]</span> time yeah maybe if you had one of those funnels where balls like rolling through</p>
+<p class="transcript-line"><span class="timestamp">[19:45]</span> with those are kind of inconsistent kind of random we're gonna build one</p>
+<p class="transcript-line"><span class="timestamp">[19:50]</span> yeah I don't want to think about this too it's funny because do you hear of</p>
+<p class="transcript-line"><span class="timestamp">[19:54]</span> this is a while ago that like Canada started having the suicide machines that</p>
+<p class="transcript-line"><span class="timestamp">[19:58]</span> they're letting people go like people with like terrible illness that they're</p>
+<p class="transcript-line"><span class="timestamp">[20:02]</span> in so much pain I've heard this take that that should be allowed I didn't yeah</p>
+<p class="transcript-line"><span class="timestamp">[20:06]</span> people are doing it I think Sweden had one they had people who actually did</p>
+<p class="transcript-line"><span class="timestamp">[20:09]</span> these things so but it's like a tank that just like spray some gas that knocks</p>
+<p class="transcript-line"><span class="timestamp">[20:13]</span> you out and then sprays gas that a fix you do but imagine if like one country</p>
+<p class="transcript-line"><span class="timestamp">[20:17]</span> like we got the root gold bird shotgun the best way to kill you yeah if your</p>
+<p class="transcript-line"><span class="timestamp">[20:22]</span> insurance is approved you can die this way just splatter your brains across</p>
+<p class="transcript-line"><span class="timestamp">[20:26]</span> some fucking doctor but yeah it's a good idea yeah you're gonna be mad when I</p>
+<p class="transcript-line"><span class="timestamp">[20:32]</span> get rich off it so just off killing people I mean they'd be crazy there's</p>
+<p class="transcript-line"><span class="timestamp">[20:38]</span> enough people to get rich off of there is like please fucking put a shotgun in</p>
+<p class="transcript-line"><span class="timestamp">[20:42]</span> my mind be sad yeah that probably end to my death I'd be I'd be dying for my</p>
+<p class="transcript-line"><span class="timestamp">[20:48]</span> own machine I have one ready for yourself dude for when I hit a hundred customers I</p>
+<p class="transcript-line"><span class="timestamp">[20:52]</span> just killed myself oh you know what have you read and then there were none no</p>
+<p class="transcript-line"><span class="timestamp">[20:58]</span> else that it's like a classic I feel like it's like the OG murder mystery book</p>
+<p class="transcript-line"><span class="timestamp">[21:03]</span> okay I'm agatha Christie and who she is yeah I'm heavy spoiler alert if he does</p>
+<p class="transcript-line"><span class="timestamp">[21:12]</span> that at the end there it's he sets up a machine not not a machine but like let's</p>
+<p class="transcript-line"><span class="timestamp">[21:20]</span> see what happens it's a murder mystery that they're all in an island you don't</p>
+<p class="transcript-line"><span class="timestamp">[21:24]</span> have to do the killer is who done it whatever okay and then when there's two</p>
+<p class="transcript-line"><span class="timestamp">[21:28]</span> people left he rigs up something so that she finds like a message in a bottle</p>
+<p class="transcript-line"><span class="timestamp">[21:34]</span> or something okay and when she opens it it's like attached to a string that</p>
+<p class="transcript-line"><span class="timestamp">[21:38]</span> person's machine fucking shoots him in the head well someone thought of it a long</p>
+<p class="transcript-line"><span class="timestamp">[21:42]</span> time ago yeah fuck I guess that's not as complex but yeah I don't know if it</p>
+<p class="transcript-line"><span class="timestamp">[21:48]</span> counts as a machine yeah and you could make it way more entertaining yeah there's</p>
+<p class="transcript-line"><span class="timestamp">[21:52]</span> like dominoes and fun colorful things going on throughout like a 30-minute</p>
+<p class="transcript-line"><span class="timestamp">[21:56]</span> process a little banners that come down yeah like a just kidding right before</p>
+<p class="transcript-line"><span class="timestamp">[22:00]</span> like one barrel has a whole shit just fucking then the other one blows your head</p>
+<p class="transcript-line"><span class="timestamp">[22:06]</span> off now we're cooking oh god that was coming off of lobster's don't die of old age</p>
+<p class="transcript-line"><span class="timestamp">[22:13]</span> isn't that crazy we made it all that's all we've talked about oh I guess the</p>
+<p class="transcript-line"><span class="timestamp">[22:17]</span> other one wasn't actual topic but we kind of let into it that's that kind of</p>
+<p class="transcript-line"><span class="timestamp">[22:21]</span> what a pet lobster now just knowing how that would live me how do you take</p>
+<p class="transcript-line"><span class="timestamp">[22:24]</span> care of a lobster you just put in tank you know what else that just reminds me</p>
+<p class="transcript-line"><span class="timestamp">[22:29]</span> of is rollover what I said it's fine I wasn't ready to share this fact give me a</p>
+<p class="transcript-line"><span class="timestamp">[22:35]</span> second who's the fucking evolution guy Charles Darwin yeah he had a tortoise</p>
+<p class="transcript-line"><span class="timestamp">[22:40]</span> yeah the glop of ghosts ones yeah he had a pet tortoise named Harriet I think</p>
+<p class="transcript-line"><span class="timestamp">[22:45]</span> okay and it I think he got the tortoise in 1886 and it died in 2006 yeah</p>
+<p class="transcript-line"><span class="timestamp">[22:56]</span> two that's fucking crazy and and then Steve Irwin took care of it is still a lot</p>
+<p class="transcript-line"><span class="timestamp">[23:01]</span> oh you said die in 2000 yeah yeah what is that 160 wait when do you say you got it</p>
+<p class="transcript-line"><span class="timestamp">[23:06]</span> 18 what it was 1886 to 2006 it's like 130 years yeah yeah it's like nuts it's</p>
+<p class="transcript-line"><span class="timestamp">[23:16]</span> crazy yeah to imagine your your pet just living a whole other lifetime after you die</p>
+<p class="transcript-line"><span class="timestamp">[23:22]</span> dude I had this exact conversation with somebody about Paris this weekend because</p>
+<p class="transcript-line"><span class="timestamp">[23:27]</span> like the big fucking Paris Paris Paris they can live like 90 years yeah so there's</p>
+<p class="transcript-line"><span class="timestamp">[23:34]</span> people there's people around the world who get these things this past somehow and then</p>
+<p class="transcript-line"><span class="timestamp">[23:38]</span> I'll live some and then you just get someone's like 80 year old you know our buddy Brian</p>
+<p class="transcript-line"><span class="timestamp">[23:42]</span> blip his name yeah he's the one time I ever went to his house he was like picking up</p>
+<p class="transcript-line"><span class="timestamp">[23:48]</span> something for a road trip and I was just sitting in the kitchen with his dad yeah and we just</p>
+<p class="transcript-line"><span class="timestamp">[23:54]</span> hear this bird like calling in the background his dad's like yeah I got it from when he</p>
+<p class="transcript-line"><span class="timestamp">[23:59]</span> was a kid what didn't know they live this way wait this the brain we all know yeah yeah he</p>
+<p class="transcript-line"><span class="timestamp">[24:06]</span> got a his dad got him as a parent as a kid I don't I don't think it's a parent it's like</p>
+<p class="transcript-line"><span class="timestamp">[24:10]</span> parent adjacent maybe a pair of keys but it's just okay but it's definitely not a</p>
+<p class="transcript-line"><span class="timestamp">[24:14]</span> parakeed he's like he's like I had no idea they live as long or longer than humans so the kids</p>
+<p class="transcript-line"><span class="timestamp">[24:23]</span> the kids left yeah they just have a bird still yeah I could see the agony on his face</p>
+<p class="transcript-line"><span class="timestamp">[24:30]</span> like fucking thing just terrorizing you all fucking day yeah oh now we're pot oh god that</p>
+<p class="transcript-line"><span class="timestamp">[24:40]</span> one sounded fake that's crazy great Joe I've only ever heard of people having parents and I've</p>
+<p class="transcript-line"><span class="timestamp">[24:48]</span> heard of you get you should ask him if it's still alive I will talk to Brian a decent</p>
+<p class="transcript-line"><span class="timestamp">[24:52]</span> mountain yeah online you still haven't jumped in the fuck shak dude text me what else also what's</p>
+<p class="transcript-line"><span class="timestamp">[24:58]</span> your username in that I think it's it mr. boobs I think it's father okay yeah cuz I'm the</p>
+<p class="transcript-line"><span class="timestamp">[25:05]</span> night one time I checked it and I just see all these names like I don't know any of these people</p>
+<p class="transcript-line"><span class="timestamp">[25:09]</span> oh yeah yeah cuz we all have like aliases yeah so like I think I'm father Dom is gay adopted son</p>
+<p class="transcript-line"><span class="timestamp">[25:15]</span> black gay adopted son Brian's something but then it's like when I when I first got in there</p>
+<p class="transcript-line"><span class="timestamp">[25:22]</span> I just named everyone else like a different version of my son like retarded son or autistic son</p>
+<p class="transcript-line"><span class="timestamp">[25:27]</span> okay son and I think Tim is abused bio dad don't remember how that happened all right but</p>
+<p class="transcript-line"><span class="timestamp">[25:33]</span> anyway all right if I see father in there I'll check out yeah that are Dom's black just okay</p>
+<p class="transcript-line"><span class="timestamp">[25:38]</span> up in there we're it's mostly us in there for the most part I don't know who mr. boobs is</p>
+<p class="transcript-line"><span class="timestamp">[25:42]</span> the picture was hilarious it was always a doctor doctor Phil with tips yeah okay yeah okay we're</p>
+<p class="transcript-line"><span class="timestamp">[25:48]</span> good I thought for sure those you know I'm not that cool I'm not that funny it's</p>
+<p class="transcript-line"><span class="timestamp">[25:53]</span> unfortunately if we got that kind of pot goddamn elephant enters convenience store in Thailand eats</p>
+<p class="transcript-line"><span class="timestamp">[25:58]</span> everything so I feel like this is something that I would have seen typically and not really cared</p>
+<p class="transcript-line"><span class="timestamp">[26:04]</span> about but if you're in Thailand and you have a convenience store like you're a local mom similar</p>
+<p class="transcript-line"><span class="timestamp">[26:11]</span> how like inner city if there'd be a lot of like local convenience stores were like this guy this</p>
+<p class="transcript-line"><span class="timestamp">[26:16]</span> is his business this is all he owns if this falls out he has nothing and just to think that you're</p>
+<p class="transcript-line"><span class="timestamp">[26:23]</span> in a convenience store the one you own and an elephant I saw the video of this but we just bust</p>
+<p class="transcript-line"><span class="timestamp">[26:29]</span> down the doors and eats all of your inventory for the day just like we're like blowing shit going</p>
+<p class="transcript-line"><span class="timestamp">[26:34]</span> in the fucking bridges and then just leaves and you're like hopefully explain like an insurance company</p>
+<p class="transcript-line"><span class="timestamp">[26:42]</span> yeah it's like you worry about like natural disasters like theft from like people yeah that's such a</p>
+<p class="transcript-line"><span class="timestamp">[26:49]</span> fuck you I guess that's more common yeah I got to imagine in Thailand but it can't be that common</p>
+<p class="transcript-line"><span class="timestamp">[26:55]</span> right that elephant's like I'm going to the fucking store and you just have to deal with it like you</p>
+<p class="transcript-line"><span class="timestamp">[27:01]</span> can't do anything yeah that sucks yeah I feel like elephants can't eat that fast though right</p>
+<p class="transcript-line"><span class="timestamp">[27:07]</span> because they kind of grab stuff with their trunks yeah and just but they they can grab a lot of</p>
+<p class="transcript-line"><span class="timestamp">[27:12]</span> some damage yeah I mean I it's probably got to be that situation more about the damage I would think</p>
+<p class="transcript-line"><span class="timestamp">[27:17]</span> but it was eating stuff just full packs on my arms eating parts of the counter like it's just</p>
+<p class="transcript-line"><span class="timestamp">[27:24]</span> fucking going to town it's just hilarious the videos insane thing as I I kind of love elephants</p>
+<p class="transcript-line"><span class="timestamp">[27:29]</span> so I don't know how bad I feel for that guy kind of happy for the elephant yeah it's hilarious</p>
+<p class="transcript-line"><span class="timestamp">[27:37]</span> you're the problem of this country yeah it is a being detached from it does maybe go like it's</p>
+<p class="transcript-line"><span class="timestamp">[27:42]</span> just a fucking elephant like it's kind of cute it just wants food and there's this guy who can't</p>
+<p class="transcript-line"><span class="timestamp">[27:46]</span> feed his kids anymore I mean there's that famous elephant that like I don't know what the reason</p>
+<p class="transcript-line"><span class="timestamp">[27:54]</span> was but it like found this lady's funeral and like destroyed all the feet like you had to</p>
+<p class="transcript-line"><span class="timestamp">[27:58]</span> bend dead out for this woman in Africa you've ever seen this video no I forgot what happened either</p>
+<p class="transcript-line"><span class="timestamp">[28:03]</span> like she something happened with this elephant tribe in her were like she came across its</p>
+<p class="transcript-line"><span class="timestamp">[28:09]</span> its baby I want it just it hated this woman and so what what did the lady do I don't remember but</p>
+<p class="transcript-line"><span class="timestamp">[28:16]</span> she died and the elephant found her funeral going on and just destroyed every she doesn't deserve</p>
+<p class="transcript-line"><span class="timestamp">[28:23]</span> respect yeah it's not a good one yeah this is on video holy shit well I mean the videos want I</p>
+<p class="transcript-line"><span class="timestamp">[28:29]</span> feel like you see the video like a crazy elephant but there's a whole bad story like this name</p>
+<p class="transcript-line"><span class="timestamp">[28:33]</span> been following her it's like the elephant John wicks yeah that's awesome but yeah it's they</p>
+<p class="transcript-line"><span class="timestamp">[28:40]</span> do they're fucking they remember I guess they I people tell me they're smart yeah which again I</p>
+<p class="transcript-line"><span class="timestamp">[28:46]</span> don't know how you I guess you can if you're around you're like oh these are smarter than dogs but</p>
+<p class="transcript-line"><span class="timestamp">[28:50]</span> you ever when scientists put out these like this thing can remember stuff for 17 years you're like</p>
+<p class="transcript-line"><span class="timestamp">[28:55]</span> but are like any of these metrics how the fuck you don't you don't know like I've heard that</p>
+<p class="transcript-line"><span class="timestamp">[29:01]</span> about dogs too they're like dogs of a three-year memory it's like what memories is a dog forming</p>
+<p class="transcript-line"><span class="timestamp">[29:05]</span> yeah doesn't make any sense all it just it recognizes me I feel like that's all it remembers yeah</p>
+<p class="transcript-line"><span class="timestamp">[29:12]</span> it's like I know this person or I don't yeah beyond that I've who knows I mean again I guess it</p>
+<p class="transcript-line"><span class="timestamp">[29:20]</span> remember when I went to that field that was awesome dude all questions I wish I had the answers I</p>
+<p class="transcript-line"><span class="timestamp">[29:24]</span> have no idea yeah I don't think I don't think anyone can I'd like to extract what I'm but it's like</p>
+<p class="transcript-line"><span class="timestamp">[29:29]</span> how do you even how how would I even know if it's remin I don't even know what it's thinking I would</p>
+<p class="transcript-line"><span class="timestamp">[29:34]</span> have to know what like what it thinks about to start with to think I guess if you bring your dog</p>
+<p class="transcript-line"><span class="timestamp">[29:39]</span> to the same dogs get excited for walks so they know I feel like they probably remember their walks</p>
+<p class="transcript-line"><span class="timestamp">[29:46]</span> I'm with remembering but reminisce is like yeah that's another I don't know whether I don't know</p>
+<p class="transcript-line"><span class="timestamp">[29:52]</span> animals think they self reflect that dude that's that I've heard that's one of the biggest arguments</p>
+<p class="transcript-line"><span class="timestamp">[29:57]</span> in separation from like human consciousness yeah that's like another level of elections look at</p>
+<p class="transcript-line"><span class="timestamp">[30:02]</span> past things with like a different view as opposed to just like we have a memory yeah dogs just</p>
+<p class="transcript-line"><span class="timestamp">[30:08]</span> like man I shouldn't I shouldn't a bit that yeah I feel really bad about that goes on just a</p>
+<p class="transcript-line"><span class="timestamp">[30:13]</span> tour giving seminars I will dogs do feel guilt I mean that's well documented like they know they</p>
+<p class="transcript-line"><span class="timestamp">[30:19]</span> did something wrong yeah yeah that I think it goes to its room is like I fucked up yeah I'm so sorry</p>
+<p class="transcript-line"><span class="timestamp">[30:27]</span> I mean it's funny there's a famous there's a video going around right now but like</p>
+<p class="transcript-line"><span class="timestamp">[30:31]</span> these people take their dog to a doggy daycare or like a doggy daycare it must be consistently</p>
+<p class="transcript-line"><span class="timestamp">[30:36]</span> enough and then they have a voice mail on their phone from the doggy daycare and the video is just</p>
+<p class="transcript-line"><span class="timestamp">[30:41]</span> of the dog and like so this lady's like saying at home puts the voice mail on so it's the doggy daycare</p>
+<p class="transcript-line"><span class="timestamp">[30:46]</span> person and the dog's in there it's like looking like this and once it hears the lady's voice he's like</p>
+<p class="transcript-line"><span class="timestamp">[30:51]</span> oh shit and the way he's like yeah he's doing fine he's re-social but he just all he does is hump other</p>
+<p class="transcript-line"><span class="timestamp">[30:57]</span> dogs and dogs like he's just a hamper and literally the dog hearing that like you know it looks like</p>
+<p class="transcript-line"><span class="timestamp">[31:04]</span> it knows it's such a good video yeah it's just like all fucked dude I think they for sure know</p>
+<p class="transcript-line"><span class="timestamp">[31:10]</span> tones like tones avoid they can tell of good or bad sure yeah based on how you're saying something</p>
+<p class="transcript-line"><span class="timestamp">[31:16]</span> oh dude I'm just nice let her rip other funny animal story yeah this week in Chicago yeah a sheep</p>
+<p class="transcript-line"><span class="timestamp">[31:26]</span> this the first of all I didn't know this happened but a sheep escaped from a butcher shop</p>
+<p class="transcript-line"><span class="timestamp">[31:33]</span> and was just running around the streets okay I didn't know they had live sheep in downtown Chicago</p>
+<p class="transcript-line"><span class="timestamp">[31:40]</span> yeah the I if I'm being honest didn't know that either but the only reason I go hmm kind of make</p>
+<p class="transcript-line"><span class="timestamp">[31:47]</span> sense is I've heard of in New York they have entire like you can go get live chickens killed in</p>
+<p class="transcript-line"><span class="timestamp">[31:53]</span> for like there's places to have live animals in the middle of the city that are mostly like</p>
+<p class="transcript-line"><span class="timestamp">[31:58]</span> what you know when you have like a china town or you have like a spand like when they're</p>
+<p class="transcript-line"><span class="timestamp">[32:01]</span> all these little sex of different cultures that have like they've stayed with what they do from like</p>
+<p class="transcript-line"><span class="timestamp">[32:06]</span> Mexico or from China and all exist in one spot but now I'm wondering is that what a butcher shop</p>
+<p class="transcript-line"><span class="timestamp">[32:12]</span> is like do all butcher shops have live animals typically no okay no I assume they would get me</p>
+<p class="transcript-line"><span class="timestamp">[32:18]</span> shipped in yeah yeah you get it like syrton frozen or you get it it's usually butchered before you</p>
+<p class="transcript-line"><span class="timestamp">[32:23]</span> get it right the ones I've been to I don't I've never there's definitely not live animals I don't</p>
+<p class="transcript-line"><span class="timestamp">[32:28]</span> think I've ever been to a butcher shop really there's pretty good meat to like a local place there's</p>
+<p class="transcript-line"><span class="timestamp">[32:33]</span> this Polish one back warm from and yeah but never live animals yeah I think that's a very like</p>
+<p class="transcript-line"><span class="timestamp">[32:40]</span> it's crazy to have a sheep in the city in the morning to the sheep look so scared it literally</p>
+<p class="transcript-line"><span class="timestamp">[32:44]</span> looks like a kidnap victim just escaped Jeffrey Dahmer's house yeah which is quite literally what</p>
+<p class="transcript-line"><span class="timestamp">[32:49]</span> happened yeah yeah yeah yeah yeah and then I read some reviews of the place okay so I was talking</p>
+<p class="transcript-line"><span class="timestamp">[32:58]</span> about this wasn't just alone but people are like dude I can smell the blood when I walk in like</p>
+<p class="transcript-line"><span class="timestamp">[33:04]</span> the shit is fresh yeah they're killing things there it's got a it's crazy that's insane dude yeah</p>
+<p class="transcript-line"><span class="timestamp">[33:10]</span> fuck that it's kind of fucked up yeah it's it's nuts it always bring you back to like the would we</p>
+<p class="transcript-line"><span class="timestamp">[33:15]</span> eat as much meat if you had to kill the thing you eat burgers to think about burgers you actually kill</p>
+<p class="transcript-line"><span class="timestamp">[33:21]</span> a cut I mean number one that's to be hard I guess if you haven't gone yeah but it is just oh you're</p>
+<p class="transcript-line"><span class="timestamp">[33:26]</span> saying if you had to kill all you have to kill all your food essentially but yeah be a be tough</p>
+<p class="transcript-line"><span class="timestamp">[33:33]</span> or be a lot more friction to the process instead of just buying up just a little bit</p>
+<p class="transcript-line"><span class="timestamp">[33:39]</span> uh cursed a subreddit makes me feel like we're just simulating God oh sounds deep</p>
+<p class="transcript-line"><span class="timestamp">[33:46]</span> you've ever been on the subreddit called cursed AI no it's like the most her</p>
+<p class="transcript-line"><span class="timestamp">[33:54]</span> people who are looking to make it do the most horrific things are on that subreddit so they</p>
+<p class="transcript-line"><span class="timestamp">[33:58]</span> they'll prompt it I don't know what they're prompting there's someone they've like subverted</p>
+<p class="transcript-line"><span class="timestamp">[34:02]</span> the rules around certain ones okay well they'll produce like full-scale horror movies or</p>
+<p class="transcript-line"><span class="timestamp">[34:10]</span> situations that are like it is it's just it's the most insane thing you'll ever see in your entire life</p>
+<p class="transcript-line"><span class="timestamp">[34:16]</span> I found what I've saved a handful because they're just like one number one they look cool because</p>
+<p class="transcript-line"><span class="timestamp">[34:22]</span> I like horror you love that horror yeah and like just as insane but there's ones that are like</p>
+<p class="transcript-line"><span class="timestamp">[34:26]</span> like the one I think of recently is the prompt must have been like find a future where humans and</p>
+<p class="transcript-line"><span class="timestamp">[34:33]</span> machines it can truly bend one but humanity humanity has been lost from every human and</p>
+<p class="transcript-line"><span class="timestamp">[34:38]</span> it's mostly machine and it's like it is the darkest most insane looking thing you'll ever see</p>
+<p class="transcript-line"><span class="timestamp">[34:44]</span> in your entire life is it just videos that it makes yeah it's videos and it looks real it looks</p>
+<p class="transcript-line"><span class="timestamp">[34:48]</span> so real it's crazy it's like yeah dude but every time I see it I think of like</p>
+<p class="transcript-line"><span class="timestamp">[34:57]</span> if there is God or whatever made this created this that feels like we are God you're like literally</p>
+<p class="transcript-line"><span class="timestamp">[35:04]</span> making this universe of yeah you're just living breathing claims that you're speaking it into</p>
+<p class="transcript-line"><span class="timestamp">[35:10]</span> existence yeah it's it's bananas and when you see how like human and weird everything looks like</p>
+<p class="transcript-line"><span class="timestamp">[35:15]</span> oh this feels feels wrong on some level but it's so cool dude I think we're like</p>
+<p class="transcript-line"><span class="timestamp">[35:23]</span> maybe not even a year away from literally not being able to tell a difference yeah</p>
+<p class="transcript-line"><span class="timestamp">[35:29]</span> I can barely do it now you have to really you gotta be like that looks weird and then fine</p>
+<p class="transcript-line"><span class="timestamp">[35:34]</span> some inconsistency around the edge yeah or something but yeah it's fucking insane but we'll see</p>
+<p class="transcript-line"><span class="timestamp">[35:39]</span> it's only getting better I mean dude I the place I work we've started leveraging Gen A I stuff to</p>
+<p class="transcript-line"><span class="timestamp">[35:45]</span> the degree were like it's doing things that would have taken me like weeks to do yeah it's stupidly</p>
+<p class="transcript-line"><span class="timestamp">[35:53]</span> insane I mean it makes me a better programmer but it's like I don't know man there was a couple</p>
+<p class="transcript-line"><span class="timestamp">[35:59]</span> weeks ago when we first put this stuff in place we used this thing called Rue which is like has</p>
+<p class="transcript-line"><span class="timestamp">[36:04]</span> all of these AI agents that can work as like an engineer an architect or a more debugging setting</p>
+<p class="transcript-line"><span class="timestamp">[36:11]</span> like all these different guys and you can have them working unison or you can have them work</p>
+<p class="transcript-line"><span class="timestamp">[36:14]</span> separately and I've fed it this problem that involves a really complex pipeline of data and it</p>
+<p class="transcript-line"><span class="timestamp">[36:21]</span> spit out a model with them like it analyzed the entire pipeline and gave me a model that I'm like</p>
+<p class="transcript-line"><span class="timestamp">[36:26]</span> that seemed to work as I needed it to and I was like fuck yeah man things were really good</p>
+<p class="transcript-line"><span class="timestamp">[36:33]</span> taking our jobs yeah but at the same time it broke the first time I used it so nice it can like</p>
+<p class="transcript-line"><span class="timestamp">[36:39]</span> think too hard it'll like because it'll take what you ask it and think and then it'll like create</p>
+<p class="transcript-line"><span class="timestamp">[36:44]</span> a subtest be like okay I have to go look at this first to like make an ant test happen and so I got</p>
+<p class="transcript-line"><span class="timestamp">[36:49]</span> so deep in subtest that it got back to the place of like what do you want what's going on</p>
+<p class="transcript-line"><span class="timestamp">[36:54]</span> literally it was like what models do you want me to update yeah like no it's your job to find</p>
+<p class="transcript-line"><span class="timestamp">[36:58]</span> the models in this folder and it was like I don't I don't know what to do yeah what I what I have</p>
+<p class="transcript-line"><span class="timestamp">[37:03]</span> found is the AI that I've used is like very it's like a yes man it's like it's every question you</p>
+<p class="transcript-line"><span class="timestamp">[37:09]</span> ask it's like yes certainly yeah it's always on yes here's the answer yeah and like often it's right</p>
+<p class="transcript-line"><span class="timestamp">[37:14]</span> but then it's a lot of times it's not or it'll forget context from earlier and then you'll kind of</p>
+<p class="transcript-line"><span class="timestamp">[37:20]</span> be in a loop of like it's like how do you not put all this together but yeah sure that'll be</p>
+<p class="transcript-line"><span class="timestamp">[37:26]</span> worked out very soon I think so and I think like you just said I think for the most part it gets 98</p>
+<p class="transcript-line"><span class="timestamp">[37:31]</span> percent things correct but it will have bias in your favor of like if you're talking to certain</p>
+<p class="transcript-line"><span class="timestamp">[37:36]</span> wayers if you want certain things to happen because I've definitely had to be like no that's wrong</p>
+<p class="transcript-line"><span class="timestamp">[37:41]</span> because there there was yeah I think it's called deep thing and they got rid of it but it was</p>
+<p class="transcript-line"><span class="timestamp">[37:47]</span> like a research based one that was like asking to compile all this data on like supplementation</p>
+<p class="transcript-line"><span class="timestamp">[37:52]</span> around vitamin D and long channel mega three is like what compile all the data that's available</p>
+<p class="transcript-line"><span class="timestamp">[37:56]</span> and tell me the answers and like it things that I would ask it before and I would go like this is</p>
+<p class="transcript-line"><span class="timestamp">[38:02]</span> probably right it now like proved itself wrong like no this is this bullshit huh so it's okay</p>
+<p class="transcript-line"><span class="timestamp">[38:09]</span> but anyway so we talked to animal things lobster's mouth and what time do we got in sheep</p>
+<p class="transcript-line"><span class="timestamp">[38:17]</span> 30 okay we got time uh what else do we want to do we already talked about P Diddy</p>
+<p class="transcript-line"><span class="timestamp">[38:27]</span> mostly peaceful applied to OJ Simpson what does that mean I don't know I don't know what that's</p>
+<p class="transcript-line"><span class="timestamp">[38:37]</span> about how about legacy is bullshit that's a good one legacy yeah what do you think about it</p>
+<p class="transcript-line"><span class="timestamp">[38:46]</span> actually what does it mean to you for when you think of legacy like I say you up here just</p>
+<p class="transcript-line"><span class="timestamp">[38:51]</span> be like fuck you I'd say something beautiful you're just gonna sweat you leave behind I guess</p>
+<p class="transcript-line"><span class="timestamp">[39:02]</span> after you die yeah that's I think that's correct now so what's your what's your opinion on it I guess</p>
+<p class="transcript-line"><span class="timestamp">[39:08]</span> I mean I read the other part of your yeah kind of your props yeah you don't get to experience it</p>
+<p class="transcript-line"><span class="timestamp">[39:15]</span> yeah right that's that's a downside big one I I feel like having a fear of not being remembered</p>
+<p class="transcript-line"><span class="timestamp">[39:23]</span> is very common and that I don't get it all I don't give a shit about that yeah yeah but I do</p>
+<p class="transcript-line"><span class="timestamp">[39:29]</span> I do get like wanting to like leave a family behind okay I feel like I get why that's important to people</p>
+<p class="transcript-line"><span class="timestamp">[39:40]</span> I guess but also I don't I get yeah doesn't that one won't be there fall into the same trap is the first</p>
+<p class="transcript-line"><span class="timestamp">[39:46]</span> point you made though of like this that is your that of just a different version of like being</p>
+<p class="transcript-line"><span class="timestamp">[39:52]</span> remembered except it's the kind of is yeah yeah again I'm not one to say people who think that</p>
+<p class="transcript-line"><span class="timestamp">[39:59]</span> way are wrong or right but it is and I even to play devil's advocate about what I'm about to say is</p>
+<p class="transcript-line"><span class="timestamp">[40:07]</span> I think the mentality of wanting to leave a legacy has led people to some great innovation in places</p>
+<p class="transcript-line"><span class="timestamp">[40:15]</span> from been like I need to leave something huge and has led to like them doing things to an insane</p>
+<p class="transcript-line"><span class="timestamp">[40:20]</span> amount to leave some imprint like the things we remember about yeah typically were monumental and</p>
+<p class="transcript-line"><span class="timestamp">[40:26]</span> impact some better for the than others Hitler you may be arming that not a good like a heck of a legacy</p>
+<p class="transcript-line"><span class="timestamp">[40:31]</span> but this idea of like to me when I think of people remembering me I just like what I won't</p>
+<p class="transcript-line"><span class="timestamp">[40:41]</span> not if it will matter once the lights are out let me fucking gone yeah like to me like</p>
+<p class="transcript-line"><span class="timestamp">[40:49]</span> nothing sounds selfish but the only things that matter in this world are things that matter to us</p>
+<p class="transcript-line"><span class="timestamp">[40:55]</span> whether it be you can't perceive anything else yeah so it's like and and I don't know it's</p>
+<p class="transcript-line"><span class="timestamp">[41:01]</span> weird to be like I want this to matter to other people when it doesn't matter to me anymore because</p>
+<p class="transcript-line"><span class="timestamp">[41:06]</span> even the person today who goes I want this to matter to other people it's because it matters to you</p>
+<p class="transcript-line"><span class="timestamp">[41:11]</span> right now it's because then remembering you makes you feel good yeah you could argue that I</p>
+<p class="transcript-line"><span class="timestamp">[41:21]</span> what about just like the I want to put something positive into the world like I want to I want to</p>
+<p class="transcript-line"><span class="timestamp">[41:29]</span> make an impact on this person and then I want that person to take that and make an impact on someone</p>
+<p class="transcript-line"><span class="timestamp">[41:34]</span> else and you know pay that forward maybe that gives you a good feeling I think that's great I</p>
+<p class="transcript-line"><span class="timestamp">[41:40]</span> think that that's the best version of it yeah and I kind of see that with like having kids to it's</p>
+<p class="transcript-line"><span class="timestamp">[41:45]</span> like I want to it's still my values in them sure and then they have that pass that down yeah I think</p>
+<p class="transcript-line"><span class="timestamp">[41:51]</span> that's I think that's the best version but but as far as like I want to build a company that changes</p>
+<p class="transcript-line"><span class="timestamp">[41:58]</span> the world like that I guess that would be kind of cool yeah because to your point if it's positive</p>
+<p class="transcript-line"><span class="timestamp">[42:04]</span> then it's nice if you're like I want to leave something that makes this world a better place</p>
+<p class="transcript-line"><span class="timestamp">[42:09]</span> that's because that kind of is selfless at that point right it kind of depends on your motivation</p>
+<p class="transcript-line"><span class="timestamp">[42:13]</span> are you doing it to be in the history books and have your name never erased that would be like a</p>
+<p class="transcript-line"><span class="timestamp">[42:17]</span> selfish motivation yeah yeah yeah but if you're doing it just to like leave your mark on the world</p>
+<p class="transcript-line"><span class="timestamp">[42:23]</span> maybe slightly selfish to feel like you accomplish something but also on selfish to like</p>
+<p class="transcript-line"><span class="timestamp">[42:28]</span> I don't know it just feel like you added something yeah I'd say it's it's a weird thing where I</p>
+<p class="transcript-line"><span class="timestamp">[42:33]</span> think it's both are okay it can be selfish and it can be positive at the same time right I think</p>
+<p class="transcript-line"><span class="timestamp">[42:38]</span> yeah the the wrong part for me is the part where people go I just want to do it for the sake of being</p>
+<p class="transcript-line"><span class="timestamp">[42:43]</span> remembered and not benefiting like yeah you don't want infamy which I think some some people go for</p>
+<p class="transcript-line"><span class="timestamp">[42:50]</span> that and then some of the people just do it truly for like I don't know they want to have they want</p>
+<p class="transcript-line"><span class="timestamp">[42:55]</span> to be better than the rest which even in that situation if it ends up being positive I'm like</p>
+<p class="transcript-line"><span class="timestamp">[43:00]</span> none who gives a shit yeah I mean the people who are purely like I don't I want people to</p>
+<p class="transcript-line"><span class="timestamp">[43:06]</span> remember me it's like dude people are gonna forget like yeah everyone's gonna forget like two</p>
+<p class="transcript-line"><span class="timestamp">[43:12]</span> generations does it take long do you think about even like we don't know people from 5,000</p>
+<p class="transcript-line"><span class="timestamp">[43:19]</span> years ago yeah they're probably monumental people in those times that we have no idea there it doesn't</p>
+<p class="transcript-line"><span class="timestamp">[43:24]</span> take that long for people to be wiped from memories at the current day right even even your own</p>
+<p class="transcript-line"><span class="timestamp">[43:31]</span> family it's like I yeah I never met my grandpa even I hear stories about him I'm like that's nice</p>
+<p class="transcript-line"><span class="timestamp">[43:38]</span> I like to hear that maybe I'll I would tell my kids about them but like they would stop there right</p>
+<p class="transcript-line"><span class="timestamp">[43:45]</span> and then the older you get only two or three generations yeah yeah it takes a pretty big impact</p>
+<p class="transcript-line"><span class="timestamp">[43:51]</span> for things to stick or it's weird if you're like and this price not a good instinct but like</p>
+<p class="transcript-line"><span class="timestamp">[43:59]</span> things in the future in the past to a certain degree should not matter as much like the weight of</p>
+<p class="transcript-line"><span class="timestamp">[44:06]</span> if if someone's two generations away from you in either direction like two generations dead I</p>
+<p class="transcript-line"><span class="timestamp">[44:11]</span> should say not not living I feel like those things almost shouldn't apply unless there's like life</p>
+<p class="transcript-line"><span class="timestamp">[44:16]</span> less than someone like they should matter to you yeah like I shouldn't be basing my actions off</p>
+<p class="transcript-line"><span class="timestamp">[44:19]</span> of someone who was two generations either into the in the future doesn't matter but into the past</p>
+<p class="transcript-line"><span class="timestamp">[44:24]</span> you know yeah live in the present thanks man sage advice I guess the case maybe for the past like</p>
+<p class="transcript-line"><span class="timestamp">[44:34]</span> like yeah I never knew my grandpa don't think about him that much yeah but like he raised my dad</p>
+<p class="transcript-line"><span class="timestamp">[44:41]</span> for sure my mom you know I'm sure they got something from him that they passed on to me so I guess</p>
+<p class="transcript-line"><span class="timestamp">[44:47]</span> it's still there well yeah that's still within two generations though yeah so like I'm thinking</p>
+<p class="transcript-line"><span class="timestamp">[44:52]</span> like in my head my great grandfather my great great grandfather no that shit matters to me yeah</p>
+<p class="transcript-line"><span class="timestamp">[45:00]</span> and I'm like they did shit and then yeah I don't know but at the same time those thoughts don't</p>
+<p class="transcript-line"><span class="timestamp">[45:08]</span> really come to me actively like yeah there's like no time I'm just sitting at my desk just</p>
+<p class="transcript-line"><span class="timestamp">[45:15]</span> fuck my great great don't matter I'm alive now just point it out there just so you can hear it yeah</p>
+<p class="transcript-line"><span class="timestamp">[45:23]</span> and then there's this separate thing of like legacy's in school systems which is just crazy</p>
+<p class="transcript-line"><span class="timestamp">[45:29]</span> what do you mean by that like a lot of the fucking Ivy League schools you know about like the</p>
+<p class="transcript-line"><span class="timestamp">[45:34]</span> legacy like you get in cuz you're getting because your dad was there your grand which is like</p>
+<p class="transcript-line"><span class="timestamp">[45:38]</span> the craziest way to go about stuff I guess they're banking on the kid being just like royalty yeah</p>
+<p class="transcript-line"><span class="timestamp">[45:44]</span> truly he's just banking on jeans which maybe there's something to be said there yeah probably a</p>
+<p class="transcript-line"><span class="timestamp">[45:50]</span> little bit it's probably a little like a your smart person odds are your kids smart probably</p>
+<p class="transcript-line"><span class="timestamp">[45:57]</span> bright I mean statistically yeah cuz you probably regardless of like from nature and nurture yeah</p>
+<p class="transcript-line"><span class="timestamp">[46:02]</span> yeah which you have to one could assume that's going to happen but I still think it's a weird</p>
+<p class="transcript-line"><span class="timestamp">[46:06]</span> system to have in place of like super weird super weird just get like all the other applicants</p>
+<p class="transcript-line"><span class="timestamp">[46:11]</span> they're like high achieving just get subverted by some guy who went here like 1960 for something he</p>
+<p class="transcript-line"><span class="timestamp">[46:17]</span> didn't do yes and probably one of those ways here to get in yeah it's a weird thing but two different</p>
+<p class="transcript-line"><span class="timestamp">[46:23]</span> flavors as well so what do you want to leave a legacy do you care now that we talked about no</p>
+<p class="transcript-line"><span class="timestamp">[46:28]</span> no shit I mean if I could leave a positive impure on the world but it's not something I'd be like</p>
+<p class="transcript-line"><span class="timestamp">[46:32]</span> if I don't it's gonna bug me yeah yeah I think I think and this is my own bullshit I think we're</p>
+<p class="transcript-line"><span class="timestamp">[46:40]</span> just put here to there's there's we all have a purpose to some degree or another and I think you</p>
+<p class="transcript-line"><span class="timestamp">[46:47]</span> can either lean fully in and do great things and I think everybody has a capacity or you can not</p>
+<p class="transcript-line"><span class="timestamp">[46:53]</span> and either way is truly great it's just like this is this is get you live in life either way</p>
+<p class="transcript-line"><span class="timestamp">[46:59]</span> yeah yeah spend it how you want and regardless of all you know I want to get Christian about because</p>
+<p class="transcript-line"><span class="timestamp">[47:05]</span> I'm not think I'm a devout Christian or anything but this idea that like if we are created by something</p>
+<p class="transcript-line"><span class="timestamp">[47:09]</span> and this thing is it's love to us is absolute free will then our existence of living do what we want</p>
+<p class="transcript-line"><span class="timestamp">[47:17]</span> grand there's varying degrees of what we I feel like we have an innate moral compass to some degree</p>
+<p class="transcript-line"><span class="timestamp">[47:24]</span> so like we when we see someone get killed we're not elated by someone dying but I think if we</p>
+<p class="transcript-line"><span class="timestamp">[47:29]</span> lean in the direction of doing not terrible things in general then this is it that's good if you</p>
+<p class="transcript-line"><span class="timestamp">[47:39]</span> yeah yeah just just not doing horrible things that's pretty good yeah I think as long as you're</p>
+<p class="transcript-line"><span class="timestamp">[47:45]</span> not being a bad person pretty solid you're doing better you're just doing what you should be doing</p>
+<p class="transcript-line"><span class="timestamp">[47:50]</span> in this time here again this is my theory bullshit none of this could make any sense no I'm with</p>
+<p class="transcript-line"><span class="timestamp">[47:55]</span> you on there's at least some innate moral compass you ever think about how easy it is to just do</p>
+<p class="transcript-line"><span class="timestamp">[48:00]</span> something horrible like horrifying yeah but I think also that there's a I shouldn't say a lot but</p>
+<p class="transcript-line"><span class="timestamp">[48:09]</span> we know that there's consequence too but I was so there's a selfish motivation there but I</p>
+<p class="transcript-line"><span class="timestamp">[48:15]</span> I lean towards what you say though more in that like it feels better to be good like it yeah I</p>
+<p class="transcript-line"><span class="timestamp">[48:21]</span> would make the art and you are demented like unless you're a Jeffrey Dahmer who from a young age</p>
+<p class="transcript-line"><span class="timestamp">[48:26]</span> you get abused in your wires crossed and then you're getting sexually aroused by horrendous things</p>
+<p class="transcript-line"><span class="timestamp">[48:31]</span> except for those rare cases I think most people it feels good to do good and bad to do bad and so</p>
+<p class="transcript-line"><span class="timestamp">[48:38]</span> and even even if that's self-at-like doing good makes people like you which feels good yeah it's</p>
+<p class="transcript-line"><span class="timestamp">[48:43]</span> like so I don't know as you've gotten older I have because when I was younger I did a lot of bad stuff</p>
+<p class="transcript-line"><span class="timestamp">[48:50]</span> and the dark side and as I've gotten older it's like the good things lead to better outcomes which</p>
+<p class="transcript-line"><span class="timestamp">[48:58]</span> you could crunch that to physical statistical stuff or you could put in this like more I don't know</p>
+<p class="transcript-line"><span class="timestamp">[49:05]</span> ethereal realm of philosophical yeah spiritual but like generally the more good I do the better my life</p>
+<p class="transcript-line"><span class="timestamp">[49:11]</span> is anyway you want to cut it whether it be through helping other people doing something for myself</p>
+<p class="transcript-line"><span class="timestamp">[49:16]</span> that's you know productive or good it's like everything gets better in that direction the second</p>
+<p class="transcript-line"><span class="timestamp">[49:21]</span> you start doing things that are hurting other people or hurting yourself it gets worse it just does</p>
+<p class="transcript-line"><span class="timestamp">[49:27]</span> and that's again my lived experience but I would imagine almost everyone living on this earth</p>
+<p class="transcript-line"><span class="timestamp">[49:31]</span> has experienced those directions in different degrees it's like you volunteer for something like</p>
+<p class="transcript-line"><span class="timestamp">[49:36]</span> oh my god this feels great it's the best feeling you'll ever have I yeah I didn't want to do this at all</p>
+<p class="transcript-line"><span class="timestamp">[49:42]</span> yeah and then the second that ripples to how many different people like that not to get all butterfly</p>
+<p class="transcript-line"><span class="timestamp">[49:49]</span> that's your legacy yeah just to fucking volunteer and help yeah I mean I would advocate for everybody</p>
+<p class="transcript-line"><span class="timestamp">[49:56]</span> go do it I mean it's it's one of those things that I always I'll go online and look at</p>
+<p class="transcript-line"><span class="timestamp">[50:00]</span> opportunities for volunteering I'd be like fucking not ready yet nope tired not today not doing it</p>
+<p class="transcript-line"><span class="timestamp">[50:05]</span> but it is that thing of like you could truly go work at a soup kitchen and make someone someone who's</p>
+<p class="transcript-line"><span class="timestamp">[50:12]</span> homeless changes their entire life because they got a meal that day yeah like just small things like</p>
+<p class="transcript-line"><span class="timestamp">[50:17]</span> that could change and that guy could go on become the next Hitler and then we're all good oh yeah let</p>
+<p class="transcript-line"><span class="timestamp">[50:23]</span> that guy die wait a second you don't get any soup today look a little Hitler you just got the</p>
+<p class="transcript-line"><span class="timestamp">[50:33]</span> stash that was that was beautiful for a second but really really tripped up that court dude you know</p>
+<p class="transcript-line"><span class="timestamp">[50:42]</span> I I haven't valedict this that why Hitler had that must that or why that message was common</p>
+<p class="transcript-line"><span class="timestamp">[50:46]</span> that was just normal wasn't it I think World War One when they had to wear gas masks a standard</p>
+<p class="transcript-line"><span class="timestamp">[50:51]</span> mustache would cause an issue with the seal and say that Hitler was in World War One there's a</p>
+<p class="transcript-line"><span class="timestamp">[50:56]</span> generation of people who like had to make that kind of kind of probably became like a the side of</p>
+<p class="transcript-line"><span class="timestamp">[51:01]</span> respect like you fought the war like you which again haven't validated but it is a unique choice</p>
+<p class="transcript-line"><span class="timestamp">[51:06]</span> that mustache I'm gonna tell three people before you validate thank god until they got the soup kitchen</p>
+<p class="transcript-line"><span class="timestamp">[51:11]</span> well great all right let's see what else we got oh cash Patel uh we could talk about him or not</p>
+<p class="transcript-line"><span class="timestamp">[51:20]</span> cash Patel your friend no no trip yeah it is crazy I have a friend named cash Patel</p>
+<p class="transcript-line"><span class="timestamp">[51:27]</span> that's yeah it's just more government crap um buh buh buh buh buh buh buh buh buh</p>
+<p class="transcript-line"><span class="timestamp">[51:33]</span> another hur well this is the most right got more animal stuff yeah I was just about to see</p>
+<p class="transcript-line"><span class="timestamp">[51:38]</span> the chickens legs yep yeah yeah yeah apparently I didn't know this I knew that like we</p>
+<p class="transcript-line"><span class="timestamp">[51:43]</span> mutate we do terrible things to the conventional chickens in this country like growing them</p>
+<p class="transcript-line"><span class="timestamp">[51:48]</span> but I didn't know that at two months it is standard for their legs to break from their weight</p>
+<p class="transcript-line"><span class="timestamp">[51:54]</span> like it's not before GMOs no no no this is all that's from what we did</p>
+<p class="transcript-line"><span class="timestamp">[51:59]</span> them filled with shit but at two months their legs just break there's no like this just kind of</p>
+<p class="transcript-line"><span class="timestamp">[52:06]</span> happens is like oh no no like most of them are not moving because their legs break at two months</p>
+<p class="transcript-line"><span class="timestamp">[52:10]</span> and then they just kill them they kill them yeah for food oh yeah this is like a like giant</p>
+<p class="transcript-line"><span class="timestamp">[52:16]</span> fucking meat plants cheese well like there's literally just you just get to a certain age that</p>
+<p class="transcript-line"><span class="timestamp">[52:20]</span> you're so fat that your legs break yeah their legs are tiny dude they're literally chicken</p>
+<p class="transcript-line"><span class="timestamp">[52:25]</span> legs that would be like if we we got you to 1500 pounds and your legs snap and then that's your</p>
+<p class="transcript-line"><span class="timestamp">[52:34]</span> life the chickens that we know are fucking insane like they're a normal chicken is just like a normal</p>
+<p class="transcript-line"><span class="timestamp">[52:40]</span> looking bird yeah dude they're like the the breasts that we get they can get like Walmart you're so</p>
+<p class="transcript-line"><span class="timestamp">[52:46]</span> you do you get like fill in entire center plate with just the breast it's nuts but yeah talk about</p>
+<p class="transcript-line"><span class="timestamp">[52:52]</span> if anything's hell on earth it's those situations oh yeah I hope we can make that better</p>
+<p class="transcript-line"><span class="timestamp">[52:56]</span> sometimes soon because like just live breeding things just like oh it's just hell we truly see</p>
+<p class="transcript-line"><span class="timestamp">[53:05]</span> them as just objects yeah which yeah do you know chickens cost like seven bucks like a</p>
+<p class="transcript-line"><span class="timestamp">[53:11]</span> like a live chicken from where where you looking at chicken prices my sister has them I don't know</p>
+<p class="transcript-line"><span class="timestamp">[53:17]</span> oh okay I mean that's a good source she has like 10 chickens they cost less than a carton of eggs</p>
+<p class="transcript-line"><span class="timestamp">[53:22]</span> in some days forever yeah oh shit gotta get some chickens yeah they keep dying too like animals</p>
+<p class="transcript-line"><span class="timestamp">[53:30]</span> get in their pan and just oh just fucking ravage like foxes and raccoons yeah actually</p>
+<p class="transcript-line"><span class="timestamp">[53:35]</span> raccoons probably wouldn't do anything right they don't have a raccoon something fox fox for sure fox</p>
+<p class="transcript-line"><span class="timestamp">[53:40]</span> in the chicken hen what else do we got gray come up for air your hands are stretched to</p>
+<p class="transcript-line"><span class="timestamp">[53:50]</span> homeless guy I don't know I do what that is oh this is a funny one though I forgot who I was</p>
+<p class="transcript-line"><span class="timestamp">[53:56]</span> listening to who's talking about this but you know the whole phrase hung like a horse yeah until</p>
+<p class="transcript-line"><span class="timestamp">[54:00]</span> like a guy has a giant dick if you do the actual horse calculations hung like a horse is an</p>
+<p class="transcript-line"><span class="timestamp">[54:06]</span> average person's dick right compared to its body yeah yeah yeah like a horse is literally just like</p>
+<p class="transcript-line"><span class="timestamp">[54:12]</span> I guess in the situation if you're saying hung like a horse you're saying that it's relative to</p>
+<p class="transcript-line"><span class="timestamp">[54:16]</span> the human body it's a horse cock yeah which is insane yeah if you have a horse guy they're like</p>
+<p class="transcript-line"><span class="timestamp">[54:22]</span> 20 it's like as long as your arm yeah dude I mean yeah it's a big cock it is crazy to</p>
+<p class="transcript-line"><span class="timestamp">[54:32]</span> who did that math I don't know I forgot I was listening to but it's literally just like the the</p>
+<p class="transcript-line"><span class="timestamp">[54:37]</span> horse having the 20 inch cock it has the equivalent of having like a three inch dick as like an</p>
+<p class="transcript-line"><span class="timestamp">[54:43]</span> average man so it's actually a small smaller than average dick on a horse okay so it's an insult</p>
+<p class="transcript-line"><span class="timestamp">[54:50]</span> to be hung like a small dick horse yeah that's calling someone hung like a horse and yeah they</p>
+<p class="transcript-line"><span class="timestamp">[54:58]</span> don't know you're like got them they have no clue oh dude have you ever done this have you ever</p>
+<p class="transcript-line"><span class="timestamp">[55:08]</span> had a charge that you've disputed on your credit card that you've actually paid for like it wasn't</p>
+<p class="transcript-line"><span class="timestamp">[55:14]</span> a fucking fraudulent thing oh I disputed one thing why and it was like some some gift I got I think</p>
+<p class="transcript-line"><span class="timestamp">[55:26]</span> like I got my mom for Mother's Day it's like flowers or something and I think I dispute</p>
+<p class="transcript-line"><span class="timestamp">[55:33]</span> as something and then like right after I was like oh I think I actually bought that</p>
+<p class="transcript-line"><span class="timestamp">[55:38]</span> oh okay so it was a mistake yeah yeah but they gave me the money anyway which was awesome pretty</p>
+<p class="transcript-line"><span class="timestamp">[55:44]</span> tight right yeah so I was you're talking about yeah yeah yeah because I've I've never done it on</p>
+<p class="transcript-line"><span class="timestamp">[55:50]</span> purpose I've done that situation and I've done it for fraud before we're like someone bought like a</p>
+<p class="transcript-line"><span class="timestamp">[55:55]</span> fucking TV with my credit card yeah but I wonder how long you can go disputing stuff until your</p>
+<p class="transcript-line"><span class="timestamp">[56:01]</span> credit card because you can like just you can straight like if I go to Best Buy today and I buy</p>
+<p class="transcript-line"><span class="timestamp">[56:06]</span> something for four thousand dollars and I go no I didn't fucking buy that they would definitely not</p>
+<p class="transcript-line"><span class="timestamp">[56:10]</span> pay it I have wonder how long they would ask some questions for a bigger purchase like the thing</p>
+<p class="transcript-line"><span class="timestamp">[56:16]</span> I disputed was pretty small it's like charge it bucks yeah yeah so there is probably a dollar amount</p>
+<p class="transcript-line"><span class="timestamp">[56:22]</span> that they're like hold on a second yeah we can't just let you fucking have it but is it's such a</p>
+<p class="transcript-line"><span class="timestamp">[56:27]</span> weird because in my head it's like once I pay for it there's no way to like undo that</p>
+<p class="transcript-line"><span class="timestamp">[56:33]</span> oh aside from returning the item but it's hilarious be like go home have it and go to my credit it's</p>
+<p class="transcript-line"><span class="timestamp">[56:39]</span> almost like you have like a mob guy be like no or he's not fucking paying you because like the</p>
+<p class="transcript-line"><span class="timestamp">[56:44]</span> credit card was like no not doing that yeah you probably do that for a lot of small things so they</p>
+<p class="transcript-line"><span class="timestamp">[56:49]</span> just eat that caught yeah I feel like they must I wonder if that factors into your credit score actually</p>
+<p class="transcript-line"><span class="timestamp">[56:55]</span> if you keep disputing things probably like if you have a good credit score and you dispute something yeah</p>
+<p class="transcript-line"><span class="timestamp">[56:59]</span> that must factor in if they like give you that or not maybe because the fraud one I feel like</p>
+<p class="transcript-line"><span class="timestamp">[57:04]</span> is where most disputes come from but for someone got their credit card stolen they go I'm not I</p>
+<p class="transcript-line"><span class="timestamp">[57:09]</span> didn't fucking do that yeah but then also because then if it's not for all you think most disputes are</p>
+<p class="transcript-line"><span class="timestamp">[57:15]</span> people lying no I think most disputes are our fraud was committed on them someone</p>
+<p class="transcript-line"><span class="timestamp">[57:20]</span> brought something with their credit card they go I didn't pay for that I think yeah it's got to</p>
+<p class="transcript-line"><span class="timestamp">[57:27]</span> be a dollar amount thing so I got to imagine if I go to a best buy and I go I'm not paying like a</p>
+<p class="transcript-line"><span class="timestamp">[57:30]</span> pay with credit card not paying for that I doubt they're gonna like chase me down for 40 bucks</p>
+<p class="transcript-line"><span class="timestamp">[57:33]</span> some like that but also with Amazon customer service if you get something you're like do there's</p>
+<p class="transcript-line"><span class="timestamp">[57:40]</span> a little dang on the side of this they'll just fucking refund you dude I had which is awesome I think</p>
+<p class="transcript-line"><span class="timestamp">[57:44]</span> I've told you this they sent me I bought Dyson vacuum they sent me accidentally two and I went</p>
+<p class="transcript-line"><span class="timestamp">[57:49]</span> hey you guys sent me an extra one they're like all right we'll give you a box to return it never</p>
+<p class="transcript-line"><span class="timestamp">[57:52]</span> sent that follow up again like hey I still have this vacuum like oh it says you shipped it I was like</p>
+<p class="transcript-line"><span class="timestamp">[57:58]</span> I didn't they're like well it says it shipped it it's like yeah the rep doesn't care I was like oh</p>
+<p class="transcript-line"><span class="timestamp">[58:05]</span> okay and then I just got there's like a six hundred dollar fucking vacuum they just sold</p>
+<p class="transcript-line"><span class="timestamp">[58:09]</span> to some guy on Facebook marketplace oh nice yeah like they have so much money yeah I mean not to</p>
+<p class="transcript-line"><span class="timestamp">[58:15]</span> be all marketing and capitalism but that's what you get when you get extremely successful companies</p>
+<p class="transcript-line"><span class="timestamp">[58:21]</span> you get customers yeah that's awesome so when you have monies that have</p>
+<p class="transcript-line"><span class="timestamp">[58:25]</span> or monies you have companies that have so much money and do so good by the customer you get</p>
+<p class="transcript-line"><span class="timestamp">[58:30]</span> customer service and that's part of their brand like they are that indirectly does make the money</p>
+<p class="transcript-line"><span class="timestamp">[58:34]</span> because their their brand is so good people love Amazon it's almost like doing good things</p>
+<p class="transcript-line"><span class="timestamp">[58:40]</span> legacy fuck that's their legacy yeah dude that's fucking bananas all right we probably got time for</p>
+<p class="transcript-line"><span class="timestamp">[58:47]</span> one more let's make it a good one make it a banger yeah well you still haven't found a banger for us</p>
+<p class="transcript-line"><span class="timestamp">[59:02]</span> man I've put so much government stuff in here towards the top Libya one line Libya</p>
+<p class="transcript-line"><span class="timestamp">[59:10]</span> tell me about Libya I mean it's the whole it's a government thing there's this</p>
+<p class="transcript-line"><span class="timestamp">[59:14]</span> impolitics they call it the Libya example or the Libya blueprint we're like</p>
+<p class="transcript-line"><span class="timestamp">[59:22]</span> Libya is apparently the the reason why all these companies like you fucking makes this shit up</p>
+<p class="transcript-line"><span class="timestamp">[59:27]</span> why all these countries they need to have nuclear weapons otherwise they get invaded</p>
+<p class="transcript-line"><span class="timestamp">[59:35]</span> I was at the Mohmari Qadafi thing yeah yeah okay that was it so like literally the the second</p>
+<p class="transcript-line"><span class="timestamp">[59:40]</span> they got rid of their nuclear weapons the leader gets killed and then everybody invades them</p>
+<p class="transcript-line"><span class="timestamp">[59:44]</span> and so that that's it's now known in the political sphere and the historical spheres like the Libya</p>
+<p class="transcript-line"><span class="timestamp">[59:49]</span> I think it's the blue printer example or whatever but it's like you have to have some deterrent</p>
+<p class="transcript-line"><span class="timestamp">[59:55]</span> there's even uh it's either Murray Rothbard or Milton Freeman who says because whenever we get to</p>
+<p class="transcript-line"><span class="timestamp">[60:03]</span> these places of like how much how big an army should a country have because of this whole idea of</p>
+<p class="transcript-line"><span class="timestamp">[60:07]</span> like free market and capitalism it's like well how much force can't should we be able to apply</p>
+<p class="transcript-line"><span class="timestamp">[60:13]</span> and I've heard again camera of the economist but he says if you just had a country with a handful</p>
+<p class="transcript-line"><span class="timestamp">[60:19]</span> of nuclear submarines as we do now you wouldn't need any army ever because it is no one is going to</p>
+<p class="transcript-line"><span class="timestamp">[60:26]</span> do anything when there's nuclear weapons just appear deterrence yeah because number one people you</p>
+<p class="transcript-line"><span class="timestamp">[60:32]</span> can't find nuclear submarine so you never know where they are yeah for other countries obviously</p>
+<p class="transcript-line"><span class="timestamp">[60:36]</span> and so if you have those no one will do anything you do not need an army do you believe that</p>
+<p class="transcript-line"><span class="timestamp">[60:43]</span> yeah I mean it's what about Russia Ukraine like</p>
+<p class="transcript-line"><span class="timestamp">[60:48]</span> Russia could just wipe them out completely Ukraine got rid of all of its nuclear weapons I know</p>
+<p class="transcript-line"><span class="timestamp">[60:53]</span> well so yeah that's not the best example but I feel like right a point where the deterrence is so</p>
+<p class="transcript-line"><span class="timestamp">[61:01]</span> I feel like we're both using deterrence and also calling each other's bluffs at the same time</p>
+<p class="transcript-line"><span class="timestamp">[61:06]</span> to where like normal war can kind of resume because it's like you're not going to fucking</p>
+<p class="transcript-line"><span class="timestamp">[61:10]</span> nuke us but we can still do military stuff well I would say the second that a country invades</p>
+<p class="transcript-line"><span class="timestamp">[61:18]</span> another country nuclear weapons then I can hear that argument out but till this day but it hasn't</p>
+<p class="transcript-line"><span class="timestamp">[61:23]</span> had it hasn't had it has happened so the the deterrent has proved itself since nuclear weapons have</p>
+<p class="transcript-line"><span class="timestamp">[61:28]</span> been put in place the cold war was cold because of it yeah this continued since the cold war</p>
+<p class="transcript-line"><span class="timestamp">[61:34]</span> where no nuclear power has ever invaded another nuclear power so everyone needs nukes yeah I think so</p>
+<p class="transcript-line"><span class="timestamp">[61:44]</span> at this I just don't think I don't think humanity's in a place where you can get rid of them because</p>
+<p class="transcript-line"><span class="timestamp">[61:49]</span> someone will build them and then they will start invading countries that don't have them I mean</p>
+<p class="transcript-line"><span class="timestamp">[61:54]</span> that situation has played out over all right let's imagine a world where everyone has nukes yeah</p>
+<p class="transcript-line"><span class="timestamp">[62:01]</span> you think war just stops yeah all the wars that have happened in the past I mean since the</p>
+<p class="transcript-line"><span class="timestamp">[62:11]</span> cold war even had been all involving countries that don't have nuclear weapons again you can't</p>
+<p class="transcript-line"><span class="timestamp">[62:16]</span> find a situation where a country had nuclear weapons and there was any information I'm just trying</p>
+<p class="transcript-line"><span class="timestamp">[62:19]</span> all right let's imagine imagine Ukraine had nukes the whole time yeah Russia invades I mean they</p>
+<p class="transcript-line"><span class="timestamp">[62:27]</span> would be much less likely to invade but say they do okay how what does it take for Ukraine to</p>
+<p class="transcript-line"><span class="timestamp">[62:34]</span> actually drop a new column these are a lot these are we don't know right yeah no it's interesting</p>
+<p class="transcript-line"><span class="timestamp">[62:43]</span> yeah I think again and also like especially a neighboring country you got systems in place</p>
+<p class="transcript-line"><span class="timestamp">[62:53]</span> that say hey as soon as Ukraine launches missiles we're scattering countermeasures we're also</p>
+<p class="transcript-line"><span class="timestamp">[62:58]</span> scattering our own nukes the whole mutual you sure destruction thing that we're all kind of we've</p>
+<p class="transcript-line"><span class="timestamp">[63:02]</span> been living in since they've been put in place and and both sides know that those systems exist</p>
+<p class="transcript-line"><span class="timestamp">[63:06]</span> yeah kind of means both sides might not do it well like you're gonna hesitate even if there's</p>
+<p class="transcript-line"><span class="timestamp">[63:13]</span> an invasion again I would bank on the last 50 years that there has been most first-world countries</p>
+<p class="transcript-line"><span class="timestamp">[63:22]</span> have nuclear weapons and there hasn't been a nuclear weapon launch since World War II yeah and</p>
+<p class="transcript-line"><span class="timestamp">[63:29]</span> there has been there's there's definitely conflicts between countries that have nuclear weapons but</p>
+<p class="transcript-line"><span class="timestamp">[63:34]</span> no one has done any military action right yeah we China's arrival but holy shit we're not</p>
+<p class="transcript-line"><span class="timestamp">[63:41]</span> kind of no because I think at the core of if you're leading a country the I think the main fear</p>
+<p class="transcript-line"><span class="timestamp">[63:50]</span> with the nuclear stuff is that if like a extremely underdeveloped country somehow got a hold of</p>
+<p class="transcript-line"><span class="timestamp">[63:54]</span> nuclear weapons that they don't understand the consequence and they're willing to blow it all</p>
+<p class="transcript-line"><span class="timestamp">[63:58]</span> away but it takes a good heavy amount of like research and science and resources to get to a</p>
+<p class="transcript-line"><span class="timestamp">[64:07]</span> place where we have a functioning nuclear facility yeah you're not a barbarian with a nuke you're</p>
+<p class="transcript-line"><span class="timestamp">[64:12]</span> not an afghanist like you're not like you know sam up in ladden doesn't get to a place where he's</p>
+<p class="transcript-line"><span class="timestamp">[64:16]</span> developed nuclear weapons it's just not and a site to launch them from animals that can traverse</p>
+<p class="transcript-line"><span class="timestamp">[64:20]</span> like defense systems like that's just it's it's it's a weird thing that there's a barrier to entry</p>
+<p class="transcript-line"><span class="timestamp">[64:27]</span> for nuclear facilities that typically when you get there you have the understanding of what it can do</p>
+<p class="transcript-line"><span class="timestamp">[64:32]</span> and the consequence that follows so again I can be totally wrong and it could be that at one point</p>
+<p class="transcript-line"><span class="timestamp">[64:39]</span> a country launches it and then it's all over but so far it's never happened yeah no it's that's a</p>
+<p class="transcript-line"><span class="timestamp">[64:45]</span> great point and I again I hope that that's the case I do it's I I'm fully on board that if you</p>
+<p class="transcript-line"><span class="timestamp">[64:52]</span> crane still had nuclear weapons this whole Ukraine rush war would have never had yet night I believe</p>
+<p class="transcript-line"><span class="timestamp">[64:56]</span> that yeah but then you could also say like all it takes is one like like 99.99% of people countries</p>
+<p class="transcript-line"><span class="timestamp">[65:07]</span> leaders are going to be responsible with nukes but one guy is crazy enough to push the button dude</p>
+<p class="transcript-line"><span class="timestamp">[65:14]</span> if you heard of the story of Richard Nixon who ordered new king of a country yeah he was drunk</p>
+<p class="transcript-line"><span class="timestamp">[65:18]</span> yeah he was drunk yeah and the operators were like yeah right now Kissinger was like one good thing</p>
+<p class="transcript-line"><span class="timestamp">[65:24]</span> that guy's crazy too but he's like I'm gonna wait till morning did not bomb a country like</p>
+<p class="transcript-line"><span class="timestamp">[65:32]</span> imagine if he didn't have that guy yeah that's the US too I know I know I mean we had the</p>
+<p class="transcript-line"><span class="timestamp">[65:40]</span> Cuban Missile Crisis where we are like literally same kind of situation where we're so close</p>
+<p class="transcript-line"><span class="timestamp">[65:45]</span> to doing that and we're like yeah but but here's the thing Pandora's boxes are already open</p>
+<p class="transcript-line"><span class="timestamp">[65:51]</span> nuclear weapons aren't going away I don't know there's this whole sense of the cold war there's</p>
+<p class="transcript-line"><span class="timestamp">[65:57]</span> been a commission yeah there's been it where like people have gotten but there's still tens of</p>
+<p class="transcript-line"><span class="timestamp">[66:01]</span> thousands of nuclear what like no one is giving them up I don't think and anytime somebody does</p>
+<p class="transcript-line"><span class="timestamp">[66:06]</span> another country invades them so I just I think we can't put it back now I don't unless we hit some</p>
+<p class="transcript-line"><span class="timestamp">[66:13]</span> no absolutely yeah so it's like if I believe we could I think I believe we've de-escalated I feel like</p>
+<p class="transcript-line"><span class="timestamp">[66:19]</span> that has worked like there's less nukes in their were at like the height of the cold war but yeah</p>
+<p class="transcript-line"><span class="timestamp">[66:24]</span> absolutely because I think I also don't know like everyone could be keeping the secret oh I think</p>
+<p class="transcript-line"><span class="timestamp">[66:30]</span> there's good enough commissions and systems in place that we know tracking these things that</p>
+<p class="transcript-line"><span class="timestamp">[66:35]</span> yeah because I think during the cold war at the height there was like we're talking tens of</p>
+<p class="transcript-line"><span class="timestamp">[66:39]</span> thousands per Russia and per United States and that's not talking about other countries either</p>
+<p class="transcript-line"><span class="timestamp">[66:43]</span> so I think by now there's maybe in the 10,000s in general but even then it's like dude until it's</p>
+<p class="transcript-line"><span class="timestamp">[66:50]</span> sub 10 nothing makes a difference if there's thousands of nuclear warheads it's like dude you want</p>
+<p class="transcript-line"><span class="timestamp">[66:56]</span> to hundred those you want to blow up the universe yeah it's like we're not it's like they're big enough</p>
+<p class="transcript-line"><span class="timestamp">[67:02]</span> now it's a number of nukes doesn't really matter as much well I'm just saying that there's we're</p>
+<p class="transcript-line"><span class="timestamp">[67:08]</span> not even close to the number that would like de-escalation it doesn't matter until you're close to</p>
+<p class="transcript-line"><span class="timestamp">[67:13]</span> stand yeah but but even then I'm out of fucking physicists yeah it's just like anywhere near the</p>
+<p class="transcript-line"><span class="timestamp">[67:20]</span> thousands there's been no de-escalation there's been less but the the threat of nuclear damage to</p>
+<p class="transcript-line"><span class="timestamp">[67:26]</span> the universe and blowing at the planet still very there there's a documentary called command and control</p>
+<p class="transcript-line"><span class="timestamp">[67:34]</span> guys about I think during the height of the Cold War yeah um some nuclear facility in Arkansas I think</p>
+<p class="transcript-line"><span class="timestamp">[67:45]</span> it nuclear war like active nuclear warheads engineers working on them yeah</p>
+<p class="transcript-line"><span class="timestamp">[67:49]</span> a dude some service technician drops a wrench and he's like in the chamber with the warhead</p>
+<p class="transcript-line"><span class="timestamp">[67:57]</span> drops a wrench falls like multiple stories is all underground yeah bounces hits the fuel tank</p>
+<p class="transcript-line"><span class="timestamp">[68:03]</span> starts filling up with fuel it's it's like a disaster story okay eventually the the</p>
+<p class="transcript-line"><span class="timestamp">[68:10]</span> fucking nuclear warhead explodes and launches literally it I don't remember where landed it landed</p>
+<p class="transcript-line"><span class="timestamp">[68:18]</span> in a desert somewhere but it was like a coin toss of if it exploded it would have wiped out the</p>
+<p class="transcript-line"><span class="timestamp">[68:23]</span> entire south wait what the entire south yes no to their huge dude no way because yes they've been</p>
+<p class="transcript-line"><span class="timestamp">[68:32]</span> testing these things in the desert in Las Vegas like they test them they test them in the ocean too</p>
+<p class="transcript-line"><span class="timestamp">[68:37]</span> yeah it wouldn't take out the entire south one good chunk of this I think they said like a third of</p>
+<p class="transcript-line"><span class="timestamp">[68:42]</span> the country would have been blown up no what I want to look up this story because I from my</p>
+<p class="transcript-line"><span class="timestamp">[68:50]</span> understanding again and my understanding is literally just reading stuff online watching these</p>
+<p class="transcript-line"><span class="timestamp">[68:54]</span> test views like they they test them in parts of the country so I have to imagine that they're not</p>
+<p class="transcript-line"><span class="timestamp">[68:58]</span> if it was going to blow up a third of the south would be and that's they're that much stronger</p>
+<p class="transcript-line"><span class="timestamp">[69:04]</span> I think they got pay once I don't know I should verify if that if that's true that's a proud so</p>
+<p class="transcript-line"><span class="timestamp">[69:10]</span> that that's a case for less nuke's that's what I'm getting like if there's so many one fuck up</p>
+<p class="transcript-line"><span class="timestamp">[69:16]</span> could be insane yeah but that but again then it's the tradeoff thing of like okay we can have</p>
+<p class="transcript-line"><span class="timestamp">[69:23]</span> that fuck up but then we can also have a world where lot of war yeah no one's gonna right like</p>
+<p class="transcript-line"><span class="timestamp">[69:30]</span> it's if you look at the trajectory of how much wars existed in humanity overall this is the time</p>
+<p class="transcript-line"><span class="timestamp">[69:35]</span> where there's the least amount of war by far it's beautiful yeah and it's mostly due to nuclear</p>
+<p class="transcript-line"><span class="timestamp">[69:41]</span> weapons unfortunately so that is the reason it's not some we're more altruistic and better it's</p>
+<p class="transcript-line"><span class="timestamp">[69:47]</span> because there's so much deterrent there was she might took one for the team dude truly and</p>
+<p class="transcript-line"><span class="timestamp">[69:52]</span> Nagasaki and Nagasaki they both everyone was like oh okay we're we're not going to do that again</p>
+<p class="transcript-line"><span class="timestamp">[70:00]</span> because it's pretty bad yeah yeah well that's a good way then that's a good one all right well</p>
+<p class="transcript-line"><span class="timestamp">[70:06]</span> we'll see you next week see you next week bye bye</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fake Problems Podcast &middot;
+        <a href="/">Home</a></p>
+    </footer>
+</body>
+</html>

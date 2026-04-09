@@ -4,94 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Episodes | Fake Problems Podcast</title>
-    <meta name="description" content="Full episodes with transcripts, show notes, and chapter markers. An irreverent comedy podcast about dark, weird, and absurd topics.">
-    <meta property="og:title" content="Episodes | Fake Problems Podcast">
-    <meta property="og:description" content="Full episodes with transcripts and show notes.">
+    <meta name="description" content="Full episodes with transcripts, show notes, and chapter markers. 30 episodes, 395,581 words of searchable content.">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --accent: #C0582A;
-            --accent-bright: #D4622B;
-            --bg: #FAF6EE;
-            --bg-card: #F5F0E6;
-            --text: #4A3F33;
-            --text-dim: #9B8E7B;
-            --text-bright: #1E1810;
-            --border: #DDD4C4;
-            --mono: 'JetBrains Mono', monospace;
-            --sans: 'Space Grotesk', sans-serif;
+            --accent: #C0582A; --accent-bright: #D4622B; --bg: #FAF6EE;
+            --bg-card: #F5F0E6; --text: #4A3F33; --text-dim: #9B8E7B;
+            --text-bright: #1E1810; --border: #DDD4C4;
+            --mono: 'JetBrains Mono', monospace; --sans: 'Space Grotesk', sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: var(--sans);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        .back-link {
-            display: inline-block;
-            color: var(--accent);
-            text-decoration: none;
-            font-family: var(--mono);
-            font-size: 0.85rem;
-            margin-bottom: 2rem;
-        }
+        body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .back-link { display: inline-block; color: var(--accent); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; margin-bottom: 2rem; }
         .back-link:hover { text-decoration: underline; }
-        h1 {
-            font-size: 2rem;
-            color: var(--text-bright);
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            color: var(--text-dim);
-            margin-bottom: 2rem;
-        }
-        .episode-card {
-            display: block;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            background: var(--bg-card);
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text);
-            border: 1px solid var(--border);
-            transition: border-color 0.2s, transform 0.2s;
-        }
-        .episode-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-        .episode-card h2 {
-            font-size: 1.1rem;
-            color: var(--text-bright);
-            margin-bottom: 0.25rem;
-        }
-        .episode-card .meta {
-            font-family: var(--mono);
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .episode-card .summary {
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            color: var(--text);
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-            border-top: 1px solid var(--border);
-            margin-top: 3rem;
-        }
+        h1 { font-size: 2rem; color: var(--text-bright); margin-bottom: 0.25rem; }
+        .subtitle { color: var(--text-dim); margin-bottom: 2rem; }
+        .stats { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .episode-card { display: block; padding: 1.5rem; margin-bottom: 1rem; background: var(--bg-card); border-radius: 8px; text-decoration: none; color: var(--text); border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s; }
+        .episode-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .episode-card h2 { font-size: 1.1rem; color: var(--text-bright); margin-bottom: 0.25rem; }
+        .episode-card .meta { font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+        .episode-card .summary { font-size: 0.9rem; margin-top: 0.5rem; }
+        footer { text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 3rem; }
         footer a { color: var(--accent); text-decoration: none; }
     </style>
 </head>
@@ -100,16 +36,189 @@
         <a href="/" class="back-link">&larr; Back to Fake Problems Podcast</a>
         <h1>Episodes</h1>
         <p class="subtitle">Full transcripts, show notes, and chapter markers for every episode.</p>
-
+        <p class="stats">30 episodes &middot; 395,581 words of searchable content</p>
+        
         <a href="ep30-why-nukes-kids-on-bikes-and-penguins-are-weirder-than-you-th.html" class="episode-card">
-            <h2>Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Think</h2>
+            <h2>Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Thought</h2>
             <div class="meta">Episode 30 &middot; 12,843 words &middot; Full transcript</div>
-            <p class="summary">This episode dives into the wild, lesser-known facts about nuclear near-disasters, the strange laws around kids on bikes, and the surprisingly brutal world of penguins.</p>
+            <p class="summary">The hosts cover a wild range of topics from a nuclear near-disaster caused by a dropped wrench to getting bullied by kids while playing pickleball. They dive into dark survival stories like a rugby te</p>
         </a>
 
-        <!-- More episodes will be added here as they're processed -->
-    </div>
+        <a href="ep29-lobsters-dont-die-but-we-might.html" class="episode-card">
+            <h2>Lobsters Don't Die, But We Might</h2>
+            <div class="meta">Episode 29 &middot; 13,090 words &middot; Full transcript</div>
+            <p class="summary">In this episode, the hosts dive into the myths of lobster immortality, explore the bizarre world of AI horror. They also touch on cultural differences in diet and the implications of nuclear deterrenc</p>
+        </a>
 
+        <a href="ep28-dear-diary-evan-finally-did-this.html" class="episode-card">
+            <h2>Dear Diary, Evan Finally Did This</h2>
+            <div class="meta">Episode 28 &middot; 14,626 words &middot; Full transcript</div>
+            <p class="summary">In this episode, the hosts dive into a range of topics from the absurdity of registering improv skills as lethal weapons to the dark humor of P Diddy's alleged antics. They also explore the complexiti</p>
+        </a>
+
+        <a href="ep27-what-about-the-onesies-mr-kennedy.html" class="episode-card">
+            <h2>What About the Onesies, Mr. Kennedy?</h2>
+            <div class="meta">Episode 27 &middot; 12,494 words &middot; Full transcript</div>
+            <p class="summary">In this episode, the hosts dive into a range of topics from RFK's stance on Big Pharma and his grilling by Bernie Sanders, to the absurdity of gifting a 55-gallon drum of lube. They also explore the f</p>
+        </a>
+
+        <a href="ep26-gods-butt-plug-and-other-scientific-discoveries.html" class="episode-card">
+            <h2>God's Butt Plug and Other Scientific Discoveries</h2>
+            <div class="meta">Episode 26 &middot; 10,319 words &middot; Full transcript</div>
+            <p class="summary">In this episode, the hosts discuss climate change skepticism, the potential eruption of Yellowstone, and the humorous concept of God's anatomy. They also share a funny encounter with bike cops and del</p>
+        </a>
+
+        <a href="ep25-pov-you-dont-know-what-pov-means.html" class="episode-card">
+            <h2>POV: You Don't Know What POV Means</h2>
+            <div class="meta">Episode 25 &middot; 10,676 words &middot; Full transcript</div>
+            <p class="summary">In this episode, the hosts dive into the awkward social dynamics of choosing a godfather, rant about the misuse of the term 'POV' online, and discuss the irony of saying 'I'm humbled' when receiving a</p>
+        </a>
+
+        <a href="ep24-episode-24.html" class="episode-card">
+            <h2>Episode 24</h2>
+            <div class="meta">Episode 24 &middot; 11,835 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into various 'fake problems' including Ashley Madison cheating websites, persistent dating advice, and whether there are income caps on disabled people but not billionaires. The convers</p>
+        </a>
+
+        <a href="ep23-episode-23.html" class="episode-card">
+            <h2>Episode 23</h2>
+            <div class="meta">Episode 23 &middot; 11,177 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into Michael Jackson castration conspiracy theories, debate the flaws of democracy and government efficiency, and explore random topics from James Bond's terrible spy skills to whether </p>
+        </a>
+
+        <a href="ep22-episode-22.html" class="episode-card">
+            <h2>Episode 22</h2>
+            <div class="meta">Episode 22 &middot; 8,577 words &middot; Full transcript</div>
+            <p class="summary">The hosts return from holiday break to discuss various random topics including Project 2025, pet peeves about people saying 'I'm proud of you,' and whether bartenders should serve mentally handicapped</p>
+        </a>
+
+        <a href="ep21-episode-21.html" class="episode-card">
+            <h2>Episode 21</h2>
+            <div class="meta">Episode 21 &middot; 11,702 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into bizarre topics ranging from towns with sexual names getting free Pornhub premium to North Korean soldiers discovering internet porn for the first time. They also discuss controvers</p>
+        </a>
+
+        <a href="ep20-episode-20.html" class="episode-card">
+            <h2>Episode 20</h2>
+            <div class="meta">Episode 20 &middot; 12,451 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into various 'fake problems' including the psychology of Amazon reviews, the awkwardness of certain medical specialties, and a personal experiment with non-alcoholic beer. They also exp</p>
+        </a>
+
+        <a href="ep19-episode-19.html" class="episode-card">
+            <h2>Episode 19</h2>
+            <div class="meta">Episode 19 &middot; 11,758 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into fascinating follow-ups including why powering the world with Sahara Desert solar panels could destroy the Amazon rainforest, and whether you can actually burp out a fart. They also</p>
+        </a>
+
+        <a href="ep18-episode-18.html" class="episode-card">
+            <h2>Episode 18</h2>
+            <div class="meta">Episode 18 &middot; 11,859 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive deep into controversial topics including historical labor dynamics, the psychology of female vs male pedophiles, and whether pedophilia can be cured. They also discuss modern phenomena </p>
+        </a>
+
+        <a href="ep17-episode-17.html" class="episode-card">
+            <h2>Episode 17</h2>
+            <div class="meta">Episode 17 &middot; 10,975 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive deep into uncomfortable territory, debating incest laws, sharing threesome experiences, and discussing a disturbing Reddit story about whether someone should tell their fiancé about a p</p>
+        </a>
+
+        <a href="ep16-episode-16.html" class="episode-card">
+            <h2>Episode 16</h2>
+            <div class="meta">Episode 16 &middot; 10,225 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into various 'fake problems' including dating app pet peeves, coffee addiction struggles, and philosophical discussions about perception and relationships. They explore everything from </p>
+        </a>
+
+        <a href="ep15-episode-15.html" class="episode-card">
+            <h2>Episode 15</h2>
+            <div class="meta">Episode 15 &middot; 11,366 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into fake problems ranging from quarter-zip fashion confusion to dating app morning messages, while exploring wild hypotheticals about gas-powered adult toys and prison simulation techn</p>
+        </a>
+
+        <a href="ep14-episode-14.html" class="episode-card">
+            <h2>Episode 14</h2>
+            <div class="meta">Episode 14 &middot; 10,957 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into various pet peeves including people overusing '100 percent' as a response, the logistics of powering the world with solar panels, and the awkwardness of animal buttholes being cons</p>
+        </a>
+
+        <a href="ep13-episode-13.html" class="episode-card">
+            <h2>Episode 13</h2>
+            <div class="meta">Episode 13 &middot; 11,639 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into research updates revealing Chris Angel as a complete fraud who pays audiences to react to fake magic tricks, then explore the wild world of naked dating shows and bizarre social ph</p>
+        </a>
+
+        <a href="ep12-episode-12.html" class="episode-card">
+            <h2>Episode 12</h2>
+            <div class="meta">Episode 12 &middot; 12,206 words &middot; Full transcript</div>
+            <p class="summary">The Fake Problems Podcast tackles bizarre hypotheticals and observations with a special guest, covering everything from the social dynamics of petting strangers' dogs to why smartphones never appear i</p>
+        </a>
+
+        <a href="ep11-episode-11.html" class="episode-card">
+            <h2>Episode 11</h2>
+            <div class="meta">Episode 11 &middot; 11,052 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into follow-ups from previous episodes including the giant seaweed blob that never materialized, then explore controversial topics like fake boobs being potentially transphobic, skincar</p>
+        </a>
+
+        <a href="ep10-episode-10.html" class="episode-card">
+            <h2>Episode 10</h2>
+            <div class="meta">Episode 10 &middot; 11,506 words &middot; Full transcript</div>
+            <p class="summary">The hosts discuss various awkward and gross situations including cats eating their dead owners, drinking from a moldy water bottle, and a plane emergency landing due to someone having explosive diarrh</p>
+        </a>
+
+        <a href="ep9-episode-9.html" class="episode-card">
+            <h2>Episode 9</h2>
+            <div class="meta">Episode 9 &middot; 10,072 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into various fake problems including the mystery of how modern magic actually works, the persistence of duck face photos on dating apps, and whether it's better to know what you look li</p>
+        </a>
+
+        <a href="ep8-episode-8.html" class="episode-card">
+            <h2>Episode 8</h2>
+            <div class="meta">Episode 8 &middot; 10,664 words &middot; Full transcript</div>
+            <p class="summary">The hosts return from a break to discuss various fake problems including whether skipping grades is child abuse, wild middle school camp stories involving Axe Body Spray incidents, and Stephen Hawking</p>
+        </a>
+
+        <a href="ep7-episode-7.html" class="episode-card">
+            <h2>Episode 7</h2>
+            <div class="meta">Episode 7 &middot; 17,757 words &middot; Full transcript</div>
+            <p class="summary">The hosts discuss a disastrous techno festival experience, dive deep into recent alien/UFO testimony to Congress, and explore various random topics from buffets to Down syndrome demographics. They als</p>
+        </a>
+
+        <a href="ep6-episode-6.html" class="episode-card">
+            <h2>Episode 6</h2>
+            <div class="meta">Episode 6 &middot; 13,352 words &middot; Full transcript</div>
+            <p class="summary">The hosts return after a long break to discuss everything from half marathons and Mormon soaking practices to the importance of loving your enemies. They share personal stories about converting confli</p>
+        </a>
+
+        <a href="ep5-episode-5.html" class="episode-card">
+            <h2>Episode 5</h2>
+            <div class="meta">Episode 5 &middot; 20,464 words &middot; Full transcript</div>
+            <p class="summary">The hosts discuss one member's transformative jury duty experience that restored his faith in the judicial system and gave him a sense of purpose he'd been missing. They also share a bizarre story abo</p>
+        </a>
+
+        <a href="ep4-episode-4.html" class="episode-card">
+            <h2>Episode 4</h2>
+            <div class="meta">Episode 4 &middot; 21,043 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive into movie analysis starting with 'It Follows' and its mysterious 1980s technology, then explore controversial topics like zoos, child labor laws, and whether animals are truly happy in</p>
+        </a>
+
+        <a href="ep3-episode-3.html" class="episode-card">
+            <h2>Episode 3</h2>
+            <div class="meta">Episode 3 &middot; 20,854 words &middot; Full transcript</div>
+            <p class="summary">Two friends dive deep into coffee addiction, workout culture, and random philosophical tangents while discussing everything from David Goggins to medieval torture methods. The conversation covers thei</p>
+        </a>
+
+        <a href="ep2-episode-2.html" class="episode-card">
+            <h2>Episode 2</h2>
+            <div class="meta">Episode 2 &middot; 20,686 words &middot; Full transcript</div>
+            <p class="summary">The hosts discuss their experiences with open mic comedy nights, share stories about family dynamics and awkward shopping trips, and dive deep into various topics ranging from military intervention an</p>
+        </a>
+
+        <a href="ep1-episode-1.html" class="episode-card">
+            <h2>Episode 1</h2>
+            <div class="meta">Episode 1 &middot; 17,356 words &middot; Full transcript</div>
+            <p class="summary">The hosts dive deep into recent train safety issues following the Ohio derailment, sharing personal stories about concussions and college fight clubs, and discussing everything from corrupt politician</p>
+        </a>
+
+    </div>
     <footer>
         <p>&copy; 2026 Fake Problems Podcast &middot; <a href="/">Home</a></p>
     </footer>
