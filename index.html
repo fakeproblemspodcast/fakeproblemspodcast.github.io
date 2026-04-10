@@ -738,6 +738,44 @@
             letter-spacing: 0.05em;
         }
 
+        /* ── Episode Cards (older episodes) ── */
+        .episode-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .episode-card:hover { border-color: rgba(192, 88, 42, 0.3); }
+
+        .episode-card h3 {
+            font-size: 1.05rem;
+            color: var(--text-bright);
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .episode-card p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        .ep-link {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .ep-link:hover { text-decoration: underline; }
+
         /* ── Footer ── */
         footer {
             padding: 4rem 2rem;
@@ -806,7 +844,6 @@
 <nav id="mainNav">
     <a href="#" class="logo">fake_problems://</a>
     <div class="nav-links">
-        <a href="/episodes/">Episodes</a>
         <a href="#listen">Listen</a>
         <a href="#clips">Clips</a>
         <a href="#about">About</a>
@@ -882,13 +919,11 @@
             <h2 class="section-heading">Latest Episode</h2>
         </div>
         <div class="player-wrapper reveal reveal-delay-1">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/NV54Ilj0zGE" title="Episode 30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
+            
             <div class="player-info">
-                <span class="ep-tag">Episode 30</span>
-                <h3>Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Thought</h3>
-                <p>A dropped wrench almost detonated a nuke, kids on bikes are surprisingly terrifying bullies, Appalachia is basically its own country, and the guys settle the penguin pet debate once and for all.</p>
+                <span class="ep-tag">Episode 73</span>
+                <h3>How to Fast 50 Days Without Losing Your Mind</h3>
+                <p>This episode dives into a spiritual journey of faith, fasting, and purpose told through vivid personal stories. From fasting 50 days on just water to navigating global ministry challenges, the guests explore the mysterious power of sacrifice and divine guidance. They also tackle the surprising spiritual struggles of the wealthy and the weight of leadership in turbulent times.</p>
             </div>
         </div>
     </section>
@@ -902,23 +937,17 @@
         <div class="clips-scroll-wrapper reveal reveal-delay-1">
             <div class="clips-track">
                 <div class="clip-card">
-                    <div class="clip-video">
-                        <iframe src="https://www.youtube.com/embed/7LYxLPpHcHg" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="clip-label">A Wrench Almost Nuked the South</div>
-                </div>
-                <div class="clip-card">
-                    <div class="clip-video">
-                        <iframe src="https://www.youtube.com/embed/MJWuJACj-bY" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="clip-label">Bullied by Kids at Pickleball</div>
-                </div>
-                <div class="clip-card">
-                    <div class="clip-video">
-                        <iframe src="https://www.youtube.com/embed/Em1SJ_U6qck" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="clip-label">Why Torture Is Pain x1000</div>
-                </div>
+                <div class="clip-video" style="background:var(--bg-elevated);display:flex;align-items:center;justify-content:center;padding-bottom:177.78%;position:relative;"><span style="position:absolute;color:var(--text-dim);font-size:0.8rem;">No video</span></div>
+                <div class="clip-label">When the Chair Tells You to Walk Forward</div>
+            </div>
+<div class="clip-card">
+                <div class="clip-video" style="background:var(--bg-elevated);display:flex;align-items:center;justify-content:center;padding-bottom:177.78%;position:relative;"><span style="position:absolute;color:var(--text-dim);font-size:0.8rem;">No video</span></div>
+                <div class="clip-label">Fasting 50 Days and God’s Unexpected Lunch Invite</div>
+            </div>
+<div class="clip-card">
+                <div class="clip-video" style="background:var(--bg-elevated);display:flex;align-items:center;justify-content:center;padding-bottom:177.78%;position:relative;"><span style="position:absolute;color:var(--text-dim);font-size:0.8rem;">No video</span></div>
+                <div class="clip-label">Why Rich People Are the Most Miserable</div>
+            </div>
             </div>
         </div>
     </section>
@@ -935,25 +964,25 @@
             <h2 class="section-heading">Actual Things We Said</h2>
         </div>
         <div class="quotes-grid">
-            <div class="quote-card reveal reveal-delay-1">
+            <div class="quote-card reveal">
                 <span class="big-quote">&ldquo;</span>
-                <blockquote>If anyone comes up to you and just says you suck for 30 minutes, you start to believe it.</blockquote>
-                <cite>On being bullied by children</cite>
+                <blockquote>God never pampered me. If I do anything wrong, he&#x27;s right there to tell me it&#x27;s wrong.</blockquote>
+                <cite>one of the hosts</cite>
             </div>
-            <div class="quote-card reveal reveal-delay-2">
+<div class="quote-card reveal">
                 <span class="big-quote">&ldquo;</span>
-                <blockquote>A dropped wrench almost nuked half the country and no one even knew about it.</blockquote>
-                <cite>On Cold War nuclear accidents</cite>
+                <blockquote>The wealthy have less — less grace, less peace, and more misery.</blockquote>
+                <cite>one of the hosts</cite>
             </div>
-            <div class="quote-card reveal reveal-delay-3">
+<div class="quote-card reveal">
                 <span class="big-quote">&ldquo;</span>
-                <blockquote>What if you could pet any animal into being your pet? Just keep petting it until it gives up and loves you.</blockquote>
-                <cite>On the science of domestication</cite>
+                <blockquote>When something doesn’t make sense, it’s a spirit.</blockquote>
+                <cite>one of the hosts</cite>
             </div>
-            <div class="quote-card reveal reveal-delay-4">
+<div class="quote-card reveal">
                 <span class="big-quote">&ldquo;</span>
-                <blockquote>They ate their dead friends and still made it out alive. That's some next-level survival.</blockquote>
-                <cite>On the Andes rugby crash</cite>
+                <blockquote>God is more than a businessman. He values sacrifice like an investment with a price.</blockquote>
+                <cite>one of the hosts</cite>
             </div>
         </div>
     </div>
@@ -984,6 +1013,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <section class="section" id="about">
         <div class="reveal">
@@ -1017,31 +1048,9 @@
     </section>
 </div>
 
-<!-- ── Email Signup ── -->
-<section class="section" id="subscribe" style="padding: 4rem 2.5rem; text-align: center;">
-    <div style="max-width: 500px; margin: 0 auto;">
-        <h2 class="section-title reveal" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Never miss an episode</h2>
-        <p class="reveal reveal-delay-1" style="color: var(--text-dim); margin-bottom: 1.5rem;">
-            New episodes every other Saturday. Get notified — no spam, no algorithm.
-        </p>
-        <form action="https://buttondown.com/api/emails/embed-subscribe/fakeproblemspodcast" method="post" target="popupwindow" class="reveal reveal-delay-2" style="display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto;">
-            <input type="email" name="email" placeholder="your@email.com" required
-                style="flex: 1; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; background: var(--bg-card); color: var(--text); font-family: var(--sans); font-size: 0.9rem;">
-            <button type="submit"
-                style="padding: 0.75rem 1.5rem; background: var(--accent); color: #fff; border: none; border-radius: 6px; font-weight: 600; font-family: var(--sans); cursor: pointer; font-size: 0.9rem; white-space: nowrap;">
-                Subscribe
-            </button>
-        </form>
-        <p class="reveal reveal-delay-3" style="font-family: var(--mono); font-size: 0.7rem; color: var(--text-dim); margin-top: 0.75rem;">
-            Powered by Buttondown. Unsubscribe anytime.
-        </p>
-    </div>
-</section>
-
 <!-- ── Footer ── -->
 <footer>
     <div class="footer-links">
-        <a href="/episodes/">Episodes</a>
         <a href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA">YouTube</a>
         <a href="https://open.spotify.com/show/4C8HAr55dGMgkM9pJXPgDQ">Spotify</a>
         <a href="https://twitter.com/fakeproblemspod">Twitter</a>
