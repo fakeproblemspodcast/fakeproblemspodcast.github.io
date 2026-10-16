@@ -1,226 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episodes | Fake Problems Podcast</title>
-    <meta name="description" content="Full episodes with transcripts, show notes, and chapter markers. 30 episodes, 395,581 words of searchable content.">
-    <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --accent: #C0582A; --accent-bright: #D4622B; --bg: #FAF6EE;
-            --bg-card: #F5F0E6; --text: #4A3F33; --text-dim: #9B8E7B;
-            --text-bright: #1E1810; --border: #DDD4C4;
-            --mono: 'JetBrains Mono', monospace; --sans: 'Space Grotesk', sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
-        .back-link { display: inline-block; color: var(--accent); text-decoration: none; font-family: var(--mono); font-size: 0.85rem; margin-bottom: 2rem; }
-        .back-link:hover { text-decoration: underline; }
-        h1 { font-size: 2rem; color: var(--text-bright); margin-bottom: 0.25rem; }
-        .subtitle { color: var(--text-dim); margin-bottom: 2rem; }
-        .stats { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .episode-card { display: block; padding: 1.5rem; margin-bottom: 1rem; background: var(--bg-card); border-radius: 8px; text-decoration: none; color: var(--text); border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s; }
-        .episode-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        .episode-card h2 { font-size: 1.1rem; color: var(--text-bright); margin-bottom: 0.25rem; }
-        .episode-card .meta { font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
-        .episode-card .summary { font-size: 0.9rem; margin-top: 0.5rem; }
-        footer { text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 3rem; }
-        footer a { color: var(--accent); text-decoration: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Episodes | Fake Problems Podcast</title>
+  <meta name="description" content="Every episode of Fake Problems Podcast with full transcripts, chapters and show notes.">
+  <link rel="canonical" href="https://fakeproblemspodcast.com/episodes/">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fake Problems Podcast">
+  <meta property="og:title" content="All Episodes | Fake Problems Podcast">
+  <meta property="og:description" content="Every episode of Fake Problems Podcast with full transcripts, chapters and show notes.">
+  <meta property="og:url" content="https://fakeproblemspodcast.com/episodes/">
+  <meta property="og:image" content="https://fakeproblemspodcast.com/assets/podcast_artwork_3000.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All Episodes | Fake Problems Podcast">
+  <meta name="twitter:description" content="Every episode of Fake Problems Podcast with full transcripts, chapters and show notes.">
+  <meta name="twitter:image" content="https://fakeproblemspodcast.com/assets/podcast_artwork_3000.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "author": {
+    "@type": "Organization",
+    "name": "Fake Problems Podcast"
+  },
+  "description": "Fake Problems Podcast is an 18+ comedy show where two friends take the strangest, darkest and most absurd stories in the news and give them far more deadpan confidence than they deserve. Immortal lobsters, Olympic ski-jumper scandals, beta fish weddings, the AI water panic: if nobody asked us to solve it, we\u0027re solving it anyway. New episodes every other week.",
+  "image": "https://fakeproblemspodcast.com/assets/podcast_artwork_3000.jpg",
+  "inLanguage": "en",
+  "name": "Fake Problems Podcast",
+  "sameAs": [
+    "https://open.spotify.com/show/4C8HAr55dGMgkM9pJXPgDQ",
+    "https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA"
+  ],
+  "url": "https://fakeproblemspodcast.com/"
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent: #C0582A; --bg: #FAF6EE; --bg-card: #F5F0E6; --text: #4A3F33; --text-dim: #85786A; --text-bright: #1E1810; --border: #DDD4C4; --spotify: #1DB954; --youtube: #FF0000; --apple: #9933CC; --mono: 'JetBrains Mono', monospace; --sans: 'Space Grotesk', system-ui, sans-serif; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+    a { color: var(--accent); }
+    .back-link { display: inline-block; text-decoration: none; font-family: var(--mono); font-size: 0.85rem; margin-bottom: 2rem; }
+    h1 { font-size: 2rem; color: var(--text-bright); margin-bottom: 1rem; }
+    .follow-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.3rem; border-radius: 999px; color: #fff; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+    .btn-spotify { background: var(--spotify); color: #0b2b16; }
+    .btn-youtube { background: var(--youtube); }
+    .btn-apple { background: var(--apple); }
+    .episode-card { display: block; text-decoration: none; color: inherit; padding: 1rem 1.25rem; margin-bottom: 0.75rem; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border); }
+    .episode-card:hover { border-color: var(--accent); }
+    .ep-num { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+    .episode-card h2 { font-size: 1.1rem; color: var(--text-bright); margin: 0.2rem 0; }
+    .episode-card p { font-size: 0.9rem; color: var(--text-dim); }
+    footer { text-align: center; padding: 2rem 1rem; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+    footer a { text-decoration: none; margin: 0 0.4rem; }
+    @media (max-width: 600px) { h1 { font-size: 1.5rem; } .container { padding: 1.25rem 1rem; } .btn { flex: 1 1 100%; justify-content: center; } }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back-link">&larr; Back to Fake Problems Podcast</a>
-        <h1>Episodes</h1>
-        <p class="subtitle">Full transcripts, show notes, and chapter markers for every episode.</p>
-        <p class="stats">30 episodes &middot; 395,581 words of searchable content</p>
-        
-        <a href="ep30-why-nukes-kids-on-bikes-and-penguins-are-weirder-than-you-th.html" class="episode-card">
-            <h2>Why Nukes, Kids on Bikes, and Penguins Are Weirder Than You Thought</h2>
-            <div class="meta">Episode 30 &middot; 12,843 words &middot; Full transcript</div>
-            <p class="summary">The hosts cover a wild range of topics from a nuclear near-disaster caused by a dropped wrench to getting bullied by kids while playing pickleball. They dive into dark survival stories like a rugby te</p>
-        </a>
-
-        <a href="ep29-lobsters-dont-die-but-we-might.html" class="episode-card">
-            <h2>Lobsters Don't Die, But We Might</h2>
-            <div class="meta">Episode 29 &middot; 13,090 words &middot; Full transcript</div>
-            <p class="summary">In this episode, the hosts dive into the myths of lobster immortality, explore the bizarre world of AI horror. They also touch on cultural differences in diet and the implications of nuclear deterrenc</p>
-        </a>
-
-        <a href="ep28-dear-diary-evan-finally-did-this.html" class="episode-card">
-            <h2>Dear Diary, Evan Finally Did This</h2>
-            <div class="meta">Episode 28 &middot; 14,626 words &middot; Full transcript</div>
-            <p class="summary">In this episode, the hosts dive into a range of topics from the absurdity of registering improv skills as lethal weapons to the dark humor of P Diddy's alleged antics. They also explore the complexiti</p>
-        </a>
-
-        <a href="ep27-what-about-the-onesies-mr-kennedy.html" class="episode-card">
-            <h2>What About the Onesies, Mr. Kennedy?</h2>
-            <div class="meta">Episode 27 &middot; 12,494 words &middot; Full transcript</div>
-            <p class="summary">In this episode, the hosts dive into a range of topics from RFK's stance on Big Pharma and his grilling by Bernie Sanders, to the absurdity of gifting a 55-gallon drum of lube. They also explore the f</p>
-        </a>
-
-        <a href="ep26-gods-butt-plug-and-other-scientific-discoveries.html" class="episode-card">
-            <h2>God's Butt Plug and Other Scientific Discoveries</h2>
-            <div class="meta">Episode 26 &middot; 10,319 words &middot; Full transcript</div>
-            <p class="summary">In this episode, the hosts discuss climate change skepticism, the potential eruption of Yellowstone, and the humorous concept of God's anatomy. They also share a funny encounter with bike cops and del</p>
-        </a>
-
-        <a href="ep25-pov-you-dont-know-what-pov-means.html" class="episode-card">
-            <h2>POV: You Don't Know What POV Means</h2>
-            <div class="meta">Episode 25 &middot; 10,676 words &middot; Full transcript</div>
-            <p class="summary">In this episode, the hosts dive into the awkward social dynamics of choosing a godfather, rant about the misuse of the term 'POV' online, and discuss the irony of saying 'I'm humbled' when receiving a</p>
-        </a>
-
-        <a href="ep24-episode-24.html" class="episode-card">
-            <h2>Episode 24</h2>
-            <div class="meta">Episode 24 &middot; 11,835 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into various 'fake problems' including Ashley Madison cheating websites, persistent dating advice, and whether there are income caps on disabled people but not billionaires. The convers</p>
-        </a>
-
-        <a href="ep23-episode-23.html" class="episode-card">
-            <h2>Episode 23</h2>
-            <div class="meta">Episode 23 &middot; 11,177 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into Michael Jackson castration conspiracy theories, debate the flaws of democracy and government efficiency, and explore random topics from James Bond's terrible spy skills to whether </p>
-        </a>
-
-        <a href="ep22-episode-22.html" class="episode-card">
-            <h2>Episode 22</h2>
-            <div class="meta">Episode 22 &middot; 8,577 words &middot; Full transcript</div>
-            <p class="summary">The hosts return from holiday break to discuss various random topics including Project 2025, pet peeves about people saying 'I'm proud of you,' and whether bartenders should serve mentally handicapped</p>
-        </a>
-
-        <a href="ep21-episode-21.html" class="episode-card">
-            <h2>Episode 21</h2>
-            <div class="meta">Episode 21 &middot; 11,702 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into bizarre topics ranging from towns with sexual names getting free Pornhub premium to North Korean soldiers discovering internet porn for the first time. They also discuss controvers</p>
-        </a>
-
-        <a href="ep20-episode-20.html" class="episode-card">
-            <h2>Episode 20</h2>
-            <div class="meta">Episode 20 &middot; 12,451 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into various 'fake problems' including the psychology of Amazon reviews, the awkwardness of certain medical specialties, and a personal experiment with non-alcoholic beer. They also exp</p>
-        </a>
-
-        <a href="ep19-episode-19.html" class="episode-card">
-            <h2>Episode 19</h2>
-            <div class="meta">Episode 19 &middot; 11,758 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into fascinating follow-ups including why powering the world with Sahara Desert solar panels could destroy the Amazon rainforest, and whether you can actually burp out a fart. They also</p>
-        </a>
-
-        <a href="ep18-episode-18.html" class="episode-card">
-            <h2>Episode 18</h2>
-            <div class="meta">Episode 18 &middot; 11,859 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive deep into controversial topics including historical labor dynamics, the psychology of female vs male pedophiles, and whether pedophilia can be cured. They also discuss modern phenomena </p>
-        </a>
-
-        <a href="ep17-episode-17.html" class="episode-card">
-            <h2>Episode 17</h2>
-            <div class="meta">Episode 17 &middot; 10,975 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive deep into uncomfortable territory, debating incest laws, sharing threesome experiences, and discussing a disturbing Reddit story about whether someone should tell their fiancé about a p</p>
-        </a>
-
-        <a href="ep16-episode-16.html" class="episode-card">
-            <h2>Episode 16</h2>
-            <div class="meta">Episode 16 &middot; 10,225 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into various 'fake problems' including dating app pet peeves, coffee addiction struggles, and philosophical discussions about perception and relationships. They explore everything from </p>
-        </a>
-
-        <a href="ep15-episode-15.html" class="episode-card">
-            <h2>Episode 15</h2>
-            <div class="meta">Episode 15 &middot; 11,366 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into fake problems ranging from quarter-zip fashion confusion to dating app morning messages, while exploring wild hypotheticals about gas-powered adult toys and prison simulation techn</p>
-        </a>
-
-        <a href="ep14-episode-14.html" class="episode-card">
-            <h2>Episode 14</h2>
-            <div class="meta">Episode 14 &middot; 10,957 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into various pet peeves including people overusing '100 percent' as a response, the logistics of powering the world with solar panels, and the awkwardness of animal buttholes being cons</p>
-        </a>
-
-        <a href="ep13-episode-13.html" class="episode-card">
-            <h2>Episode 13</h2>
-            <div class="meta">Episode 13 &middot; 11,639 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into research updates revealing Chris Angel as a complete fraud who pays audiences to react to fake magic tricks, then explore the wild world of naked dating shows and bizarre social ph</p>
-        </a>
-
-        <a href="ep12-episode-12.html" class="episode-card">
-            <h2>Episode 12</h2>
-            <div class="meta">Episode 12 &middot; 12,206 words &middot; Full transcript</div>
-            <p class="summary">The Fake Problems Podcast tackles bizarre hypotheticals and observations with a special guest, covering everything from the social dynamics of petting strangers' dogs to why smartphones never appear i</p>
-        </a>
-
-        <a href="ep11-episode-11.html" class="episode-card">
-            <h2>Episode 11</h2>
-            <div class="meta">Episode 11 &middot; 11,052 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into follow-ups from previous episodes including the giant seaweed blob that never materialized, then explore controversial topics like fake boobs being potentially transphobic, skincar</p>
-        </a>
-
-        <a href="ep10-episode-10.html" class="episode-card">
-            <h2>Episode 10</h2>
-            <div class="meta">Episode 10 &middot; 11,506 words &middot; Full transcript</div>
-            <p class="summary">The hosts discuss various awkward and gross situations including cats eating their dead owners, drinking from a moldy water bottle, and a plane emergency landing due to someone having explosive diarrh</p>
-        </a>
-
-        <a href="ep9-episode-9.html" class="episode-card">
-            <h2>Episode 9</h2>
-            <div class="meta">Episode 9 &middot; 10,072 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into various fake problems including the mystery of how modern magic actually works, the persistence of duck face photos on dating apps, and whether it's better to know what you look li</p>
-        </a>
-
-        <a href="ep8-episode-8.html" class="episode-card">
-            <h2>Episode 8</h2>
-            <div class="meta">Episode 8 &middot; 10,664 words &middot; Full transcript</div>
-            <p class="summary">The hosts return from a break to discuss various fake problems including whether skipping grades is child abuse, wild middle school camp stories involving Axe Body Spray incidents, and Stephen Hawking</p>
-        </a>
-
-        <a href="ep7-episode-7.html" class="episode-card">
-            <h2>Episode 7</h2>
-            <div class="meta">Episode 7 &middot; 17,757 words &middot; Full transcript</div>
-            <p class="summary">The hosts discuss a disastrous techno festival experience, dive deep into recent alien/UFO testimony to Congress, and explore various random topics from buffets to Down syndrome demographics. They als</p>
-        </a>
-
-        <a href="ep6-episode-6.html" class="episode-card">
-            <h2>Episode 6</h2>
-            <div class="meta">Episode 6 &middot; 13,352 words &middot; Full transcript</div>
-            <p class="summary">The hosts return after a long break to discuss everything from half marathons and Mormon soaking practices to the importance of loving your enemies. They share personal stories about converting confli</p>
-        </a>
-
-        <a href="ep5-episode-5.html" class="episode-card">
-            <h2>Episode 5</h2>
-            <div class="meta">Episode 5 &middot; 20,464 words &middot; Full transcript</div>
-            <p class="summary">The hosts discuss one member's transformative jury duty experience that restored his faith in the judicial system and gave him a sense of purpose he'd been missing. They also share a bizarre story abo</p>
-        </a>
-
-        <a href="ep4-episode-4.html" class="episode-card">
-            <h2>Episode 4</h2>
-            <div class="meta">Episode 4 &middot; 21,043 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive into movie analysis starting with 'It Follows' and its mysterious 1980s technology, then explore controversial topics like zoos, child labor laws, and whether animals are truly happy in</p>
-        </a>
-
-        <a href="ep3-episode-3.html" class="episode-card">
-            <h2>Episode 3</h2>
-            <div class="meta">Episode 3 &middot; 20,854 words &middot; Full transcript</div>
-            <p class="summary">Two friends dive deep into coffee addiction, workout culture, and random philosophical tangents while discussing everything from David Goggins to medieval torture methods. The conversation covers thei</p>
-        </a>
-
-        <a href="ep2-episode-2.html" class="episode-card">
-            <h2>Episode 2</h2>
-            <div class="meta">Episode 2 &middot; 20,686 words &middot; Full transcript</div>
-            <p class="summary">The hosts discuss their experiences with open mic comedy nights, share stories about family dynamics and awkward shopping trips, and dive deep into various topics ranging from military intervention an</p>
-        </a>
-
-        <a href="ep1-episode-1.html" class="episode-card">
-            <h2>Episode 1</h2>
-            <div class="meta">Episode 1 &middot; 17,356 words &middot; Full transcript</div>
-            <p class="summary">The hosts dive deep into recent train safety issues following the Ohio derailment, sharing personal stories about concussions and college fight clubs, and discussing everything from corrupt politician</p>
-        </a>
-
+  <div class="container">
+    <a href="/" class="back-link">&larr; Fake Problems Podcast</a>
+    <h1>All Episodes</h1>
+    <div class="follow-buttons">
+      <a class="btn btn-spotify" href="https://open.spotify.com/show/4C8HAr55dGMgkM9pJXPgDQ" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1 .25c-2.8-1.7-6.4-2.1-10.5-1.1a.75.75 0 1 1-.3-1.5c4.5-1 8.5-.6 11.5 1.3a.75.75 0 0 1 .3 1zm1.4-3.3a.94.94 0 0 1-1.3.3c-3.2-2-8.2-2.5-12-1.4a.94.94 0 1 1-.5-1.8c4.4-1.3 9.8-.7 13.5 1.6a.94.94 0 0 1 .3 1.3zm.1-3.4C15.4 8.4 9 8.2 5.2 9.3a1.13 1.13 0 1 1-.6-2.2c4.3-1.3 11.4-1 15.9 1.6a1.13 1.13 0 0 1-1.5 1.9z"/></svg>Follow on Spotify</a><a class="btn btn-youtube" href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.9 31.9 0 0 0 0 12a31.9 31.9 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.9 31.9 0 0 0 24 12a31.9 31.9 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>Subscribe on YouTube</a>
     </div>
-    <footer>
-        <p>&copy; 2026 Fake Problems Podcast &middot; <a href="/">Home</a></p>
-    </footer>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep38.html" class="episode-card">
+      <span class="ep-num">Episode 38 &middot; 2026-10-08</span>
+      <h2>The AI Water Panic Is a Math Problem and Nobody Did the Math</h2>
+      <p>The hosts start with sterile mosquitoes and ecosystems we&#39;ve already broken, then move through a headline-versus-reality look at a city budget, a state-funded grocery store, and why they think free food ends in…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep37.html" class="episode-card">
+      <span class="ep-num">Episode 37 &middot; 2026-09-20</span>
+      <h2>Why Beta Fish Weddings Are a Silent Massacre</h2>
+      <p>This episode dives into the dark and absurd worlds of wedding beta fish executions, cultural food taboos, elite military training failures, and twisted historical takes on World War II and the Israeli-Palestinian…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep36.html" class="episode-card">
+      <span class="ep-num">Episode 36 &middot; 2026-09-04</span>
+      <h2>Stand Your Ground and Why Openly Gay Leads Still Don&#39;t Exist</h2>
+      <p>The hosts kick off with a metal concert cut short by fire alarms, segue into the awkwardness of weddings and the art of polite escapes. Then they dive into Hollywood&#39;s reluctance to cast openly gay male leads, followed…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep35.html" class="episode-card">
+      <span class="ep-num">Episode 35 &middot; 2026-08-21</span>
+      <h2>Why a Guy Yelled the N-Word at the BAFTAs (and It&#39;s Not What You Think)</h2>
+      <p>This episode dives into the viral BAFTAs incident involving a man with Tourette&#39;s shouting racial slurs, the absurd political pandering of Gavin Newsom, and how media manipulation fuels outrage. The hosts also explore…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep34.html" class="episode-card">
+      <span class="ep-num">Episode 34 &middot; 2026-07-13</span>
+      <h2>The Surgery That Took a Swing and Missed the Bladder</h2>
+      <p>This episode starts with a jaw-dropping medical mishap involving unnecessary surgery, then spirals into grim historical horrors like castrations in slave trades and deadly chimney sweeping jobs. The hosts pivot to…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep33.html" class="episode-card">
+      <span class="ep-num">Episode 33 &middot; 2026-06-02</span>
+      <h2>Why We Keep Sending People to the Moon and Nothing Else Makes Sense</h2>
+      <p>The hosts dive into the absurdity of modern space missions, the dark corners of the internet like Silk Road, and the complicated geopolitics surrounding Israel and US lobbying. They also wander into bizarre territory…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep32.html" class="episode-card">
+      <span class="ep-num">Episode 32 &middot; 2026-05-08</span>
+      <h2>Why Olympic Ski Jumpers Inflate Their Junk</h2>
+      <p>The guys dive into the bizarre world of Olympic ski jumpers inflating their junk with acid for better performance, unravel myths about the gender wage gap, and reveal shocking stats about American military eligibility.…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep31.html" class="episode-card">
+      <span class="ep-num">Episode 31 &middot; 2026-04-17</span>
+      <h2>The Assassination That Everyone Forgot</h2>
+      <p>The hosts unpack the dark reality behind political assassinations and media attention, explore the unexpected psychology behind fights and bonds, and dive into relationship statistics that hilariously blame women for…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep30.html" class="episode-card">
+      <span class="ep-num">Episode 30 &middot; 2026-04-02</span>
+      <h2>How Far Would You Go for a Pet Penguin?</h2>
+      <p>The hosts cover a wild range of topics from a nuclear near-disaster caused by a dropped wrench to getting bullied by kids while playing pickleball. They dive into dark survival stories like a rugby team&#39;s crash in the…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep29.html" class="episode-card">
+      <span class="ep-num">Episode 29 &middot; 2026-03-18</span>
+      <h2>Lobsters Don&#39;t Die, But We Might</h2>
+      <p>In this episode, the hosts dive into the myths of lobster immortality, explore the bizarre world of AI horror. They also touch on cultural differences in diet and the implications of nuclear deterrence.</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep28.html" class="episode-card">
+      <span class="ep-num">Episode 28 &middot; 2026-03-02</span>
+      <h2>Dear Diary, Evan Finally Did This</h2>
+      <p>In this episode, the hosts dive into a range of topics from the absurdity of registering improv skills as lethal weapons to the dark humor of P Diddy&#39;s alleged antics. They also explore the complexities of global…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep27.html" class="episode-card">
+      <span class="ep-num">Episode 27 &middot; 2026-02-08</span>
+      <h2>What About the Onesies, Mr. Kennedy?</h2>
+      <p>In this episode, the hosts dive into a range of topics from RFK&#39;s stance on Big Pharma and his grilling by Bernie Sanders, to the absurdity of gifting a 55-gallon drum of lube. They also explore the feasibility of a…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep26.html" class="episode-card">
+      <span class="ep-num">Episode 26 &middot; 2026-01-27</span>
+      <h2>God&#39;s Plug and Other Scientific Discoveries</h2>
+      <p>In this episode, the hosts discuss climate change skepticism, the potential eruption of Yellowstone, and the humorous concept of God&#39;s anatomy. They also share a funny encounter with bike cops and delve into critical…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep25.html" class="episode-card">
+      <span class="ep-num">Episode 25 &middot; 2025-12-05</span>
+      <h2>POV: You Don&#39;t Know What POV Means</h2>
+      <p>In this episode, the hosts dive into the awkward social dynamics of choosing a godfather, rant about the misuse of the term &#39;POV&#39; online, and discuss the irony of saying &#39;I&#39;m humbled&#39; when receiving an award. They also…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep24.html" class="episode-card">
+      <span class="ep-num">Episode 24 &middot; 2025-11-01</span>
+      <h2>Drunk Persistance</h2>
+      <p>The hosts dive into various &#39;fake problems&#39; including Ashley Madison cheating websites, persistent dating advice, and whether there are income caps on disabled people but not billionaires. The conversation takes wild…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep23.html" class="episode-card">
+      <span class="ep-num">Episode 23 &middot; 2025-10-13</span>
+      <h2>Lots of Government Stuff</h2>
+      <p>The hosts dive into Michael Jackson castration conspiracy theories, debate the flaws of democracy and government efficiency, and explore random topics from James Bond&#39;s terrible spy skills to whether exposure therapy…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep22.html" class="episode-card">
+      <span class="ep-num">Episode 22 &middot; 2025-09-03</span>
+      <h2>Lesbian Choir Boys</h2>
+      <p>The hosts return from holiday break to discuss various random topics including Project 2025, pet peeves about people saying &#39;I&#39;m proud of you,&#39; and whether bartenders should serve mentally handicapped people alcohol.…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep21.html" class="episode-card">
+      <span class="ep-num">Episode 21 &middot; 2025-07-28</span>
+      <h2>Space Therapy</h2>
+      <p>The hosts dive into bizarre topics ranging from towns with sexual names getting free Pornhub premium to North Korean soldiers discovering internet porn for the first time. They also discuss controversial language…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep20.html" class="episode-card">
+      <span class="ep-num">Episode 20 &middot; 2025-06-30</span>
+      <h2>A 4 Day Love Story</h2>
+      <p>The hosts dive into various &#39;fake problems&#39; including the psychology of Amazon reviews, the awkwardness of certain medical specialties, and a personal experiment with non-alcoholic beer. They also explore topics…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep19.html" class="episode-card">
+      <span class="ep-num">Episode 19 &middot; 2025-06-01</span>
+      <h2>Solar Powered Roasting</h2>
+      <p>The hosts dive into fascinating follow-ups including why powering the world with Sahara Desert solar panels could destroy the Amazon rainforest, and whether you can actually burp out a fart. They also explore dating…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep18.html" class="episode-card">
+      <span class="ep-num">Episode 18 &middot; 2025-05-11</span>
+      <h2>Snake Church Glow Up</h2>
+      <p>The hosts dive deep into controversial topics including historical labor dynamics, the psychology of female vs male pedophiles, and whether pedophilia can be cured. They also discuss modern phenomena like cyber trucks…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep17.html" class="episode-card">
+      <span class="ep-num">Episode 17 &middot; 2025-03-30</span>
+      <h2>Totally Safe for Work</h2>
+      <p>The hosts dive deep into uncomfortable territory, debating incest laws, sharing threesome experiences, and discussing a disturbing Reddit story about whether someone should tell their fiancé about a past incestuous…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep16.html" class="episode-card">
+      <span class="ep-num">Episode 16 &middot; 2025-02-24</span>
+      <h2>What is Love</h2>
+      <p>The hosts dive into various &#39;fake problems&#39; including dating app pet peeves, coffee addiction struggles, and philosophical discussions about perception and relationships. They explore everything from historical gender…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep15.html" class="episode-card">
+      <span class="ep-num">Episode 15 &middot; 2025-02-02</span>
+      <h2>Gas Powered Dating Apps</h2>
+      <p>The hosts dive into fake problems ranging from quarter-zip fashion confusion to dating app morning messages, while exploring wild hypotheticals about gas-powered adult toys and prison simulation technology. They also…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep14.html" class="episode-card">
+      <span class="ep-num">Episode 14 &middot; 2025-01-06</span>
+      <h2>Solar Powered Food Addiction</h2>
+      <p>The hosts dive into various pet peeves including people overusing &#39;100 percent&#39; as a response, the logistics of powering the world with solar panels, and the awkwardness of animal buttholes being constantly visible.…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep13.html" class="episode-card">
+      <span class="ep-num">Episode 13 &middot; 2024-12-07</span>
+      <h2>Magical Spice Wars</h2>
+      <p>The hosts dive into research updates revealing Chris Angel as a complete fraud who pays audiences to react to fake magic tricks, then explore the wild world of naked dating shows and bizarre social phenomena. The…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep12.html" class="episode-card">
+      <span class="ep-num">Episode 12 &middot; 2024-10-23</span>
+      <h2>Japanese Robot Cafes</h2>
+      <p>The Fake Problems Podcast tackles bizarre hypotheticals and observations with a special guest, covering everything from the social dynamics of petting strangers&#39; dogs to why smartphones never appear in our dreams. The…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep11.html" class="episode-card">
+      <span class="ep-num">Episode 11 &middot; 2024-07-15</span>
+      <h2>Hepeating Black Hole</h2>
+      <p>The hosts dive into follow-ups from previous episodes including the giant seaweed blob that never materialized, then explore controversial topics like fake boobs being potentially transphobic, skincare routines as…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep10.html" class="episode-card">
+      <span class="ep-num">Episode 10 &middot; 2024-02-10</span>
+      <h2>Monodontia</h2>
+      <p>The hosts discuss various awkward and gross situations including cats eating their dead owners, drinking from a moldy water bottle, and a plane emergency landing due to someone having explosive diarrhea. They also…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep9.html" class="episode-card">
+      <span class="ep-num">Episode 9 &middot; 2024-01-09</span>
+      <h2>Are You Hotter Than A Magician</h2>
+      <p>The hosts dive into various fake problems including the mystery of how modern magic actually works, the persistence of duck face photos on dating apps, and whether it&#39;s better to know what you look like or live without…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep8.html" class="episode-card">
+      <span class="ep-num">Episode 8 &middot; 2023-12-04</span>
+      <h2>Camp Cuck</h2>
+      <p>The hosts return from a break to discuss various fake problems including whether skipping grades is child abuse, wild middle school camp stories involving Axe Body Spray incidents, and Stephen Hawking&#39;s surprising love…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep7.html" class="episode-card">
+      <span class="ep-num">Episode 7 &middot; 2023-11-13</span>
+      <h2>Tolerating Techno</h2>
+      <p>The hosts discuss a disastrous techno festival experience, dive deep into recent alien/UFO testimony to Congress, and explore various random topics from buffets to Down syndrome demographics. They also cover pet…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep6.html" class="episode-card">
+      <span class="ep-num">Episode 6 &middot; 2023-09-07</span>
+      <h2>Love Thy Biker</h2>
+      <p>The hosts return after a long break to discuss everything from half marathons and Mormon soaking practices to the importance of loving your enemies. They share personal stories about converting conflicts into…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep5.html" class="episode-card">
+      <span class="ep-num">Episode 5 &middot; 2023-08-14</span>
+      <h2>Sad Justice</h2>
+      <p>The hosts discuss one member&#39;s transformative jury duty experience that restored his faith in the judicial system and gave him a sense of purpose he&#39;d been missing. They also share a bizarre story about being recruited…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep4.html" class="episode-card">
+      <span class="ep-num">Episode 4 &middot; 2023-07-09</span>
+      <h2>It Follows Helen Keller</h2>
+      <p>The hosts dive into movie analysis starting with &#39;It Follows&#39; and its mysterious 1980s technology, then explore controversial topics like zoos, child labor laws, and whether animals are truly happy in captivity. The…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep3.html" class="episode-card">
+      <span class="ep-num">Episode 3 &middot; 2023-06-19</span>
+      <h2>Being a Stoic With Bionic Limbs</h2>
+      <p>Two friends dive deep into coffee addiction, workout culture, and random philosophical tangents while discussing everything from David Goggins to medieval torture methods. The conversation covers their attempts to quit…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep2.html" class="episode-card">
+      <span class="ep-num">Episode 2 &middot; 2023-05-21</span>
+      <h2>Top Gun Ego Death</h2>
+      <p>The hosts discuss their experiences with open mic comedy nights, share stories about family dynamics and awkward shopping trips, and dive deep into various topics ranging from military intervention and government…</p>
+    </a>
+    
+    <a href="https://fakeproblemspodcast.com/episodes/ep1.html" class="episode-card">
+      <span class="ep-num">Episode 1 &middot; 2023-05-15</span>
+      <h2>CTE Can&#39;t Hurt Me</h2>
+      <p>The hosts dive deep into recent train safety issues following the Ohio derailment, sharing personal stories about concussions and college fight clubs, and discussing everything from corrupt politicians to evolutionary…</p>
+    </a>
+    
+  </div>
+  <footer>
+    <p>&copy; 2026 Fake Problems Podcast &middot; <a href="/">Home</a><a href="https://open.spotify.com/show/4C8HAr55dGMgkM9pJXPgDQ" rel="noopener">Spotify</a><a href="https://www.youtube.com/channel/UCmuoi8QYHAYnOmkOjkg9TrA" rel="noopener">YouTube</a></p>
+  </footer>
 </body>
 </html>
