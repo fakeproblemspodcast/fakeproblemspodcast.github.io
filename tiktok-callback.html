@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <title>TikTok Sign-in | Fake Problems Podcast</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        :root {
+            --accent: #C0582A;
+            --bg: #FAF6EE;
+            --text: #4A3F33;
+            --text-dim: #9B8E7B;
+            --text-bright: #1E1810;
+            --border: #DDD4C4;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        main { max-width: 720px; margin: 0 auto; padding: 56px 16px 80px; }
+        h1 { color: var(--text-bright); font-size: 1.6rem; margin-bottom: 12px; }
+        p { margin-bottom: 12px; }
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            font: 0.9rem ui-monospace, monospace;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: #fff;
+            color: var(--text-bright);
+            word-break: break-all;
+        }
+        button {
+            margin-top: 12px;
+            padding: 10px 18px;
+            font: inherit;
+            border: 0;
+            border-radius: 6px;
+            background: var(--accent);
+            color: #fff;
+            cursor: pointer;
+        }
+        .err { color: #A3261B; }
+        .dim { color: var(--text-dim); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+<main>
+    <h1 id="title">TikTok sign-in</h1>
+    <p id="msg">Reading the response from TikTok&hellip;</p>
+    <div id="box" hidden>
+        <textarea id="url" readonly></textarea>
+        <button id="copy" type="button">Copy</button>
+    </div>
+    <p class="dim">This page is used only by the Fake Problems Podcast publishing tool. Nothing here is sent anywhere &mdash; the code stays in your browser until you paste it into the tool.</p>
+</main>
+<script>
+    (function () {
+        var q = new URLSearchParams(window.location.search);
+        var msg = document.getElementById("msg");
+        if (q.get("error")) {
+            msg.className = "err";
+            msg.textContent = "TikTok returned an error: " + q.get("error") +
+                (q.get("error_description") ? " (" + q.get("error_description") + ")" : "");
+            return;
+        }
+        if (!q.get("code")) {
+            msg.textContent = "No sign-in code in this link. Start the sign-in from the publishing tool.";
+            return;
+        }
+        msg.textContent = "Signed in. Copy this whole link and paste it into the setup script (it expires in a few minutes):";
+        var box = document.getElementById("box");
+        var field = document.getElementById("url");
+        field.value = window.location.href;
+        box.hidden = false;
+        document.getElementById("copy").addEventListener("click", function () {
+            field.select();
+            try {
+                navigator.clipboard.writeText(field.value);
+                this.textContent = "Copied";
+            } catch (e) {
+                document.execCommand("copy");
+                this.textContent = "Copied";
+            }
+        });
+    })();
+</script>
+</body>
+</html>
